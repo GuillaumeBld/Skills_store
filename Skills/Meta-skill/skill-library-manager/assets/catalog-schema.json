@@ -1,0 +1,159 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Skills Library Catalog",
+  "description": "Schema for Skills_librairie catalog.json",
+  "type": "object",
+  "required": ["version", "updated", "repository", "skills"],
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "Catalog version (semver)"
+    },
+    "updated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last catalog update timestamp (ISO 8601)"
+    },
+    "repository": {
+      "type": "string",
+      "format": "uri",
+      "description": "GitHub repository URL"
+    },
+    "skills": {
+      "type": "array",
+      "description": "Array of skill metadata",
+      "items": {
+        "$ref": "#/definitions/skill"
+      }
+    },
+    "categories": {
+      "type": "object",
+      "description": "Skills grouped by tag",
+      "patternProperties": {
+        "^[a-z0-9-]+$": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "stats": {
+      "type": "object",
+      "description": "Library statistics",
+      "properties": {
+        "total_skills": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "total_categories": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "last_scan": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  },
+  "definitions": {
+    "skill": {
+      "type": "object",
+      "required": ["name", "version", "description"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$",
+          "description": "Skill name (kebab-case)"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(-[a-zA-Z0-9.]+)?$",
+          "description": "Skill version (semver)"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 500,
+          "description": "Brief skill description"
+        },
+        "author": {
+          "type": "string",
+          "description": "Skill author name"
+        },
+        "created": {
+          "type": "string",
+          "format": "date",
+          "description": "Creation date (YYYY-MM-DD)"
+        },
+        "updated": {
+          "type": "string",
+          "format": "date",
+          "description": "Last update date (YYYY-MM-DD)"
+        },
+        "tags": {
+          "type": "array",
+          "description": "Skill tags for categorization",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "minItems": 1,
+          "maxItems": 10,
+          "uniqueItems": true
+        },
+        "dependencies": {
+          "type": "array",
+          "description": "Required skills",
+          "items": {
+            "type": "string"
+          }
+        },
+        "compatibility": {
+          "type": "array",
+          "description": "Compatible platforms",
+          "items": {
+            "type": "string",
+            "enum": ["claude.ai", "claude-code", "api"]
+          }
+        },
+        "license": {
+          "type": "string",
+          "description": "License type",
+          "examples": ["MIT", "Apache-2.0", "GPL-3.0"]
+        },
+        "location": {
+          "type": "string",
+          "pattern": "^skills/[a-z0-9-]+/$",
+          "description": "Path to skill source"
+        },
+        "package": {
+          "type": "string",
+          "pattern": "^packaged/[a-z0-9-]+\\.skill$",
+          "description": "Path to packaged .skill file"
+        },
+        "size": {
+          "type": "string",
+          "pattern": "^[0-9]+(\\.[0-9]+)?[KMGT]?B$",
+          "description": "Package file size"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["stable", "beta", "experimental", "deprecated"],
+          "description": "Skill stability status"
+        },
+        "deprecated": {
+          "type": "string",
+          "description": "Deprecation message with replacement suggestion"
+        },
+        "homepage": {
+          "type": "string",
+          "format": "uri",
+          "description": "Documentation URL"
+        }
+      }
+    }
+  }
+}
