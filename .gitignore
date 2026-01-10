@@ -19,9 +19,6 @@ venv/
 ENV/
 .venv
 
-# Local archive folder (original files before repo organization)
-../archive/
-
 # Temporary files
 *.log
 *.tmp
