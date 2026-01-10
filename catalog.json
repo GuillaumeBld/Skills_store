@@ -1,0 +1,1027 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-01-10T12:08:33.960438",
+  "repository": "https://github.com/GuillaumeBld/Skills_librairie",
+  "skills": [
+    {
+      "name": "loki-mode",
+      "category": "AI-Agents",
+      "version": "1.0.0",
+      "description": "Multi-agent autonomous startup system - orchestrates 37 AI agents across 6 swarms to build, deploy, and operate a complete startup from PRD to revenue. Use when building complete startup systems, orchestrating multiple AI agents, automating full-stack development, or managing complex multi-agent workflows. Based on asklokesh/claudeskill-loki-mode.",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "MIT",
+      "location": "Skills/AI-Agents/loki-mode/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/AI-Agents/loki-mode",
+      "package": "packaged/loki-mode.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "rag-pipeline-expert",
+      "category": "AI-Agents",
+      "version": "1.0.0",
+      "description": "Expert guidance for building complete RAG (Retrieval-Augmented Generation) pipelines with web scraping ingestion, vector databases, chunking strategies, and AI agent-based retrieval. Use when building RAG systems, implementing web scraping for knowledge bases, optimizing retrieval accuracy, choosing vector databases, configuring chunking strategies, or designing agentic retrieval patterns. Covers both pure Python/Docker implementations and n8n workflow integrations with balanced guidance on all major frameworks (LangChain, LlamaIndex, CrewAI, AutoGen, LangGraph).",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "MIT",
+      "location": "Skills/AI-Agents/rag-pipeline-expert/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/AI-Agents/rag-pipeline-expert",
+      "package": "packaged/rag-pipeline-expert.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "n8n-code-javascript",
+      "category": "Automation",
+      "version": "1.0.0",
+      "description": "Write JavaScript code in n8n Code nodes. Use when writing JavaScript in n8n, using $input/$json/$node syntax, making HTTP requests with $helpers, working with dates using DateTime, troubleshooting Code node errors, or choosing between Code node modes.",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "MIT",
+      "location": "Skills/Automation/n8n-code-javascript/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Automation/n8n-code-javascript",
+      "package": "packaged/n8n-code-javascript.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "n8n-code-python",
+      "category": "Automation",
+      "version": "1.0.0",
+      "description": "Write Python code in n8n Code nodes. Use when writing Python in n8n, using _input/_json/_node syntax, working with standard library, or need to understand Python limitations in n8n Code nodes.",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "MIT",
+      "location": "Skills/Automation/n8n-code-python/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Automation/n8n-code-python",
+      "package": "packaged/n8n-code-python.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "n8n-expression-syntax",
+      "category": "Automation",
+      "version": "1.0.0",
+      "description": "Validate n8n expression syntax and fix common errors. Use when writing n8n expressions, using {{}} syntax, accessing $json/$node variables, troubleshooting expression errors, or working with webhook data in workflows.",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "MIT",
+      "location": "Skills/Automation/n8n-expression-syntax/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Automation/n8n-expression-syntax",
+      "package": "packaged/n8n-expression-syntax.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "n8n-mcp-tools-expert",
+      "category": "Automation",
+      "version": "1.0.0",
+      "description": "Expert guide for using n8n-mcp MCP tools effectively. Use when searching for nodes, validating configurations, accessing templates, managing workflows, or using any n8n-mcp tool. Provides tool selection guidance, parameter formats, and common patterns.",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "MIT",
+      "location": "Skills/Automation/n8n-mcp-tools-expert/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Automation/n8n-mcp-tools-expert",
+      "package": "packaged/n8n-mcp-tools-expert.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "n8n-node-configuration",
+      "category": "Automation",
+      "version": "1.0.0",
+      "description": "Operation-aware node configuration guidance. Use when configuring nodes, understanding property dependencies, determining required fields, choosing between get_node detail levels, or learning common configuration patterns by node type.",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "MIT",
+      "location": "Skills/Automation/n8n-node-configuration/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Automation/n8n-node-configuration",
+      "package": "packaged/n8n-node-configuration.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "n8n-validation-expert",
+      "category": "Automation",
+      "version": "1.0.0",
+      "description": "Interpret validation errors and guide fixing them. Use when encountering validation errors, validation warnings, false positives, operator structure issues, or need help understanding validation results. Also use when asking about validation profiles, error types, or the validation loop process.",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "MIT",
+      "location": "Skills/Automation/n8n-validation-expert/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Automation/n8n-validation-expert",
+      "package": "packaged/n8n-validation-expert.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "n8n-workflow-patterns",
+      "category": "Automation",
+      "version": "1.0.0",
+      "description": "Proven workflow architectural patterns from real n8n workflows. Use when building new workflows, designing workflow structure, choosing workflow patterns, planning workflow architecture, or asking about webhook processing, HTTP API integration, database operations, AI agent workflows, or scheduled tasks.",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "MIT",
+      "location": "Skills/Automation/n8n-workflow-patterns/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Automation/n8n-workflow-patterns",
+      "package": "packaged/n8n-workflow-patterns.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "brand-guidelines",
+      "category": "Communication",
+      "version": "1.0.0",
+      "description": "Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply.",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "Complete terms in LICENSE.txt",
+      "location": "Skills/Communication/brand-guidelines/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Communication/brand-guidelines",
+      "package": "packaged/brand-guidelines.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "doc-coauthoring",
+      "category": "Communication",
+      "version": "1.0.0",
+      "description": "Guide users through a structured workflow for co-authoring documentation. Use when user wants to write documentation, proposals, technical specs, decision docs, or similar structured content. This workflow helps users efficiently transfer context, refine content through iteration, and verify the doc works for readers. Trigger when user mentions writing docs, creating proposals, drafting specs, or similar documentation tasks.",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "MIT",
+      "location": "Skills/Communication/doc-coauthoring/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Communication/doc-coauthoring",
+      "package": "packaged/doc-coauthoring.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "internal-comms",
+      "category": "Communication",
+      "version": "1.0.0",
+      "description": "A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "Complete terms in LICENSE.txt",
+      "location": "Skills/Communication/internal-comms/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Communication/internal-comms",
+      "package": "packaged/internal-comms.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "algorithmic-art",
+      "category": "Design-Creative",
+      "version": "1.0.0",
+      "description": "Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avoid copyright violations.",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "Complete terms in LICENSE.txt",
+      "location": "Skills/Design-Creative/algorithmic-art/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Design-Creative/algorithmic-art",
+      "package": "packaged/algorithmic-art.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "canvas-design",
+      "category": "Design-Creative",
+      "version": "1.0.0",
+      "description": "Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations.",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "Complete terms in LICENSE.txt",
+      "location": "Skills/Design-Creative/canvas-design/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Design-Creative/canvas-design",
+      "package": "packaged/canvas-design.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "claude-d3js-skill",
+      "category": "Design-Creative",
+      "version": "1.0.0",
+      "description": "Create data visualizations using d3.js for interactive charts, graphs, and data-driven visualizations. Use when creating interactive data visualizations, building charts and graphs, visualizing datasets, or creating data-driven art. Based on chrisvoncsefalvay/claude-d3js-skill.",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "MIT",
+      "location": "Skills/Design-Creative/claude-d3js-skill/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Design-Creative/claude-d3js-skill",
+      "package": "packaged/claude-d3js-skill.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "frontend-design",
+      "category": "Design-Creative",
+      "version": "1.0.0",
+      "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids generic AI aesthetics.",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "Complete terms in LICENSE.txt",
+      "location": "Skills/Design-Creative/frontend-design/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Design-Creative/frontend-design",
+      "package": "packaged/frontend-design.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "slack-gif-creator",
+      "category": "Design-Creative",
+      "version": "1.0.0",
+      "description": "Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when users request animated GIFs for Slack like \"make me a GIF of X doing Y for Slack.\"",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "Complete terms in LICENSE.txt",
+      "location": "Skills/Design-Creative/slack-gif-creator/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Design-Creative/slack-gif-creator",
+      "package": "packaged/slack-gif-creator.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "theme-factory",
+      "category": "Design-Creative",
+      "version": "1.0.0",
+      "description": "Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly.",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "Complete terms in LICENSE.txt",
+      "location": "Skills/Design-Creative/theme-factory/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Design-Creative/theme-factory",
+      "package": "packaged/theme-factory.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "web-asset-generator",
+      "category": "Design-Creative",
+      "version": "1.0.0",
+      "description": "Generates web assets like favicons, app icons, and social media images for web applications. Use when creating favicons, generating app icons, creating social media preview images, optimizing web assets, or preparing assets for deployment. Based on alonw0/web-asset-generator.",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "MIT",
+      "location": "Skills/Design-Creative/web-asset-generator/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Design-Creative/web-asset-generator",
+      "package": "packaged/web-asset-generator.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "ios-simulator-skill",
+      "category": "Development",
+      "version": "1.0.0",
+      "description": "iOS app building, navigation, and testing through automation. Uses semantic navigation on accessibility APIs to interact with iOS simulators by meaning, not pixel coordinates. Includes 21 production scripts for building, testing, navigation, accessibility audits, visual testing, and device lifecycle management. Works across different screen sizes and survives UI redesigns. Token optimized (96% reduction vs raw tools). Use when building iOS apps, testing iOS applications, automating iOS simulator interactions, or performing accessibility audits on iOS apps. Based on conorluddy/ios-simulator-skill.",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "MIT",
+      "location": "Skills/Development/ios-simulator-skill/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Development/ios-simulator-skill",
+      "package": "packaged/ios-simulator-skill.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "mcp-builder",
+      "category": "Development",
+      "version": "1.0.0",
+      "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK).",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "Complete terms in LICENSE.txt",
+      "location": "Skills/Development/mcp-builder/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Development/mcp-builder",
+      "package": "packaged/mcp-builder.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "playwright-skill",
+      "category": "Development",
+      "version": "1.0.0",
+      "description": "General-purpose browser automation using Playwright for UI verification, testing, and debugging web applications. Use when testing web applications, automating browser interactions, verifying UI elements, debugging frontend issues, or performing end-to-end testing. Based on lackeyjb/playwright-skill.",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "MIT",
+      "location": "Skills/Development/playwright-skill/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Development/playwright-skill",
+      "package": "packaged/playwright-skill.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "web-artifacts-builder",
+      "category": "Development",
+      "version": "1.0.0",
+      "description": "Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts.",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "Complete terms in LICENSE.txt",
+      "location": "Skills/Development/web-artifacts-builder/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Development/web-artifacts-builder",
+      "package": "packaged/web-artifacts-builder.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "webapp-testing",
+      "category": "Development",
+      "version": "1.0.0",
+      "description": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "Complete terms in LICENSE.txt",
+      "location": "Skills/Development/webapp-testing/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Development/webapp-testing",
+      "package": "packaged/webapp-testing.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "docx",
+      "category": "Document-Generation",
+      "version": "1.0.0",
+      "description": "Comprehensive document creation, editing, and analysis with support for tracked changes, comments, formatting preservation, and text extraction. When Claude needs to work with professional documents (.docx files) for: (1) Creating new documents, (2) Modifying or editing content, (3) Working with tracked changes, (4) Adding comments, or any other document tasks",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "Proprietary. LICENSE.txt has complete terms",
+      "location": "Skills/Document-Generation/docx/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Document-Generation/docx",
+      "package": "packaged/docx.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "pdf",
+      "category": "Document-Generation",
+      "version": "1.0.0",
+      "description": "Comprehensive PDF manipulation toolkit for extracting text and tables, creating new PDFs, merging/splitting documents, and handling forms. When Claude needs to fill in a PDF form or programmatically process, generate, or analyze PDF documents at scale.",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "Proprietary. LICENSE.txt has complete terms",
+      "location": "Skills/Document-Generation/pdf/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Document-Generation/pdf",
+      "package": "packaged/pdf.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "pptx",
+      "category": "Document-Generation",
+      "version": "1.0.0",
+      "description": "Presentation creation, editing, and analysis. When Claude needs to work with presentations (.pptx files) for: (1) Creating new presentations, (2) Modifying or editing content, (3) Working with layouts, (4) Adding comments or speaker notes, or any other presentation tasks",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "Proprietary. LICENSE.txt has complete terms",
+      "location": "Skills/Document-Generation/pptx/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Document-Generation/pptx",
+      "package": "packaged/pptx.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "xlsx",
+      "category": "Document-Generation",
+      "version": "1.0.0",
+      "description": "Comprehensive spreadsheet creation, editing, and analysis with support for formulas, formatting, data analysis, and visualization. When Claude needs to work with spreadsheets (.xlsx, .xlsm, .csv, .tsv, etc) for: (1) Creating new spreadsheets with formulas and formatting, (2) Reading or analyzing data, (3) Modify existing spreadsheets while preserving formulas, (4) Data analysis and visualization in spreadsheets, or (5) Recalculating formulas",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "Proprietary. LICENSE.txt has complete terms",
+      "location": "Skills/Document-Generation/xlsx/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Document-Generation/xlsx",
+      "package": "packaged/xlsx.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "docker-development-workflow",
+      "category": "Infrastructure-DevOps",
+      "version": "1.0.0",
+      "description": "Docker development workflow patterns including local development setup with hot-reload, production Dockerfile optimization using multi-stage builds, docker-compose for dev/staging/prod environments, CI/CD pipeline configuration with GitHub Actions, image size reduction techniques (70-90% smaller), and release management strategies. Use when setting up local Docker development, optimizing container images, implementing CI/CD for containerized apps, or establishing deployment workflows from Git to production.",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "MIT",
+      "location": "Skills/Infrastructure-DevOps/docker-development-workflow/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Infrastructure-DevOps/docker-development-workflow",
+      "package": "packaged/docker-development-workflow.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "vps-daily-operations",
+      "category": "Infrastructure-DevOps",
+      "version": "1.0.0",
+      "description": "VPS operational procedures including daily health checks, weekly maintenance, monitoring configuration, incident response, security hardening, and backup strategies. Use when setting up automated monitoring for Dokploy/Docker infrastructure, implementing SSH hardening with Fail2Ban, configuring backup routines, responding to incidents (disk full, OOM, compromised containers), or establishing operational runbooks. Includes ready-to-use bash scripts for automation via cron or systemd timers.",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "MIT",
+      "location": "Skills/Infrastructure-DevOps/vps-daily-operations/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Infrastructure-DevOps/vps-daily-operations",
+      "package": "packaged/vps-daily-operations.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "vps-deployment-stack",
+      "category": "Infrastructure-DevOps",
+      "version": "1.0.0",
+      "description": "Deploy production-ready VPS infrastructure with Dokploy (PaaS), Traefik (reverse proxy with auto-TLS), Docker Compose, and Uptime Kuma (monitoring). Use when setting up a new VPS from scratch, configuring automatic HTTPS with Let's Encrypt, deploying Git-based applications with webhooks, or establishing monitoring infrastructure. Covers installation, DNS configuration, TLS setup, and validation from empty VPS to working system with zero-downtime deployments.",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "MIT",
+      "location": "Skills/Infrastructure-DevOps/vps-deployment-stack/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Infrastructure-DevOps/vps-deployment-stack",
+      "package": "packaged/vps-deployment-stack.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "skill-code-simplifier",
+      "category": "Meta-skill",
+      "version": "1.0.0",
+      "description": "Automatically refine and simplify skill content while preserving functionality. Based on Anthropic's code-simplifier pattern. Enhances clarity, enforces standards, reduces verbosity, eliminates redundancy, and maintains balance between brevity and understanding. Operates autonomously on recent changes. Use after editing skills or before packaging.",
+      "author": "Guillaume",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [
+        "meta-skill",
+        "refactoring",
+        "clarity",
+        "automation",
+        "quality"
+      ],
+      "dependencies": [
+        "skill-quality-auditor"
+      ],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "MIT",
+      "location": "Skills/Meta-skill/skill-code-simplifier/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Meta-skill/skill-code-simplifier",
+      "package": "packaged/skill-code-simplifier.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "skill-consistency-enforcer",
+      "category": "Meta-skill",
+      "version": "1.0.0",
+      "description": "Automatically enforce style guide and formatting standards across all skills. Checks frontmatter completeness, standardizes terminology, fixes formatting inconsistencies, validates tag conventions, and ensures section ordering. Runs on save or commit. Use when maintaining library consistency or onboarding new contributors.",
+      "author": "Guillaume",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [
+        "meta-skill",
+        "consistency",
+        "formatting",
+        "automation",
+        "standards"
+      ],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "MIT",
+      "location": "Skills/Meta-skill/skill-consistency-enforcer/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Meta-skill/skill-consistency-enforcer",
+      "package": "packaged/skill-consistency-enforcer.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "skill-creator",
+      "category": "Meta-skill",
+      "version": "1.0.0",
+      "description": "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations.",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "Complete terms in LICENSE.txt",
+      "location": "Skills/Meta-skill/skill-creator/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Meta-skill/skill-creator",
+      "package": "packaged/skill-creator.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "skill-dependency-mapper",
+      "category": "Meta-skill",
+      "version": "1.0.0",
+      "description": "Visualize and manage skill dependencies and relationships. Builds dependency graphs, detects circular dependencies, suggests skill composition, identifies orphaned skills, recommends splitting, generates Mermaid diagrams, and tracks skill families. Use when organizing library, planning new skills, refactoring existing skills, or understanding skill relationships.",
+      "author": "Guillaume",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [
+        "meta-skill",
+        "dependencies",
+        "visualization",
+        "architecture",
+        "organization"
+      ],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "MIT",
+      "location": "Skills/Meta-skill/skill-dependency-mapper/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Meta-skill/skill-dependency-mapper",
+      "package": "packaged/skill-dependency-mapper.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "skill-documentation-generator",
+      "category": "Meta-skill",
+      "version": "1.0.0",
+      "description": "Auto-generate comprehensive documentation from skills in multiple formats (PDF, HTML, EPUB, Markdown). Converts skills to static sites (Docusaurus/GitBook), generates API docs from scripts, creates video tutorials, builds searchable indexes, and exports for non-AI use. Use when publishing skills or creating external documentation.",
+      "author": "Guillaume",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [
+        "meta-skill",
+        "documentation",
+        "export",
+        "publishing",
+        "automation"
+      ],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "MIT",
+      "location": "Skills/Meta-skill/skill-documentation-generator/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Meta-skill/skill-documentation-generator",
+      "package": "packaged/skill-documentation-generator.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "skill-example-validator",
+      "category": "Meta-skill",
+      "version": "1.0.0",
+      "description": "Validate all commands and examples in skills are executable and produce expected outputs. Tests commands in sandbox, checks HTTP URLs, verifies file paths, validates environment variables, and generates test reports. Use before releases, in CI/CD, or when updating examples.",
+      "author": "Guillaume",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [
+        "meta-skill",
+        "validation",
+        "testing",
+        "quality",
+        "automation"
+      ],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "MIT",
+      "location": "Skills/Meta-skill/skill-example-validator/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Meta-skill/skill-example-validator",
+      "package": "packaged/skill-example-validator.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "skill-quality-auditor",
+      "category": "Meta-skill",
+      "version": "1.0.0",
+      "description": "Automatically audit skills for quality, completeness, and best practices. Scans SKILL.md for required sections, validates command executability, checks metadata completeness, analyzes readability metrics, detects broken links, and generates quality scores (0-100) with actionable improvement suggestions. Use when creating new skills, before packaging, during skill reviews, or auditing entire library.",
+      "author": "Guillaume",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [
+        "meta-skill",
+        "quality",
+        "validation",
+        "best-practices",
+        "automation"
+      ],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "MIT",
+      "location": "Skills/Meta-skill/skill-quality-auditor/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Meta-skill/skill-quality-auditor",
+      "package": "packaged/skill-quality-auditor.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "skill-test-generator",
+      "category": "Meta-skill",
+      "version": "1.0.0",
+      "description": "Automatically generate test cases and validation scripts for skills. Extracts commands from SKILL.md, creates test scripts (bash/pytest), generates test fixtures, validates expected outputs, tests failure modes, and supports CI/CD integration. Use when creating skills, before releases, or establishing regression test suites.",
+      "author": "Guillaume",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [
+        "meta-skill",
+        "testing",
+        "validation",
+        "automation",
+        "quality"
+      ],
+      "dependencies": [
+        "skill-quality-auditor"
+      ],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "MIT",
+      "location": "Skills/Meta-skill/skill-test-generator/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Meta-skill/skill-test-generator",
+      "package": "packaged/skill-test-generator.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "skills-store-access",
+      "category": "Meta-skill",
+      "version": "1.0.0",
+      "description": "MAIN ENTRY POINT - Equip any AI system (Claude Code, Claude.ai, Claude API, Cursor, or any platform) with complete Skills store capabilities. This foundational skill enables intelligent skill discovery, proactive installation, and lifecycle management without filling context. Works with any system supporting Claude skills - platform-aware installation auto-detects environment and uses appropriate method. Once equipped, create, store, fetch, search, discover, and manage skills in the Skills_librairie repository. Includes lightweight discovery system (90%+ context reduction), intelligent task analysis, proactive installation for ongoing projects, and complete cross-platform compatibility. Use when you need to equip any AI system with Skills store access, discover relevant skills for tasks, install skills proactively, or manage skills across platforms. The Skills store is located at https://github.com/GuillaumeBld/Skills_librairie and contains organized skills by category in the Skills/ directory.",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "MIT",
+      "location": "Skills/Meta-skill/skills-store-access/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Meta-skill/skills-store-access",
+      "package": "packaged/skills-store-access.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "superpowers",
+      "category": "Meta-skill",
+      "version": "1.0.0",
+      "description": "Foundational skill that teaches agents how to use skills to their best capabilities. Enables structured development workflows using test-driven development, systematic debugging, collaborative planning, subagent-driven development, and proper code review. Helps agents work systematically rather than ad-hoc, emphasizing TDD, YAGNI, DRY principles, and evidence-based verification. Use when agents need to work on software development tasks, debug issues, plan implementations, execute tasks in batches, or collaborate on code reviews. Based on obra/superpowers methodology for Claude Code.",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "MIT",
+      "location": "Skills/Meta-skill/superpowers/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Meta-skill/superpowers",
+      "package": "packaged/superpowers.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "superpowers-lab",
+      "category": "Meta-skill",
+      "version": "1.0.0",
+      "description": "Experimental skills for Claude Code Superpowers - new techniques still being refined and tested. Skills here may change over time. Use when exploring experimental development workflows, testing new skill techniques, or trying cutting-edge approaches to agent-assisted development. Based on obra/superpowers-lab.",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "MIT",
+      "location": "Skills/Meta-skill/superpowers-lab/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Meta-skill/superpowers-lab",
+      "package": "packaged/superpowers-lab.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "claude-scientific-skills",
+      "category": "Scientific",
+      "version": "1.0.0",
+      "description": "Comprehensive collection of ready-to-use scientific skills, including working with specialized scientific libraries and databases. Use when performing scientific computing, data analysis, working with scientific databases, running simulations, or processing scientific data. Based on K-Dense-AI/claude-scientific-skills.",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "MIT",
+      "location": "Skills/Scientific/claude-scientific-skills/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Scientific/claude-scientific-skills",
+      "package": "packaged/claude-scientific-skills.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "ffuf-web-fuzzing",
+      "category": "Security",
+      "version": "1.0.0",
+      "description": "Expert guidance for ffuf web fuzzing during penetration testing, including authenticated fuzzing with raw requests, auto-calibration, and result analysis. Use when performing web application security testing, fuzzing endpoints, testing authentication mechanisms, or conducting penetration tests. Based on jthack/ffuf_claude_skill.",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "MIT",
+      "location": "Skills/Security/ffuf-web-fuzzing/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/Security/ffuf-web-fuzzing",
+      "package": "packaged/ffuf-web-fuzzing.skill",
+      "size": "N/A"
+    },
+    {
+      "name": "skill-library-manager",
+      "category": "Uncategorized",
+      "version": "1.0.0",
+      "description": "No description available",
+      "author": "Unknown",
+      "created": "2026-01-10",
+      "updated": "2026-01-10",
+      "tags": [],
+      "dependencies": [],
+      "compatibility": [
+        "claude.ai",
+        "claude-code"
+      ],
+      "license": "MIT",
+      "location": "Skills/skill-library-manager/",
+      "absolute_path": "/Users/guillaumebld/Documents/Skills/Skills_librairie/Skills/skill-library-manager",
+      "package": "packaged/skill-library-manager.skill",
+      "size": "N/A"
+    }
+  ],
+  "categories": {
+    "AI-Agents": [
+      "loki-mode",
+      "rag-pipeline-expert"
+    ],
+    "Automation": [
+      "n8n-code-javascript",
+      "n8n-code-python",
+      "n8n-expression-syntax",
+      "n8n-mcp-tools-expert",
+      "n8n-node-configuration",
+      "n8n-validation-expert",
+      "n8n-workflow-patterns"
+    ],
+    "Communication": [
+      "brand-guidelines",
+      "doc-coauthoring",
+      "internal-comms"
+    ],
+    "Design-Creative": [
+      "algorithmic-art",
+      "canvas-design",
+      "claude-d3js-skill",
+      "frontend-design",
+      "slack-gif-creator",
+      "theme-factory",
+      "web-asset-generator"
+    ],
+    "Development": [
+      "ios-simulator-skill",
+      "mcp-builder",
+      "playwright-skill",
+      "web-artifacts-builder",
+      "webapp-testing"
+    ],
+    "Document-Generation": [
+      "docx",
+      "pdf",
+      "pptx",
+      "xlsx"
+    ],
+    "Infrastructure-DevOps": [
+      "docker-development-workflow",
+      "vps-daily-operations",
+      "vps-deployment-stack"
+    ],
+    "Meta-skill": [
+      "skill-code-simplifier",
+      "skill-consistency-enforcer",
+      "skill-creator",
+      "skill-dependency-mapper",
+      "skill-documentation-generator",
+      "skill-example-validator",
+      "skill-quality-auditor",
+      "skill-test-generator",
+      "skills-store-access",
+      "superpowers",
+      "superpowers-lab"
+    ],
+    "Scientific": [
+      "claude-scientific-skills"
+    ],
+    "Security": [
+      "ffuf-web-fuzzing"
+    ],
+    "Uncategorized": [
+      "skill-library-manager"
+    ]
+  },
+  "stats": {
+    "total_skills": 45,
+    "total_categories": 11,
+    "last_scan": "2026-01-10T12:08:33.960440"
+  }
+}

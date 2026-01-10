@@ -9,7 +9,26 @@ import json
 import sys
 from pathlib import Path
 
-LIBRARY_ROOT = os.getenv('LIBRARY_ROOT', os.path.expanduser('~/Skills_librairie'))
+# Get script directory and find library root dynamically (same logic as catalog-builder.py)
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+LIBRARY_ROOT = os.getenv('LIBRARY_ROOT')
+if not LIBRARY_ROOT:
+    # Walk up from script location to find repository root
+    current = SCRIPT_DIR
+    while current != os.path.dirname(current):  # Stop at filesystem root
+        if os.path.basename(current) == 'Skills_librairie' or os.path.basename(current) == 'Skills_store':
+            LIBRARY_ROOT = current
+            break
+        # Check if we're in a repo by looking for Skills/ directory
+        skills_candidate = os.path.join(current, 'Skills')
+        if os.path.exists(skills_candidate) and os.path.isdir(skills_candidate):
+            LIBRARY_ROOT = current
+            break
+        current = os.path.dirname(current)
+    else:
+        # Fallback to default
+        LIBRARY_ROOT = os.path.expanduser('~/Skills_librairie')
+
 CATALOG_FILE = os.path.join(LIBRARY_ROOT, 'catalog.json')
 
 def load_catalog():

@@ -12,10 +12,48 @@ The first gives you access to the Skills store, the second teaches you how to us
 Repository: https://github.com/GuillaumeBld/Skills_librairie
 
 After reading both skills (or just skills-store-access if superpowers isn't available yet):
-1. Install the skill-library-manager skill from the repository
-2. Generate the skills discovery index
-3. Verify you can discover and use skills from the Skills_librairie repository
-4. Confirm you understand how to use superpowers methodology for systematic workflows (if available)
+
+1. **Clone the repository** (if not already done):
+   ```bash
+   git clone https://github.com/GuillaumeBld/Skills_librairie.git <your-path>/Skills_librairie
+   cd <your-path>/Skills_librairie
+   ```
+
+2. **Set LIBRARY_ROOT environment variable** (optional, but recommended):
+   ```bash
+   export LIBRARY_ROOT="<your-path>/Skills_librairie"
+   ```
+   The scripts will auto-detect the library root by walking up from their location, but setting this explicitly helps.
+
+3. **Build the catalog** (generates catalog.json from all skills):
+   ```bash
+   python3 Skills/skill-library-manager/scripts/catalog-builder.py
+   ```
+   This script:
+   - Auto-detects LIBRARY_ROOT if not set
+   - Finds the `Skills/` directory (capital S)
+   - Scans recursively through all category subdirectories
+   - Extracts metadata from each SKILL.md file
+   - Generates catalog.json with all skills and categories
+
+4. **Generate the lightweight skills discovery index**:
+   ```bash
+   python3 Skills/Meta-skill/skills-store-access/scripts/generate-skills-index.py
+   ```
+   This creates skills-index.json for efficient skill discovery.
+
+5. **Verify installation** by searching for skills:
+   ```bash
+   python3 Skills/skill-library-manager/scripts/search-skills.py --all
+   ```
+
+6. **Confirm understanding** of superpowers methodology for systematic workflows (if available).
+
+**Important Notes**:
+- The repository uses `Skills/` (capital S) directory, not `skills/` (lowercase)
+- Skills are organized in categories: `Skills/Meta-skill/`, `Skills/Development/`, etc.
+- The scripts automatically handle case sensitivity and path detection
+- If you cloned to a non-standard location, set LIBRARY_ROOT to help the scripts find it
 
 If you're reading this locally (repository cloned), you can read superpowers from:
-- Local path: Skills/Meta-skill/superpowers/SKILL.md
+- Local path: `Skills/Meta-skill/superpowers/SKILL.md`

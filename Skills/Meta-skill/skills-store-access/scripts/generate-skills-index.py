@@ -12,15 +12,31 @@ import sys
 from pathlib import Path
 from datetime import datetime
 
-LIBRARY_ROOT = os.getenv('LIBRARY_ROOT', os.path.expanduser('~/Skills_librairie'))
+# Get script directory and find library root dynamically (same logic as catalog-builder.py)
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+LIBRARY_ROOT = os.getenv('LIBRARY_ROOT')
 if not LIBRARY_ROOT:
-    # Try common locations
-    for path in ['/Users/guillaumebld/Documents/Skills/Skills_librairie', 
-                 os.path.expanduser('~/Documents/Skills/Skills_librairie'),
-                 os.path.expanduser('~/Skills_librairie')]:
-        if os.path.exists(path):
-            LIBRARY_ROOT = path
+    # Walk up from script location to find repository root
+    current = SCRIPT_DIR
+    while current != os.path.dirname(current):  # Stop at filesystem root
+        if os.path.basename(current) == 'Skills_librairie' or os.path.basename(current) == 'Skills_store':
+            LIBRARY_ROOT = current
             break
+        # Check if we're in a repo by looking for Skills/ directory
+        skills_candidate = os.path.join(current, 'Skills')
+        if os.path.exists(skills_candidate) and os.path.isdir(skills_candidate):
+            LIBRARY_ROOT = current
+            break
+        current = os.path.dirname(current)
+    else:
+        # Fallback to default or try common locations
+        for path in [os.path.expanduser('~/Skills_librairie'),
+                     os.path.expanduser('~/Documents/Skills/Skills_librairie')]:
+            if os.path.exists(path):
+                LIBRARY_ROOT = path
+                break
+        else:
+            LIBRARY_ROOT = os.path.expanduser('~/Skills_librairie')  # Final fallback
 
 CATALOG_FILE = os.path.join(LIBRARY_ROOT, 'catalog.json')
 INDEX_FILE = os.path.join(LIBRARY_ROOT, 'skills-index.json')
@@ -59,27 +75,41 @@ def build_lightweight_index(catalog):
         # Extract minimal metadata
         description = skill.get('description', '')
         
-        # Determine category from location or catalog field
-        category = skill.get('category', 'uncategorized')
-        if not category or category == 'uncategorized':
-            # Try to infer from location path
+        # Get category from catalog field (should be set by catalog-builder.py from path structure)
+        category = skill.get('category', 'Uncategorized')
+        
+        # If category is still missing or Uncategorized, try to infer from location path as fallback
+        if not category or category == 'Uncategorized' or category == 'uncategorized':
             location = skill.get('location', '')
-            if 'Meta-skill' in location:
-                category = 'Meta-skill'
-            elif 'Automation' in location:
-                category = 'Automation'
-            elif 'Infrastructure-DevOps' in location:
-                category = 'Infrastructure-DevOps'
-            elif 'Development' in location:
-                category = 'Development'
-            elif 'Design-Creative' in location:
-                category = 'Design-Creative'
-            elif 'Communication' in location:
-                category = 'Communication'
-            elif 'Document-Generation' in location:
-                category = 'Document-Generation'
-            elif 'AI-Agents' in location:
-                category = 'AI-Agents'
+            # Extract category from path like Skills/Meta-skill/superpowers/
+            path_parts = location.strip('/').split('/')
+            if len(path_parts) >= 2:
+                inferred_category = path_parts[1]  # Skills/Category/Skill -> Category
+                if inferred_category and inferred_category != 'Skills':
+                    category = inferred_category
+            # Legacy fallback: check location string
+            if category == 'Uncategorized' or category == 'uncategorized':
+                location_lower = location.lower()
+                if 'meta-skill' in location_lower:
+                    category = 'Meta-skill'
+                elif 'automation' in location_lower:
+                    category = 'Automation'
+                elif 'infrastructure-devops' in location_lower or 'infrastructure' in location_lower:
+                    category = 'Infrastructure-DevOps'
+                elif 'development' in location_lower:
+                    category = 'Development'
+                elif 'design-creative' in location_lower or 'design' in location_lower:
+                    category = 'Design-Creative'
+                elif 'communication' in location_lower:
+                    category = 'Communication'
+                elif 'document-generation' in location_lower or 'document' in location_lower:
+                    category = 'Document-Generation'
+                elif 'ai-agents' in location_lower or 'ai' in location_lower:
+                    category = 'AI-Agents'
+                elif 'security' in location_lower:
+                    category = 'Security'
+                elif 'scientific' in location_lower:
+                    category = 'Scientific'
         
         # Build lightweight entry
         entry = {
@@ -96,8 +126,8 @@ def build_lightweight_index(catalog):
         
         skills_index.append(entry)
     
-    # Sort by name for consistent ordering
-    skills_index.sort(key=lambda x: x['name'])
+    # Sort by category, then name for consistent ordering
+    skills_index.sort(key=lambda x: (x.get('category', 'Uncategorized'), x['name']))
     
     return {
         "version": "1.0.0",

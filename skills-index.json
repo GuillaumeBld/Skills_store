@@ -1,0 +1,854 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-01-10T12:09:03.030740",
+  "total_skills": 45,
+  "skills": [
+    {
+      "name": "loki-mode",
+      "description": "Multi-agent autonomous startup system - orchestrates 37 AI agents across 6 swarms to build, deploy, and operate a complete startup from PRD to revenue. Use when building complete startup systems, orchestrating multiple AI agents, automating full-stack development, or managing complex multi-agent workflows. Based on asklokesh/claudeskill-loki-mode.",
+      "tags": [],
+      "category": "AI-Agents",
+      "keywords": [
+        "across",
+        "agent",
+        "agents",
+        "asklokesh",
+        "automating",
+        "autonomous",
+        "based",
+        "build",
+        "building",
+        "claudeskill"
+      ]
+    },
+    {
+      "name": "rag-pipeline-expert",
+      "description": "Expert guidance for building complete RAG (Retrieval-Augmented Generation) pipelines with web scraping ingestion, vector databases, chunking strategies, and AI agent-based retrieval. Use when building RAG systems, implementing web scraping for knowledge bases, optimizing retrieval accuracy, choosing vector databases, configuring chunking strategies, or designing agentic retrieval patterns. Covers both pure Python/Docker...",
+      "tags": [],
+      "category": "AI-Agents",
+      "keywords": [
+        "accuracy",
+        "agent",
+        "agentic",
+        "all",
+        "augmented",
+        "autogen",
+        "balanced",
+        "based",
+        "bases",
+        "both"
+      ]
+    },
+    {
+      "name": "n8n-code-javascript",
+      "description": "Write JavaScript code in n8n Code nodes. Use when writing JavaScript in n8n, using $input/$json/$node syntax, making HTTP requests with $helpers, working with dates using DateTime, troubleshooting Code node errors, or choosing between Code node modes.",
+      "tags": [],
+      "category": "Automation",
+      "keywords": [
+        "between",
+        "choosing",
+        "code",
+        "dates",
+        "datetime",
+        "errors",
+        "helpers",
+        "http",
+        "input",
+        "javascript"
+      ]
+    },
+    {
+      "name": "n8n-code-python",
+      "description": "Write Python code in n8n Code nodes. Use when writing Python in n8n, using _input/_json/_node syntax, working with standard library, or need to understand Python limitations in n8n Code nodes.",
+      "tags": [],
+      "category": "Automation",
+      "keywords": [
+        "code",
+        "library",
+        "limitations",
+        "n8n",
+        "need",
+        "nodes",
+        "python",
+        "standard",
+        "syntax",
+        "understand"
+      ]
+    },
+    {
+      "name": "n8n-expression-syntax",
+      "description": "Validate n8n expression syntax and fix common errors. Use when writing n8n expressions, using {{}} syntax, accessing $json/$node variables, troubleshooting expression errors, or working with webhook data in workflows.",
+      "tags": [],
+      "category": "Automation",
+      "keywords": [
+        "accessing",
+        "common",
+        "data",
+        "errors",
+        "expression",
+        "expressions",
+        "fix",
+        "json",
+        "n8n",
+        "node"
+      ]
+    },
+    {
+      "name": "n8n-mcp-tools-expert",
+      "description": "Expert guide for using n8n-mcp MCP tools effectively. Use when searching for nodes, validating configurations, accessing templates, managing workflows, or using any n8n-mcp tool. Provides tool selection guidance, parameter formats, and common patterns.",
+      "tags": [],
+      "category": "Automation",
+      "keywords": [
+        "accessing",
+        "any",
+        "common",
+        "configurations",
+        "effectively",
+        "expert",
+        "formats",
+        "guidance",
+        "guide",
+        "managing"
+      ]
+    },
+    {
+      "name": "n8n-node-configuration",
+      "description": "Operation-aware node configuration guidance. Use when configuring nodes, understanding property dependencies, determining required fields, choosing between get_node detail levels, or learning common configuration patterns by node type.",
+      "tags": [],
+      "category": "Automation",
+      "keywords": [
+        "aware",
+        "between",
+        "choosing",
+        "common",
+        "configuration",
+        "configuring",
+        "dependencies",
+        "detail",
+        "determining",
+        "fields"
+      ]
+    },
+    {
+      "name": "n8n-validation-expert",
+      "description": "Interpret validation errors and guide fixing them. Use when encountering validation errors, validation warnings, false positives, operator structure issues, or need help understanding validation results. Also use when asking about validation profiles, error types, or the validation loop process.",
+      "tags": [],
+      "category": "Automation",
+      "keywords": [
+        "about",
+        "also",
+        "asking",
+        "encountering",
+        "error",
+        "errors",
+        "expert",
+        "false",
+        "fixing",
+        "guide"
+      ]
+    },
+    {
+      "name": "n8n-workflow-patterns",
+      "description": "Proven workflow architectural patterns from real n8n workflows. Use when building new workflows, designing workflow structure, choosing workflow patterns, planning workflow architecture, or asking about webhook processing, HTTP API integration, database operations, AI agent workflows, or scheduled tasks.",
+      "tags": [],
+      "category": "Automation",
+      "keywords": [
+        "about",
+        "agent",
+        "api",
+        "architectural",
+        "architecture",
+        "asking",
+        "building",
+        "choosing",
+        "database",
+        "designing"
+      ]
+    },
+    {
+      "name": "brand-guidelines",
+      "description": "Applies Anthropic's official brand colors and typography to any sort of artifact that may benefit from having Anthropic's look-and-feel. Use it when brand colors or style guidelines, visual formatting, or company design standards apply.",
+      "tags": [],
+      "category": "Communication",
+      "keywords": [
+        "anthropic",
+        "any",
+        "applies",
+        "apply",
+        "artifact",
+        "benefit",
+        "brand",
+        "colors",
+        "company",
+        "design"
+      ]
+    },
+    {
+      "name": "doc-coauthoring",
+      "description": "Guide users through a structured workflow for co-authoring documentation. Use when user wants to write documentation, proposals, technical specs, decision docs, or similar structured content. This workflow helps users efficiently transfer context, refine content through iteration, and verify the doc works for readers. Trigger when user mentions writing docs, creating...",
+      "tags": [],
+      "category": "Communication",
+      "keywords": [
+        "authoring",
+        "coauthoring",
+        "content",
+        "context",
+        "creating",
+        "decision",
+        "doc",
+        "docs",
+        "documentation",
+        "drafting"
+      ]
+    },
+    {
+      "name": "internal-comms",
+      "description": "A set of resources to help me write all kinds of internal communications, using the formats that my company likes to use. Claude should use this skill whenever asked to write some sort of internal communications (status reports, leadership updates, 3P updates, company newsletters, FAQs, incident reports, project updates, etc.).",
+      "tags": [],
+      "category": "Communication",
+      "keywords": [
+        "all",
+        "asked",
+        "claude",
+        "comms",
+        "communications",
+        "company",
+        "etc",
+        "faqs",
+        "formats",
+        "help"
+      ]
+    },
+    {
+      "name": "algorithmic-art",
+      "description": "Creating algorithmic art using p5.js with seeded randomness and interactive parameter exploration. Use this when users request creating art using code, generative art, algorithmic art, flow fields, or particle systems. Create original algorithmic art rather than copying existing artists' work to avoid copyright violations.",
+      "tags": [],
+      "category": "Design-Creative",
+      "keywords": [
+        "algorithmic",
+        "art",
+        "artists",
+        "avoid",
+        "code",
+        "copying",
+        "copyright",
+        "create",
+        "creating",
+        "existing"
+      ]
+    },
+    {
+      "name": "canvas-design",
+      "description": "Create beautiful visual art in .png and .pdf documents using design philosophy. You should use this skill when the user asks to create a poster, piece of art, design, or other static piece. Create original visual designs, never copying existing artists' work to avoid copyright violations.",
+      "tags": [],
+      "category": "Design-Creative",
+      "keywords": [
+        "art",
+        "artists",
+        "asks",
+        "avoid",
+        "beautiful",
+        "canvas",
+        "copying",
+        "copyright",
+        "create",
+        "design"
+      ]
+    },
+    {
+      "name": "claude-d3js-skill",
+      "description": "Create data visualizations using d3.js for interactive charts, graphs, and data-driven visualizations. Use when creating interactive data visualizations, building charts and graphs, visualizing datasets, or creating data-driven art. Based on chrisvoncsefalvay/claude-d3js-skill.",
+      "tags": [],
+      "category": "Design-Creative",
+      "keywords": [
+        "art",
+        "based",
+        "building",
+        "charts",
+        "chrisvoncsefalvay",
+        "claude",
+        "create",
+        "creating",
+        "d3js",
+        "data"
+      ]
+    },
+    {
+      "name": "frontend-design",
+      "description": "Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, artifacts, posters, or applications (examples include websites, landing pages, dashboards, React components, HTML/CSS layouts, or when styling/beautifying any web UI). Generates creative, polished code and UI design that avoids...",
+      "tags": [],
+      "category": "Design-Creative",
+      "keywords": [
+        "aesthetics",
+        "any",
+        "applications",
+        "artifacts",
+        "asks",
+        "avoids",
+        "beautifying",
+        "build",
+        "code",
+        "components"
+      ]
+    },
+    {
+      "name": "slack-gif-creator",
+      "description": "Knowledge and utilities for creating animated GIFs optimized for Slack. Provides constraints, validation tools, and animation concepts. Use when users request animated GIFs for Slack like \"make me a GIF of X doing Y for Slack.\"",
+      "tags": [],
+      "category": "Design-Creative",
+      "keywords": [
+        "animated",
+        "animation",
+        "concepts",
+        "constraints",
+        "creating",
+        "creator",
+        "doing",
+        "gif",
+        "gifs",
+        "knowledge"
+      ]
+    },
+    {
+      "name": "theme-factory",
+      "description": "Toolkit for styling artifacts with a theme. These artifacts can be slides, docs, reportings, HTML landing pages, etc. There are 10 pre-set themes with colors/fonts that you can apply to any artifact that has been creating, or can generate a new theme on-the-fly.",
+      "tags": [],
+      "category": "Design-Creative",
+      "keywords": [
+        "any",
+        "apply",
+        "artifact",
+        "artifacts",
+        "colors",
+        "creating",
+        "docs",
+        "etc",
+        "factory",
+        "fly"
+      ]
+    },
+    {
+      "name": "web-asset-generator",
+      "description": "Generates web assets like favicons, app icons, and social media images for web applications. Use when creating favicons, generating app icons, creating social media preview images, optimizing web assets, or preparing assets for deployment. Based on alonw0/web-asset-generator.",
+      "tags": [],
+      "category": "Design-Creative",
+      "keywords": [
+        "app",
+        "applications",
+        "asset",
+        "assets",
+        "based",
+        "creating",
+        "deployment",
+        "favicons",
+        "generates",
+        "generating"
+      ]
+    },
+    {
+      "name": "ios-simulator-skill",
+      "description": "iOS app building, navigation, and testing through automation. Uses semantic navigation on accessibility APIs to interact with iOS simulators by meaning, not pixel coordinates. Includes 21 production scripts for building, testing, navigation, accessibility audits, visual testing, and device lifecycle management. Works across different screen sizes and survives UI redesigns. Token...",
+      "tags": [],
+      "category": "Development",
+      "keywords": [
+        "accessibility",
+        "across",
+        "apis",
+        "app",
+        "applications",
+        "apps",
+        "audits",
+        "automating",
+        "automation",
+        "based"
+      ]
+    },
+    {
+      "name": "mcp-builder",
+      "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK).",
+      "tags": [],
+      "category": "Development",
+      "keywords": [
+        "apis",
+        "builder",
+        "building",
+        "context",
+        "creating",
+        "designed",
+        "enable",
+        "external",
+        "fastmcp",
+        "guide"
+      ]
+    },
+    {
+      "name": "playwright-skill",
+      "description": "General-purpose browser automation using Playwright for UI verification, testing, and debugging web applications. Use when testing web applications, automating browser interactions, verifying UI elements, debugging frontend issues, or performing end-to-end testing. Based on lackeyjb/playwright-skill.",
+      "tags": [],
+      "category": "Development",
+      "keywords": [
+        "applications",
+        "automating",
+        "automation",
+        "based",
+        "browser",
+        "debugging",
+        "elements",
+        "end",
+        "frontend",
+        "general"
+      ]
+    },
+    {
+      "name": "web-artifacts-builder",
+      "description": "Suite of tools for creating elaborate, multi-component claude.ai HTML artifacts using modern frontend web technologies (React, Tailwind CSS, shadcn/ui). Use for complex artifacts requiring state management, routing, or shadcn/ui components - not for simple single-file HTML/JSX artifacts.",
+      "tags": [],
+      "category": "Development",
+      "keywords": [
+        "artifacts",
+        "builder",
+        "claude",
+        "complex",
+        "component",
+        "components",
+        "creating",
+        "css",
+        "elaborate",
+        "file"
+      ]
+    },
+    {
+      "name": "webapp-testing",
+      "description": "Toolkit for interacting with and testing local web applications using Playwright. Supports verifying frontend functionality, debugging UI behavior, capturing browser screenshots, and viewing browser logs.",
+      "tags": [],
+      "category": "Development",
+      "keywords": [
+        "applications",
+        "behavior",
+        "browser",
+        "capturing",
+        "debugging",
+        "frontend",
+        "functionality",
+        "interacting",
+        "local",
+        "logs"
+      ]
+    },
+    {
+      "name": "docx",
+      "description": "Comprehensive document creation, editing, and analysis with support for tracked changes, comments, formatting preservation, and text extraction. When Claude needs to work with professional documents (.docx files) for: (1) Creating new documents, (2) Modifying or editing content, (3) Working with tracked changes, (4) Adding comments, or any other document tasks",
+      "tags": [],
+      "category": "Document-Generation",
+      "keywords": [
+        "adding",
+        "analysis",
+        "any",
+        "changes",
+        "claude",
+        "comments",
+        "comprehensive",
+        "content",
+        "creating",
+        "creation"
+      ]
+    },
+    {
+      "name": "pdf",
+      "description": "Comprehensive PDF manipulation toolkit for extracting text and tables, creating new PDFs, merging/splitting documents, and handling forms. When Claude needs to fill in a PDF form or programmatically process, generate, or analyze PDF documents at scale.",
+      "tags": [],
+      "category": "Document-Generation",
+      "keywords": [
+        "analyze",
+        "claude",
+        "comprehensive",
+        "creating",
+        "documents",
+        "extracting",
+        "fill",
+        "form",
+        "forms",
+        "generate"
+      ]
+    },
+    {
+      "name": "pptx",
+      "description": "Presentation creation, editing, and analysis. When Claude needs to work with presentations (.pptx files) for: (1) Creating new presentations, (2) Modifying or editing content, (3) Working with layouts, (4) Adding comments or speaker notes, or any other presentation tasks",
+      "tags": [],
+      "category": "Document-Generation",
+      "keywords": [
+        "adding",
+        "analysis",
+        "any",
+        "claude",
+        "comments",
+        "content",
+        "creating",
+        "creation",
+        "editing",
+        "files"
+      ]
+    },
+    {
+      "name": "xlsx",
+      "description": "Comprehensive spreadsheet creation, editing, and analysis with support for formulas, formatting, data analysis, and visualization. When Claude needs to work with spreadsheets (.xlsx, .xlsm, .csv, .tsv, etc) for: (1) Creating new spreadsheets with formulas and formatting, (2) Reading or analyzing data, (3) Modify existing spreadsheets while preserving formulas, (4) Data...",
+      "tags": [],
+      "category": "Document-Generation",
+      "keywords": [
+        "analysis",
+        "analyzing",
+        "claude",
+        "comprehensive",
+        "creating",
+        "creation",
+        "csv",
+        "data",
+        "editing",
+        "etc"
+      ]
+    },
+    {
+      "name": "docker-development-workflow",
+      "description": "Docker development workflow patterns including local development setup with hot-reload, production Dockerfile optimization using multi-stage builds, docker-compose for dev/staging/prod environments, CI/CD pipeline configuration with GitHub Actions, image size reduction techniques (70-90% smaller), and release management strategies. Use when setting up local Docker development, optimizing container images, implementing CI/CD for containerized...",
+      "tags": [],
+      "category": "Infrastructure-DevOps",
+      "keywords": [
+        "actions",
+        "apps",
+        "builds",
+        "compose",
+        "configuration",
+        "container",
+        "containerized",
+        "deployment",
+        "dev",
+        "development"
+      ]
+    },
+    {
+      "name": "vps-daily-operations",
+      "description": "VPS operational procedures including daily health checks, weekly maintenance, monitoring configuration, incident response, security hardening, and backup strategies. Use when setting up automated monitoring for Dokploy/Docker infrastructure, implementing SSH hardening with Fail2Ban, configuring backup routines, responding to incidents (disk full, OOM, compromised containers), or establishing operational runbooks. Includes ready-to-use bash...",
+      "tags": [],
+      "category": "Infrastructure-DevOps",
+      "keywords": [
+        "automated",
+        "automation",
+        "backup",
+        "bash",
+        "checks",
+        "compromised",
+        "configuration",
+        "configuring",
+        "containers",
+        "cron"
+      ]
+    },
+    {
+      "name": "vps-deployment-stack",
+      "description": "Deploy production-ready VPS infrastructure with Dokploy (PaaS), Traefik (reverse proxy with auto-TLS), Docker Compose, and Uptime Kuma (monitoring). Use when setting up a new VPS from scratch, configuring automatic HTTPS with Let's Encrypt, deploying Git-based applications with webhooks, or establishing monitoring infrastructure. Covers installation, DNS configuration, TLS setup, and validation...",
+      "tags": [],
+      "category": "Infrastructure-DevOps",
+      "keywords": [
+        "applications",
+        "auto",
+        "automatic",
+        "based",
+        "compose",
+        "configuration",
+        "configuring",
+        "covers",
+        "deploy",
+        "deploying"
+      ]
+    },
+    {
+      "name": "skill-code-simplifier",
+      "description": "Automatically refine and simplify skill content while preserving functionality. Based on Anthropic's code-simplifier pattern. Enhances clarity, enforces standards, reduces verbosity, eliminates redundancy, and maintains balance between brevity and understanding. Operates autonomously on recent changes. Use after editing skills or before packaging.",
+      "tags": [
+        "meta-skill",
+        "refactoring",
+        "clarity",
+        "automation",
+        "quality"
+      ],
+      "category": "Meta-skill",
+      "keywords": [
+        "after",
+        "anthropic",
+        "automatically",
+        "automation",
+        "autonomously",
+        "balance",
+        "based",
+        "before",
+        "between",
+        "brevity"
+      ]
+    },
+    {
+      "name": "skill-consistency-enforcer",
+      "description": "Automatically enforce style guide and formatting standards across all skills. Checks frontmatter completeness, standardizes terminology, fixes formatting inconsistencies, validates tag conventions, and ensures section ordering. Runs on save or commit. Use when maintaining library consistency or onboarding new contributors.",
+      "tags": [
+        "meta-skill",
+        "consistency",
+        "formatting",
+        "automation",
+        "standards"
+      ],
+      "category": "Meta-skill",
+      "keywords": [
+        "across",
+        "all",
+        "automatically",
+        "automation",
+        "checks",
+        "commit",
+        "completeness",
+        "consistency",
+        "contributors",
+        "conventions"
+      ]
+    },
+    {
+      "name": "skill-creator",
+      "description": "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations.",
+      "tags": [],
+      "category": "Meta-skill",
+      "keywords": [
+        "capabilities",
+        "claude",
+        "create",
+        "creating",
+        "creator",
+        "effective",
+        "existing",
+        "extends",
+        "guide",
+        "integrations"
+      ]
+    },
+    {
+      "name": "skill-dependency-mapper",
+      "description": "Visualize and manage skill dependencies and relationships. Builds dependency graphs, detects circular dependencies, suggests skill composition, identifies orphaned skills, recommends splitting, generates Mermaid diagrams, and tracks skill families. Use when organizing library, planning new skills, refactoring existing skills, or understanding skill relationships.",
+      "tags": [
+        "meta-skill",
+        "dependencies",
+        "visualization",
+        "architecture",
+        "organization"
+      ],
+      "category": "Meta-skill",
+      "keywords": [
+        "architecture",
+        "builds",
+        "circular",
+        "composition",
+        "dependencies",
+        "dependency",
+        "detects",
+        "diagrams",
+        "existing",
+        "families"
+      ]
+    },
+    {
+      "name": "skill-documentation-generator",
+      "description": "Auto-generate comprehensive documentation from skills in multiple formats (PDF, HTML, EPUB, Markdown). Converts skills to static sites (Docusaurus/GitBook), generates API docs from scripts, creates video tutorials, builds searchable indexes, and exports for non-AI use. Use when publishing skills or creating external documentation.",
+      "tags": [
+        "meta-skill",
+        "documentation",
+        "export",
+        "publishing",
+        "automation"
+      ],
+      "category": "Meta-skill",
+      "keywords": [
+        "api",
+        "auto",
+        "automation",
+        "builds",
+        "comprehensive",
+        "converts",
+        "creates",
+        "creating",
+        "docs",
+        "documentation"
+      ]
+    },
+    {
+      "name": "skill-example-validator",
+      "description": "Validate all commands and examples in skills are executable and produce expected outputs. Tests commands in sandbox, checks HTTP URLs, verifies file paths, validates environment variables, and generates test reports. Use before releases, in CI/CD, or when updating examples.",
+      "tags": [
+        "meta-skill",
+        "validation",
+        "testing",
+        "quality",
+        "automation"
+      ],
+      "category": "Meta-skill",
+      "keywords": [
+        "all",
+        "automation",
+        "before",
+        "checks",
+        "commands",
+        "environment",
+        "example",
+        "examples",
+        "executable",
+        "expected"
+      ]
+    },
+    {
+      "name": "skill-quality-auditor",
+      "description": "Automatically audit skills for quality, completeness, and best practices. Scans SKILL.md for required sections, validates command executability, checks metadata completeness, analyzes readability metrics, detects broken links, and generates quality scores (0-100) with actionable improvement suggestions. Use when creating new skills, before packaging, during skill reviews, or auditing entire library.",
+      "tags": [
+        "meta-skill",
+        "quality",
+        "validation",
+        "best-practices",
+        "automation"
+      ],
+      "category": "Meta-skill",
+      "keywords": [
+        "actionable",
+        "analyzes",
+        "audit",
+        "auditing",
+        "auditor",
+        "automatically",
+        "automation",
+        "before",
+        "best",
+        "best-practices"
+      ]
+    },
+    {
+      "name": "skill-test-generator",
+      "description": "Automatically generate test cases and validation scripts for skills. Extracts commands from SKILL.md, creates test scripts (bash/pytest), generates test fixtures, validates expected outputs, tests failure modes, and supports CI/CD integration. Use when creating skills, before releases, or establishing regression test suites.",
+      "tags": [
+        "meta-skill",
+        "testing",
+        "validation",
+        "automation",
+        "quality"
+      ],
+      "category": "Meta-skill",
+      "keywords": [
+        "automatically",
+        "automation",
+        "bash",
+        "before",
+        "cases",
+        "commands",
+        "creates",
+        "creating",
+        "establishing",
+        "expected"
+      ]
+    },
+    {
+      "name": "skills-store-access",
+      "description": "MAIN ENTRY POINT - Equip any AI system (Claude Code, Claude.ai, Claude API, Cursor, or any platform) with complete Skills store capabilities. This foundational skill enables intelligent skill discovery, proactive installation, and lifecycle management without filling context. Works with any system supporting Claude skills - platform-aware installation auto-detects environment and...",
+      "tags": [],
+      "category": "Meta-skill",
+      "keywords": [
+        "access",
+        "across",
+        "analysis",
+        "any",
+        "api",
+        "appropriate",
+        "auto",
+        "aware",
+        "capabilities",
+        "category"
+      ]
+    },
+    {
+      "name": "superpowers",
+      "description": "Foundational skill that teaches agents how to use skills to their best capabilities. Enables structured development workflows using test-driven development, systematic debugging, collaborative planning, subagent-driven development, and proper code review. Helps agents work systematically rather than ad-hoc, emphasizing TDD, YAGNI, DRY principles, and evidence-based verification. Use when agents need to...",
+      "tags": [],
+      "category": "Meta-skill",
+      "keywords": [
+        "agents",
+        "based",
+        "batches",
+        "best",
+        "capabilities",
+        "claude",
+        "code",
+        "collaborate",
+        "collaborative",
+        "debug"
+      ]
+    },
+    {
+      "name": "superpowers-lab",
+      "description": "Experimental skills for Claude Code Superpowers - new techniques still being refined and tested. Skills here may change over time. Use when exploring experimental development workflows, testing new skill techniques, or trying cutting-edge approaches to agent-assisted development. Based on obra/superpowers-lab.",
+      "tags": [],
+      "category": "Meta-skill",
+      "keywords": [
+        "agent",
+        "approaches",
+        "assisted",
+        "based",
+        "change",
+        "claude",
+        "code",
+        "cutting",
+        "development",
+        "edge"
+      ]
+    },
+    {
+      "name": "claude-scientific-skills",
+      "description": "Comprehensive collection of ready-to-use scientific skills, including working with specialized scientific libraries and databases. Use when performing scientific computing, data analysis, working with scientific databases, running simulations, or processing scientific data. Based on K-Dense-AI/claude-scientific-skills.",
+      "tags": [],
+      "category": "Scientific",
+      "keywords": [
+        "analysis",
+        "based",
+        "claude",
+        "collection",
+        "comprehensive",
+        "computing",
+        "data",
+        "databases",
+        "dense",
+        "including"
+      ]
+    },
+    {
+      "name": "ffuf-web-fuzzing",
+      "description": "Expert guidance for ffuf web fuzzing during penetration testing, including authenticated fuzzing with raw requests, auto-calibration, and result analysis. Use when performing web application security testing, fuzzing endpoints, testing authentication mechanisms, or conducting penetration tests. Based on jthack/ffuf_claude_skill.",
+      "tags": [],
+      "category": "Security",
+      "keywords": [
+        "analysis",
+        "application",
+        "authenticated",
+        "authentication",
+        "auto",
+        "based",
+        "calibration",
+        "conducting",
+        "during",
+        "endpoints"
+      ]
+    },
+    {
+      "name": "skill-library-manager",
+      "description": "No description available",
+      "tags": [],
+      "category": "skill-library-manager",
+      "keywords": [
+        "available",
+        "description",
+        "library",
+        "manager",
+        "skill"
+      ]
+    }
+  ]
+}
