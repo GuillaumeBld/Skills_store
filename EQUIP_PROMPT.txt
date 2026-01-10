@@ -1,0 +1,6 @@
+Equip yourself with Skills Librairie capabilities by reading and following:
+https://raw.githubusercontent.com/GuillaumeBld/Skills_librairie/main/Skills/Meta-skill/skills-store-access/SKILL.md
+
+Repository: https://github.com/GuillaumeBld/Skills_librairie
+
+After reading, equip yourself with Skills Librairie access by installing the skill-library-manager and verifying you can discover and use skills from the repository.

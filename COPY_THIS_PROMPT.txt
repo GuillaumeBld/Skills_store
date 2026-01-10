@@ -1,0 +1,21 @@
+Read these skills and equip yourself with Skills Librairie capabilities:
+
+1. https://raw.githubusercontent.com/GuillaumeBld/Skills_librairie/main/Skills/Meta-skill/skills-store-access/SKILL.md
+2. https://raw.githubusercontent.com/GuillaumeBld/Skills_librairie/main/Skills/Meta-skill/superpowers/SKILL.md
+
+The first gives you access to the Skills store, the second teaches you how to use skills to their best capabilities (TDD, systematic debugging, collaborative planning).
+
+**Note**: If the superpowers skill URL returns 404, it means it hasn't been pushed to GitHub yet. In that case:
+- Use skills-store-access first to equip yourself with Skills store capabilities
+- The superpowers skill will be available once pushed, or you can read it from the cloned repository locally
+
+Repository: https://github.com/GuillaumeBld/Skills_librairie
+
+After reading both skills (or just skills-store-access if superpowers isn't available yet):
+1. Install the skill-library-manager skill from the repository
+2. Generate the skills discovery index
+3. Verify you can discover and use skills from the Skills_librairie repository
+4. Confirm you understand how to use superpowers methodology for systematic workflows (if available)
+
+If you're reading this locally (repository cloned), you can read superpowers from:
+- Local path: Skills/Meta-skill/superpowers/SKILL.md

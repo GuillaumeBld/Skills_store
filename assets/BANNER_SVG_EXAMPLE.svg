@@ -1,0 +1,49 @@
+<!-- Example SVG Banner - Customize colors and content -->
+<svg width="1200" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffd89b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#19547b;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="400" fill="url(#bgGradient)" rx="10"/>
+  
+  <!-- Title -->
+  <text x="600" y="150" font-family="Arial, sans-serif" font-size="72" font-weight="bold" 
+        fill="url(#textGradient)" text-anchor="middle">⭐ Skills Librairie ⭐</text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="200" font-family="Arial, sans-serif" font-size="28" 
+        fill="#ffffff" text-anchor="middle">Organized • Intelligent • Platform-Agnostic</text>
+  
+  <!-- Main Entry Point -->
+  <rect x="400" y="240" width="400" height="60" rx="10" fill="#ffffff" opacity="0.2"/>
+  <text x="600" y="280" font-family="Arial, sans-serif" font-size="20" 
+        fill="#ffffff" text-anchor="middle">Main Entry Point: skills-store-access</text>
+  
+  <!-- Category nodes (simplified) -->
+  <circle cx="200" cy="320" r="30" fill="#4ecdc4" opacity="0.8"/>
+  <text x="200" y="328" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Meta</text>
+  
+  <circle cx="400" cy="320" r="30" fill="#45b7d1" opacity="0.8"/>
+  <text x="400" y="328" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Dev</text>
+  
+  <circle cx="600" cy="320" r="30" fill="#f9ca24" opacity="0.8"/>
+  <text x="600" y="328" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Design</text>
+  
+  <circle cx="800" cy="320" r="30" fill="#6c5ce7" opacity="0.8"/>
+  <text x="800" y="328" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Auto</text>
+  
+  <circle cx="1000" cy="320" r="30" fill="#fd79a8" opacity="0.8"/>
+  <text x="1000" y="328" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">AI</text>
+  
+  <!-- Central hub -->
+  <circle cx="600" cy="260" r="15" fill="#ff6b6b" opacity="1"/>
+</svg>
