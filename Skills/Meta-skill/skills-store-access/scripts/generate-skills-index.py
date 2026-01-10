@@ -36,7 +36,7 @@ if not LIBRARY_ROOT:
                 LIBRARY_ROOT = path
                 break
         else:
-            LIBRARY_ROOT = os.path.expanduser('~/Skills_librairie')  # Final fallback
+            LIBRARY_ROOT = os.path.expanduser('~/Documents/Skills/Skills_librairie')  # Final fallback
 
 CATALOG_FILE = os.path.join(LIBRARY_ROOT, 'catalog.json')
 INDEX_FILE = os.path.join(LIBRARY_ROOT, 'skills-index.json')

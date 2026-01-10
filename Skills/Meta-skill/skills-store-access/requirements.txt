@@ -1,0 +1,12 @@
+# JAAT-Enhanced Skill Auto-Discovery System Dependencies
+
+# Core JAAT library for standardized skill/task extraction
+JAAT>=1.0.0
+
+# Web scraping and content fetching
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+markdownify>=0.11.0
+
+# Optional: For enhanced HTML parsing if needed
+lxml>=4.9.0

@@ -10,7 +10,7 @@ import json
 import sys
 from pathlib import Path
 
-LIBRARY_ROOT = os.getenv('LIBRARY_ROOT', os.path.expanduser('~/Skills_librairie'))
+LIBRARY_ROOT = os.getenv('LIBRARY_ROOT', os.path.expanduser('~/Documents/Skills/Skills_librairie'))
 INDEX_FILE = os.path.join(LIBRARY_ROOT, 'skills-index.json')
 
 def load_index():

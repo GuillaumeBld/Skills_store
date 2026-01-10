@@ -11,6 +11,28 @@ import re
 import subprocess
 from pathlib import Path
 
+# Try to import JAAT enhancement (optional)
+JAAT_AVAILABLE = False
+JAAT_FUNCTIONS = {}
+
+try:
+    # Import JAAT module by file path (handles hyphens in filename)
+    import importlib.util
+    jaat_module_path = os.path.join(os.path.dirname(__file__), 'jaat-enhanced-discovery.py')
+    if os.path.exists(jaat_module_path):
+        spec = importlib.util.spec_from_file_location("jaat_enhanced_discovery", jaat_module_path)
+        jaat_module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(jaat_module)
+        JAAT_FUNCTIONS = {
+            'extract_standardized_skills': jaat_module.extract_standardized_skills,
+            'combine_with_keyword_analysis': jaat_module.combine_with_keyword_analysis,
+            'normalize_for_catalog': jaat_module.normalize_for_catalog
+        }
+        JAAT_AVAILABLE = True
+except Exception:
+    # JAAT might not be installed or have issues - mark as unavailable
+    JAAT_AVAILABLE = False
+
 # Domain keywords that suggest specialized skills
 DOMAIN_KEYWORDS = {
     'devops': ['docker', 'kubernetes', 'k8s', 'deploy', 'ci/cd', 'infrastructure', 'vps', 'server', 'traefik', 'nginx'],
@@ -100,28 +122,70 @@ def should_install_proactively(complexity, relevance_score, is_ongoing=False):
     
     return False, "Not needed proactively"
 
-def discover_relevant_skills_for_task(query):
+def extract_with_jaat(query):
+    """Extract standardized skills using JAAT (optional enhancement)"""
+    if not JAAT_AVAILABLE or 'extract_standardized_skills' not in JAAT_FUNCTIONS:
+        return None
+    
+    try:
+        # Use JAAT to extract standardized skills
+        extract_func = JAAT_FUNCTIONS['extract_standardized_skills']
+        jaat_result = extract_func(query, task_threshold=0.85, skill_threshold=0.87)
+        if jaat_result.get('success'):
+            return jaat_result
+        else:
+            return None
+    except Exception as e:
+        # Silently fail - JAAT is optional
+        return None
+
+def discover_relevant_skills_for_task(query, jaat_enhanced=False):
     """Discover relevant skills using discover-skills script"""
     script_path = os.path.join(
         os.path.dirname(__file__),
         'discover-skills.py'
     )
     
-    try:
-        result = subprocess.run(
-            [sys.executable, script_path, query, '--json'],
-            capture_output=True,
-            text=True,
-            timeout=10
-        )
-        
-        if result.returncode == 0:
-            return json.loads(result.stdout)
-        else:
-            return []
-    except Exception as e:
-        print(f"Warning: Could not discover skills: {e}", file=sys.stderr)
-        return []
+    search_queries = [query]  # Default to original query
+    
+    # If JAAT is available and enabled, try to enhance search queries
+    if jaat_enhanced and JAAT_AVAILABLE and 'normalize_for_catalog' in JAAT_FUNCTIONS:
+        jaat_result = extract_with_jaat(query)
+        if jaat_result:
+            try:
+                normalize_func = JAAT_FUNCTIONS['normalize_for_catalog']
+                enhanced_queries = normalize_func(jaat_result)
+                if enhanced_queries:
+                    # Combine original query with JAAT-extracted queries
+                    search_queries = [query] + enhanced_queries[:3]  # Top 3 additional queries
+            except Exception:
+                pass  # Fall back to original query
+    
+    # Search using all queries and combine results
+    all_discovered = []
+    seen_skills = set()
+    
+    for search_query in search_queries:
+        try:
+            result = subprocess.run(
+                [sys.executable, script_path, search_query, '--json'],
+                capture_output=True,
+                text=True,
+                timeout=10
+            )
+            
+            if result.returncode == 0:
+                discovered = json.loads(result.stdout)
+                for skill in discovered:
+                    if skill.get('name') not in seen_skills:
+                        seen_skills.add(skill['name'])
+                        all_discovered.append(skill)
+        except Exception:
+            continue
+    
+    # Sort by relevance (if available)
+    all_discovered.sort(key=lambda x: x.get('relevance', 0), reverse=True)
+    return all_discovered[:10]  # Return top 10
 
 def main():
     """Main analysis function"""
@@ -145,6 +209,8 @@ Examples:
                         help='Skip actual skill discovery (analysis only)')
     parser.add_argument('--json', action='store_true',
                         help='Output as JSON')
+    parser.add_argument('--use-jaat', action='store_true',
+                        help='Use JAAT for enhanced skill extraction (if available)')
     
     args = parser.parse_args()
     
@@ -152,6 +218,21 @@ Examples:
     complexity = analyze_query_complexity(args.query)
     domains = identify_domains(args.query)
     should_check, check_reason = should_check_for_skills(complexity, domains, args.ongoing)
+    
+    # Try JAAT extraction if enabled and complexity suggests it
+    jaat_result = None
+    enhanced_analysis = None
+    if args.use_jaat and complexity > 0.4 and JAAT_AVAILABLE and 'combine_with_keyword_analysis' in JAAT_FUNCTIONS:
+        jaat_result = extract_with_jaat(args.query)
+        if jaat_result and jaat_result.get('success'):
+            try:
+                combine_func = JAAT_FUNCTIONS['combine_with_keyword_analysis']
+                enhanced_analysis = combine_func(jaat_result, domains, complexity)
+                # Update domains with JAAT-enhanced domains
+                if enhanced_analysis:
+                    domains = enhanced_analysis.get('domains', domains)
+            except Exception:
+                pass  # Fall back to keyword analysis
     
     result = {
         'query': args.query,
@@ -161,13 +242,21 @@ Examples:
         'check_reason': check_reason,
         'should_discover': False,
         'recommended_skills': [],
-        'proactive_installation': []
+        'proactive_installation': [],
+        'jaat_enhanced': jaat_result is not None and jaat_result.get('success', False),
+        'onet_tasks_count': 0,
+        'europacode_skills_count': 0
     }
+    
+    # Add JAAT results if available
+    if jaat_result and jaat_result.get('success'):
+        result['onet_tasks_count'] = len(jaat_result.get('tasks', []))
+        result['europacode_skills_count'] = len(jaat_result.get('skills', []))
     
     # Discover skills if recommended
     if should_check and not args.no_discovery:
         result['should_discover'] = True
-        discovered = discover_relevant_skills_for_task(args.query)
+        discovered = discover_relevant_skills_for_task(args.query, jaat_enhanced=args.use_jaat)
         
         if discovered:
             result['recommended_skills'] = discovered
@@ -194,6 +283,12 @@ Examples:
         print(f"Task Analysis: {args.query}\n")
         print(f"Complexity Score: {complexity:.2f}")
         print(f"Domains: {', '.join(domains) if domains else 'None'}")
+        
+        if result.get('jaat_enhanced'):
+            print(f"\nJAAT Enhancement: Enabled")
+            print(f"  - O*NET Tasks extracted: {result.get('onet_tasks_count', 0)}")
+            print(f"  - EuropaCode Skills extracted: {result.get('europacode_skills_count', 0)}")
+        
         print(f"\nSkill Discovery: {'YES' if should_check else 'NO'}")
         print(f"Reason: {check_reason}")
         

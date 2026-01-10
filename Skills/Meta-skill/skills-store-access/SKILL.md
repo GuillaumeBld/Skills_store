@@ -219,6 +219,113 @@ bash scripts/equip-skills-store.sh  # Install skill-library-manager first
 - Skills trigger automatically when description matches your query
 - No need to explicitly "call" skills - Claude's built-in system handles this
 
+#### JAAT-Enhanced Discovery Workflow (Advanced)
+
+For complex tasks, the system can use **JAAT (Job Ad Analysis Toolkit)** to extract standardized skills from queries and automatically detect missing skills that should be created.
+
+**Enhanced Workflow with Auto-Creation:**
+
+```
+User Query/Context
+    ↓
+[Enhanced Task Analysis] ← Uses JAAT to extract O*NET tasks & EuropaCode skills
+    ↓
+[Skill Identification] ← Maps standardized skills to needed skills
+    ↓
+[Catalog Search] ← Check if skills exist in Skills Library
+    ↓
+    ├─→ Skills Found → Recommend existing skills
+    └─→ Skills Missing → [Auto-Create Skills]
+                           ↓
+                    [Gather Authoritative Sources]
+                           ↓
+                    [Generate Skill Content]
+                           ↓
+                    [Create Skill via skill-creator]
+                           ↓
+                    [Validate & Integrate]
+```
+
+**Step 1: Analyze with JAAT Enhancement**
+```bash
+# Enable JAAT-based extraction for complex tasks
+python3 scripts/analyze-task-requirements.py \
+  "Deploy a Docker stack with database migrations and CI/CD pipeline" \
+  --use-jaat --json
+
+# Output includes:
+# - O*NET tasks extracted (standardized task descriptions)
+# - EuropaCode skills extracted (standardized skill codes)
+# - Enhanced search queries generated from standardized skills
+```
+
+**Step 2: Detect Skill Gaps**
+```bash
+# After analysis, detect which required skills are missing from catalog
+python3 scripts/analyze-task-requirements.py "query" --json | \
+  python3 scripts/detect-skill-gaps.py --json
+
+# Returns prioritized list of missing skills with:
+# - Priority scores (based on relevance and uniqueness)
+# - Suggested skill names
+# - Source information (O*NET/EuropaCode)
+```
+
+**Step 3: Gather Authoritative Sources** (Optional)
+```bash
+# Identify authoritative sources for creating missing skills
+python3 scripts/detect-skill-gaps.py --json < requirements.json | \
+  python3 scripts/gather-skill-sources.py --json
+
+# Identifies:
+# - Official documentation URLs (Docker, n8n, frameworks, etc.)
+# - GitHub repositories with examples
+# - O*NET task descriptions
+# - EuropaCode skill definitions
+```
+
+**Step 4: Auto-Create Skills** (When gaps are found)
+```bash
+# Generate and create missing skills automatically
+python3 scripts/auto-create-skill.py --dry-run < requirement.json
+
+# Or actually create (with confirmation):
+python3 scripts/auto-create-skill.py < requirement.json
+```
+
+**Complete End-to-End Test:**
+```bash
+# Test the full workflow from query to skill creation
+python3 scripts/test-jaat-workflow.py \
+  "I need to deploy a Docker stack with database migrations" \
+  --use-jaat
+
+# This runs all steps in sequence:
+# 1. Analyze requirements with JAAT
+# 2. Detect skill gaps
+# 3. Gather authoritative sources
+# 4. Auto-create skills (dry-run by default)
+```
+
+**When to Use JAAT Enhancement:**
+- ✅ Complex, multi-domain tasks (complexity > 0.4)
+- ✅ Job postings or detailed project descriptions
+- ✅ Tasks requiring standardized skill mapping
+- ✅ Auto-creating skills for recurring patterns
+- ❌ Simple, one-off tasks (overkill)
+- ❌ Tasks already well-covered by existing skills
+
+**Prerequisites:**
+```bash
+# Install JAAT dependencies
+pip install -r Skills/Meta-skill/skills-store-access/requirements.txt
+
+# Or install individually:
+pip install JAAT requests beautifulsoup4 markdownify
+```
+
+**See**: `references/jaat-integration-guide.md` for detailed JAAT integration documentation.
+
 ### Best Practices
 
 **Context Efficiency:**

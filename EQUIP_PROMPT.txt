@@ -4,3 +4,19 @@ https://raw.githubusercontent.com/GuillaumeBld/Skills_librairie/main/Skills/Meta
 Repository: https://github.com/GuillaumeBld/Skills_librairie
 
 After reading, equip yourself with Skills Librairie access by installing the skill-library-manager and verifying you can discover and use skills from the repository.
+
+**Key Features:**
+- Intelligent skill discovery with lightweight index (90%+ context reduction)
+- JAAT-enhanced skill auto-discovery for complex tasks (extracts O*NET tasks and EuropaCode skills)
+- Automatic skill gap detection and creation
+- Proactive skill installation for ongoing projects
+- Platform-agnostic installation (works with Claude Code, Claude.ai, Claude API, and any platform)
+
+**JAAT-Enhanced Features (Optional):**
+The skills-store-access skill includes advanced JAAT (Job Ad Analysis Toolkit) integration for:
+- Extracting standardized skills from queries using O*NET and EuropaCode taxonomies
+- Automatically detecting missing skills in the catalog
+- Auto-creating skills from authoritative sources
+- Enhanced skill discovery for complex, multi-domain tasks
+
+To use JAAT features, install dependencies: `pip install -r Skills/Meta-skill/skills-store-access/requirements.txt`

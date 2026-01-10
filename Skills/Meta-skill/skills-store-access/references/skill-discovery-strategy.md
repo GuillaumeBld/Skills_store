@@ -157,8 +157,35 @@ def evaluate_skill_relevance(skill, task):
 **Step 4: Decision & Action**
 - Use existing installed skill? → Use it
 - Install from repo? → Install then use
-- Create new skill? → Create it
+- Create new skill? → Create it (or auto-create with JAAT)
 - No skill needed? → Proceed normally
+
+### JAAT-Enhanced Discovery (Advanced)
+
+For complex tasks, use **JAAT (Job Ad Analysis Toolkit)** to extract standardized skills and automatically detect/create missing skills.
+
+**JAAT-Enhanced Workflow:**
+1. **Extract Standardized Skills** - Uses O*NET tasks and EuropaCode skills
+2. **Map to Catalog** - Compares extracted skills against existing catalog
+3. **Detect Gaps** - Identifies missing skills with priority scoring
+4. **Gather Sources** - Finds authoritative documentation for skill creation
+5. **Auto-Create** - Generates and creates missing skills automatically
+
+**When to Use JAAT:**
+- Complex multi-domain tasks (complexity > 0.4)
+- Job postings or detailed project descriptions
+- Tasks requiring standardized skill mapping
+- Auto-creating skills for recurring patterns
+
+**Example:**
+```bash
+# Complete JAAT-enhanced workflow
+python3 scripts/test-jaat-workflow.py \
+  "Deploy Docker stack with database migrations" \
+  --use-jaat
+```
+
+See `references/jaat-integration-guide.md` for complete documentation.
 
 ## Implementation Strategy
 
