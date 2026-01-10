@@ -1,0 +1,280 @@
+# GitHub Actions Deployment Workflow
+
+Complete CI/CD pipeline template for deploying to Dokploy.
+
+## Basic Workflow: Build → Push → Deploy
+
+`.github/workflows/deploy.yml`:
+
+```yaml
+name: Deploy to Dokploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=sha,prefix={{branch}}-
+
+      - name: Build and push image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Trigger Dokploy Webhook
+        run: |
+          curl -X POST "${{ secrets.DOKPLOY_WEBHOOK_URL }}" \
+            -H "Content-Type: application/json" \
+            -d '{}'
+
+      - name: Wait for deployment
+        run: sleep 30
+
+      - name: Verify deployment
+        run: |
+          curl -f https://app.yourdomain.com/health || exit 1
+```
+
+## Setup Instructions
+
+1. **Add GitHub Secrets:**
+   - Go to: Repo → Settings → Secrets and variables → Actions
+   - Add: `DOKPLOY_WEBHOOK_URL` (from Dokploy app → Deployments → Copy Webhook)
+
+2. **Configure Dokploy App:**
+   - In Dokploy: Set Docker Image to `ghcr.io/your-username/your-repo:main`
+   - Set Registry to GitHub Container Registry (GHCR)
+
+3. **Commit and Push:**
+   ```bash
+   git add .github/workflows/deploy.yml
+   git commit -m "Add CI/CD pipeline"
+   git push origin main
+   ```
+
+## Advanced: Multi-Environment Deployment
+
+```yaml
+name: Multi-Environment Deploy
+
+on:
+  push:
+    branches: [main, staging, develop]
+
+jobs:
+  build:
+    # ... same as above
+
+  deploy-production:
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Deploy to Production
+        run: curl -X POST "${{ secrets.PROD_WEBHOOK_URL }}"
+
+  deploy-staging:
+    needs: build
+    if: github.ref == 'refs/heads/staging'
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - name: Deploy to Staging
+        run: curl -X POST "${{ secrets.STAGING_WEBHOOK_URL }}"
+
+  deploy-develop:
+    needs: build
+    if: github.ref == 'refs/heads/develop'
+    runs-on: ubuntu-latest
+    environment: develop
+    steps:
+      - name: Deploy to Dev
+        run: curl -X POST "${{ secrets.DEV_WEBHOOK_URL }}"
+```
+
+**Setup:**
+- Create 3 apps in Dokploy (prod, staging, dev)
+- Add 3 webhook URLs to GitHub Secrets
+- Each branch auto-deploys to its environment
+
+## Advanced: Direct SSH Deployment
+
+For more control, deploy directly via SSH:
+
+```yaml
+  deploy-ssh:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /app/my-app
+            docker compose pull app
+            docker compose up -d app
+            docker compose logs --tail=20 app
+```
+
+**Additional Secrets Needed:**
+- `VPS_HOST`: Your VPS IP
+- `VPS_USER`: SSH username (e.g., `deploy`)
+- `SSH_PRIVATE_KEY`: Private key (generate: `ssh-keygen -t ed25519`)
+
+## Advanced: Run Tests Before Deploy
+
+```yaml
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Run tests
+        run: npm test
+        
+      - name: Run linter
+        run: npm run lint
+
+  build:
+    needs: test  # Only build if tests pass
+    # ... rest of build job
+```
+
+## Advanced: Semantic Versioning with Tags
+
+Trigger releases via Git tags:
+
+```yaml
+on:
+  push:
+    tags:
+      - 'v*.*.*'  # Trigger on v1.0.0, v2.1.3, etc.
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Extract version
+        id: version
+        run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+      
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          push: true
+          tags: |
+            ghcr.io/${{ github.repository }}:${{ steps.version.outputs.VERSION }}
+            ghcr.io/${{ github.repository }}:latest
+      
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          generate_release_notes: true
+```
+
+**Usage:**
+```bash
+git tag -a v1.0.0 -m "Release v1.0.0"
+git push origin v1.0.0
+```
+
+## Notifications
+
+Add Slack/Discord notifications:
+
+```yaml
+  notify:
+    needs: deploy
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Slack Notification
+        uses: 8398a7/action-slack@v3
+        with:
+          status: ${{ job.status }}
+          webhook_url: ${{ secrets.SLACK_WEBHOOK }}
+          text: 'Deployment ${{ job.status }}: ${{ github.sha }}'
+```
+
+## Troubleshooting CI/CD
+
+### Build Fails
+- Check Dockerfile syntax
+- Verify GitHub Actions logs: Actions tab → Click failed run
+- Test locally: `docker build -t test .`
+
+### Webhook Not Triggering Deploy
+- Verify webhook URL is correct (copy from Dokploy)
+- Check Dokploy logs: `docker logs dokploy | grep webhook`
+- Test manually: `curl -X POST https://deploy.yourdomain.com/api/webhooks/YOUR_ID`
+
+### Permissions Error
+- Ensure `permissions: packages: write` in workflow
+- Verify GitHub token has access to GHCR
+
+### Cache Issues
+- Clear GitHub Actions cache: Repo → Actions → Caches → Delete
+- Force rebuild: `docker build --no-cache`

@@ -1,0 +1,30 @@
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+
+# IDE
+.idea/
+.vscode/
+*.sublime-*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Temporary files
+*.log
+*.tmp
+cleanup.py
+final-cleanup.sh
+reorganize-repo.sh
+organize-skills.sh
+cleanup-and-push.sh
+archive-local.sh

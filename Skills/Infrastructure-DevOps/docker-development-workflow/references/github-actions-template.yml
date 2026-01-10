@@ -1,0 +1,394 @@
+# GitHub Actions CI/CD Templates
+
+Complete workflow examples for different deployment scenarios.
+
+## Basic: Build + Push + Webhook Deploy
+
+`.github/workflows/deploy.yml`:
+```yaml
+name: Build and Deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=ref,event=branch
+            type=sha,prefix={{branch}}-
+
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Trigger Dokploy Webhook
+        run: |
+          curl -X POST "${{ secrets.DOKPLOY_WEBHOOK_URL }}"
+
+      - name: Wait for deployment
+        run: sleep 30
+
+      - name: Verify deployment
+        run: |
+          curl -f https://app.yourdomain.com/health || exit 1
+```
+
+## With Tests Before Deploy
+
+Add test job:
+```yaml
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Run tests
+        run: npm test
+      
+      - name: Run linter
+        run: npm run lint
+
+  build:
+    needs: test  # Only build if tests pass
+    # ... rest of build job
+```
+
+## Multi-Environment (Prod/Staging/Dev)
+
+```yaml
+name: Multi-Environment Deploy
+
+on:
+  push:
+    branches: [main, staging, develop]
+
+jobs:
+  build:
+    # ... same as basic build job
+
+  deploy-production:
+    needs: build
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Deploy to Production
+        run: |
+          curl -X POST "${{ secrets.PROD_WEBHOOK_URL }}"
+      
+      - name: Verify Production
+        run: |
+          curl -f https://app.yourdomain.com/health
+
+  deploy-staging:
+    needs: build
+    if: github.ref == 'refs/heads/staging'
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - name: Deploy to Staging
+        run: |
+          curl -X POST "${{ secrets.STAGING_WEBHOOK_URL }}"
+      
+      - name: Verify Staging
+        run: |
+          curl -f https://staging.yourdomain.com/health
+
+  deploy-develop:
+    needs: build
+    if: github.ref == 'refs/heads/develop'
+    runs-on: ubuntu-latest
+    environment: develop
+    steps:
+      - name: Deploy to Dev
+        run: |
+          curl -X POST "${{ secrets.DEV_WEBHOOK_URL }}"
+```
+
+**Setup:**
+- Create 3 apps in Dokploy (prod, staging, dev)
+- Add 3 webhook URLs to GitHub Secrets
+- Push to branches to auto-deploy
+
+## Direct SSH Deployment
+
+For more control, deploy via SSH:
+```yaml
+  deploy-ssh:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /app/my-app
+            docker compose pull app
+            docker compose up -d app
+            docker compose logs --tail=20 app
+```
+
+**Additional Secrets:**
+- `VPS_HOST`: Your VPS IP
+- `VPS_USER`: SSH username (e.g., `deploy`)
+- `SSH_PRIVATE_KEY`: Private key content (generate: `ssh-keygen -t ed25519`)
+
+## Semantic Versioning with Tags
+
+Trigger on Git tags:
+```yaml
+on:
+  push:
+    tags:
+      - 'v*.*.*'  # Matches v1.0.0, v2.1.3, etc.
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Extract version
+        id: version
+        run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+      
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          push: true
+          tags: |
+            ghcr.io/${{ github.repository }}:${{ steps.version.outputs.VERSION }}
+            ghcr.io/${{ github.repository }}:latest
+      
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          generate_release_notes: true
+```
+
+**Usage:**
+```bash
+git tag -a v1.0.0 -m "Release v1.0.0"
+git push origin v1.0.0
+```
+
+## With Vulnerability Scanning
+
+Add Trivy security scan:
+```yaml
+  scan:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run Trivy scanner
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: ghcr.io/${{ github.repository }}:${{ github.sha }}
+          format: 'sarif'
+          output: 'trivy-results.sarif'
+          severity: 'CRITICAL,HIGH'
+          exit-code: '1'  # Fail build on HIGH/CRITICAL
+      
+      - name: Upload results
+        uses: github/codeql-action/upload-sarif@v2
+        if: always()
+        with:
+          sarif_file: 'trivy-results.sarif'
+```
+
+## Slack/Discord Notifications
+
+Add notifications:
+```yaml
+  notify:
+    needs: [build, deploy]
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Slack Notification
+        uses: 8398a7/action-slack@v3
+        with:
+          status: ${{ job.status }}
+          webhook_url: ${{ secrets.SLACK_WEBHOOK }}
+          text: |
+            Deployment ${{ job.status }}
+            Commit: ${{ github.sha }}
+            Branch: ${{ github.ref_name }}
+```
+
+**For Discord:**
+```yaml
+      - name: Discord Notification
+        uses: sarisia/actions-status-discord@v1
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          status: ${{ job.status }}
+          title: "Deployment Status"
+          description: "Branch: ${{ github.ref_name }}"
+```
+
+## Docker Hub Instead of GHCR
+
+Replace GHCR with Docker Hub:
+```yaml
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+      
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          push: true
+          tags: |
+            ${{ secrets.DOCKER_USERNAME }}/myapp:latest
+            ${{ secrets.DOCKER_USERNAME }}/myapp:${{ github.sha }}
+```
+
+**Add Secrets:**
+- `DOCKER_USERNAME`: Docker Hub username
+- `DOCKER_PASSWORD`: Docker Hub access token (not password!)
+
+## Matrix Build (Multiple Versions)
+
+Build for multiple Node versions:
+```yaml
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18, 20, 21]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
+      - run: npm test
+```
+
+## Caching Dependencies
+
+Speed up builds with caching:
+```yaml
+      - name: Cache Node modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+      
+      - name: Install dependencies
+        run: npm ci
+```
+
+## Conditional Deployment (Only on Tag)
+
+Deploy only tagged releases:
+```yaml
+  deploy:
+    needs: build
+    if: startsWith(github.ref, 'refs/tags/v')
+    steps:
+      - run: curl -X POST "${{ secrets.DOKPLOY_WEBHOOK_URL }}"
+```
+
+## Troubleshooting
+
+### Build Fails
+- Check workflow logs: Actions tab → Click failed run
+- Test locally: `docker build -t test .`
+- Verify Dockerfile syntax
+
+### Webhook Not Triggering
+- Verify `DOKPLOY_WEBHOOK_URL` is correct
+- Check Dokploy logs: `docker logs dokploy | grep webhook`
+- Test manually: `curl -X POST <webhook-url>`
+
+### Permission Denied (GHCR)
+- Ensure `permissions: packages: write` in workflow
+- Verify GitHub token has package access
+- Check repository settings → Actions → General → Workflow permissions
+
+### Cache Issues
+- Clear cache: Repo → Actions → Caches → Delete
+- Force rebuild: `docker build --no-cache`
+
+## Best Practices
+
+1. **Always pin action versions** (use @v4, not @latest)
+2. **Use build cache** (saves 50-80% build time)
+3. **Fail fast** (run tests before build)
+4. **Scan for vulnerabilities** (Trivy in CI)
+5. **Use secrets, never hardcode** (all credentials in GitHub Secrets)
+6. **Test workflow changes in fork** (avoid breaking main)
+7. **Add status badges** to README (shows build status)
+8. **Monitor workflow usage** (GitHub has free tier limits)
+
+## Status Badge
+
+Add to README.md:
+```markdown
+![Deploy](https://github.com/USERNAME/REPO/actions/workflows/deploy.yml/badge.svg)
+```
+
+Shows: ![Deploy](https://img.shields.io/badge/deploy-passing-brightgreen)
