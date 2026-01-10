@@ -36,6 +36,16 @@ graph TB
 
 </div>
 
+## 🎨 How It Works: Visual Workflow
+
+The JAAT-enhanced skill auto-discovery system intelligently processes user requests, identifies required skills, and automatically acquires or creates them:
+
+![JAAT-Enhanced Skill Auto-Discovery Workflow](./assets/jaat-workflow-comic.png)
+
+*This comic illustrates the complete workflow: (1) User Query → (2) AI Agent analyzes and identifies required skills → (3) Skills Store provides or auto-creates missing skills → (4) AI Agent executes task with acquired skills*
+
+---
+
 A comprehensive, organized collection of Claude skills with intelligent discovery and management capabilities. This repository is **built around the skills-store-access skill** as the **main piece** and foundation, enabling AI agents to efficiently discover, install, and manage skills across **any platform**.
 
 **⭐ Main Entry Point**: [`Skills/Meta-skill/skills-store-access/`](./Skills/Meta-skill/skills-store-access/) - The foundational skill that works with **any system** supporting Claude skills.
@@ -163,7 +173,18 @@ AI with skills-store-access:
 4. Uses → Skill triggers automatically via Claude's built-in system
 ```
 
-**No manual catalog loading required** - the system handles everything efficiently.
+**With JAAT-Enhanced Discovery** (for complex tasks):
+```
+User: "Deploy a secure API with automated CI/CD"
+
+AI with JAAT-enhanced discovery:
+1. Extracts standardized skills → O*NET tasks + EuropaCode skills
+2. Maps to catalog → Identifies existing skills + detects gaps
+3. Auto-creates missing skills → Generates from authoritative sources
+4. Installs and uses → Executes task with newly acquired skills
+```
+
+**No manual catalog loading required** - the system handles everything efficiently. See the [visual workflow](#-how-it-works-visual-workflow) above for a complete illustration.
 
 ### Key Features
 
