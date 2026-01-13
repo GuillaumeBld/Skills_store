@@ -87,7 +87,7 @@ Important Notes:
 
 If you're reading this locally (repository cloned), you can read superpowers from:
 - Local path: Skills/Meta-skill/superpowers/SKILL.md
-
+```
 </details>
 ```
 # Option 2: Clone and install locally
