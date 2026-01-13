@@ -89,7 +89,7 @@ If you're reading this locally (repository cloned), you can read superpowers fro
 - Local path: Skills/Meta-skill/superpowers/SKILL.md
 ```
 </details>
-```
+
   <summary><strong>Option 2: Clone and install locally</summary></strong>
 git clone https://github.com/GuillaumeBld/Skills_librairie.git
 cd Skills_librairie
