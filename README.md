@@ -97,7 +97,7 @@ If you're reading this locally (repository cloned), you can read superpowers fro
 git clone https://github.com/GuillaumeBld/Skills_librairie.git
 cd Skills_librairie
 bash Skills/Meta-skill/skills-store-access/scripts/equip-skills-store.sh
-
+```
 </details>
 
 
