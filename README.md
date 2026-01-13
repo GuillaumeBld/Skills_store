@@ -96,6 +96,7 @@ cd Skills_librairie
 bash Skills/Meta-skill/skills-store-access/scripts/equip-skills-store.sh
 ```
 
+
 **That's it!** Your AI can now discover, install, and use 40+ specialized skills automatically. ✨
 
 ---
