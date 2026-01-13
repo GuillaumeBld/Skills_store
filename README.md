@@ -90,16 +90,13 @@ If you're reading this locally (repository cloned), you can read superpowers fro
 ```
 </details>
 
-  <summary><strong>Option 2: Clone and install locally</summary></strong>
+<details>
+  <summary><strong>Option 2: Clone and install locally</strong></summary>
+
+```bash
 git clone https://github.com/GuillaumeBld/Skills_librairie.git
 cd Skills_librairie
 bash Skills/Meta-skill/skills-store-access/scripts/equip-skills-store.sh
-```
-
-
-**That's it!** Your AI can now discover, install, and use 40+ specialized skills automatically. ✨
-
----
 
 ## How It Works
 
