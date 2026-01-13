@@ -1,6 +1,6 @@
 <div align="center">
 
-# ⭐ Welcome to Skills Store ⭐
+# ⭐ Skills Store ⭐
 
 **Empower Any AI with 40+ Skills • Intelligent Discovery • Works Everywhere**
 
