@@ -101,7 +101,7 @@ bash Skills/Meta-skill/skills-store-access/scripts/equip-skills-store.sh
 
 ---
 
-## 🎨 How It Works
+## How It Works
 
 See how the intelligent skill discovery system works from user request to execution:
 
@@ -109,7 +109,7 @@ See how the intelligent skill discovery system works from user request to execut
 
 *The four-panel workflow: (1) User makes a request → (2) AI analyzes and identifies needed skills → (3) Skills Store provides or auto-creates skills → (4) AI executes the task with acquired capabilities*
 
-## 📊 Skills Architecture
+## Skills Architecture
 
 ```mermaid
 graph TB
@@ -134,20 +134,20 @@ graph TB
 
 ---
 
-## ✨ What You Get
+## What You Get
 
 **Skills Librairie** is a comprehensive, organized collection of Claude skills that enables AI agents to efficiently discover, install, and manage specialized capabilities across **any platform**.
 
 ### Key Features
 
-- 🎯 **Intelligent Discovery** - Lightweight skill discovery (90%+ context reduction) that finds exactly what you need
-- 🚀 **Auto-Creation** - Missing skills? The system can create them automatically from authoritative sources (JAAT-enhanced)
-- 🔄 **Platform-Agnostic** - Works with Claude Code, Claude.ai, Claude API, and any system supporting Claude skills
-- 📦 **40+ Ready Skills** - Organized across 11 categories: Development, Automation, Design, DevOps, and more
-- 🧠 **Proactive Installation** - Installs skills automatically for ongoing projects when beneficial
-- 📁 **Organized Structure** - Clean, category-based organization for easy navigation
+- **Intelligent Discovery** - Lightweight skill discovery (90%+ context reduction) that finds exactly what you need
+- **Auto-Creation** - Missing skills? The system can create them automatically from authoritative sources (JAAT-enhanced)
+- **Platform-Agnostic** - Works with Claude Code, Claude.ai, Claude API, and any system supporting Claude skills
+- **40+ Ready Skills** - Organized across 11 categories: Development, Automation, Design, DevOps, and more
+- **Proactive Installation** - Installs skills automatically for ongoing projects when beneficial
+- **Organized Structure** - Clean, category-based organization for easy navigation
 
-## 📖 How to Equip Any AI System
+## How to Equip Any AI System
 
 The **skills-store-access** skill automatically detects your platform and works everywhere - no configuration needed!
 
@@ -191,7 +191,7 @@ Once equipped, your AI can:
 
 **Platform Detection:** The system automatically detects your environment (Codex/Cursor, Claude.ai, API, etc.) and adapts accordingly. No manual configuration required!
 
-## 🎯 Installation Details (Any Platform)
+## Installation Details (Any Platform)
 
 ### Detailed Installation Steps
 
@@ -278,7 +278,7 @@ python3 Skills/Meta-skill/skills-store-access/scripts/discover-skills.py "docker
 - See [Platform Guide](./Skills/Meta-skill/skills-store-access/references/platform-guide.md) for detailed instructions per platform
 - See [Complete Solution Guide](./Skills/Meta-skill/skills-store-access/references/complete-solution-guide.md) for how discovery works with any system
 
-## 💡 How It Works in Practice
+## How It Works in Practice
 
 Once equipped, your AI automatically handles skill discovery and installation. Here's what happens:
 
@@ -287,10 +287,10 @@ Once equipped, your AI automatically handles skill discovery and installation. H
 **You:** *"I need to deploy a Docker stack with Traefik"*
 
 **Your AI (automatically):**
-1. 🧠 Analyzes the request → Recognizes it's a DevOps task
-2. 🔍 Discovers relevant skills → Finds "vps-deployment-stack" (relevance: 92%)
-3. 📦 Installs if needed → Automatically installs the skill for you
-4. ✅ Uses the skill → Executes your request with the right tools
+1. Analyzes the request → Recognizes it's a DevOps task
+2. Discovers relevant skills → Finds "vps-deployment-stack" (relevance: 92%)
+3. Installs if needed → Automatically installs the skill for you
+4. Uses the skill → Executes your request with the right tools
 
 **Result:** Your deployment task is handled with specialized DevOps knowledge!
 
@@ -299,21 +299,21 @@ Once equipped, your AI automatically handles skill discovery and installation. H
 **You:** *"Deploy a secure API with automated CI/CD and database migrations"*
 
 **Your AI (with JAAT-enhanced discovery):**
-1. 🎯 Extracts standardized skills → Uses O*NET and EuropaCode taxonomies
-2. 🔎 Maps to catalog → Identifies existing skills + detects what's missing
-3. 🏗️ Auto-creates missing skills → Generates new skills from authoritative sources
-4. 📥 Installs everything → Sets up all required capabilities
-5. ✨ Executes → Completes your complex task with newly acquired skills
+1. Extracts standardized skills → Uses O*NET and EuropaCode taxonomies
+2. Maps to catalog → Identifies existing skills + detects what's missing
+3. Auto-creates missing skills → Generates new skills from authoritative sources
+4. Installs everything → Sets up all required capabilities
+5. Executes → Completes your complex task with newly acquired skills
 
 **Result:** Even if skills don't exist, the system creates them automatically!
 
 ### Key Benefits
 
-- 🚀 **Zero Manual Work** - Skills are discovered and installed automatically
-- 💾 **Context Efficient** - Uses lightweight index (10KB vs 200KB catalog)
-- 🧠 **Intelligent** - Only searches when needed, only installs when beneficial
-- 🔄 **Adaptive** - Works the same across all platforms
-- 🎯 **Proactive** - Installs skills for ongoing projects automatically
+- **Zero Manual Work** - Skills are discovered and installed automatically
+- **Context Efficient** - Uses lightweight index (10KB vs 200KB catalog)
+- **Intelligent** - Only searches when needed, only installs when beneficial
+- **Adaptive** - Works the same across all platforms
+- **Proactive** - Installs skills for ongoing projects automatically
 
 See the [visual workflow](#-how-it-works) above for a complete illustration of this process!
 
@@ -437,7 +437,7 @@ Skills_librairie/
 - `catalog.json` is auto-generated at repository root
 - `skills-index.json` is lightweight index for discovery (~10KB)
 
-## 🎓 Next Steps After Installation
+## Next Steps After Installation
 
 ### Generate the Discovery Index
 
@@ -475,11 +475,11 @@ Once installed, skills work automatically:
 
 **Just use your AI normally - skills will be discovered and used automatically!** 🎉
 
-## 📚 Explore 40+ Skills Across 11 Categories
+## Explore 40+ Skills Across 11 Categories
 
 Browse our comprehensive collection of specialized skills:
 
-### 🎯 Meta-skill
+### Meta-skill
 **Skills for managing skills** - Foundational capabilities:
 - ⭐ **skills-store-access** - Main entry point (equip any AI with Skills store)
 - ⭐ **superpowers** - Foundational workflows (TDD, systematic debugging, planning)
@@ -494,43 +494,43 @@ Browse our comprehensive collection of specialized skills:
 - n8n-mcp-tools-expert, n8n-node-configuration
 - n8n-validation-expert
 
-### 🚀 Infrastructure-DevOps
+### Infrastructure-DevOps
 **DevOps & deployment**:
 - vps-deployment-stack
 - vps-daily-operations
 - docker-development-workflow
 
-### 💻 Development
+### Development
 **Development tools & testing**:
 - mcp-builder, web-artifacts-builder, webapp-testing
 - **ios-simulator-skill** - iOS app building & testing
 - **playwright-skill** - Browser automation with Playwright
 
-### 🎨 Design-Creative
+### Design-Creative
 **Design & visual creation**:
 - canvas-design, frontend-design, algorithmic-art
 - theme-factory, slack-gif-creator
 - **claude-d3js-skill** - Interactive data visualizations
 - **web-asset-generator** - Favicons, app icons, social media images
 
-### 💬 Communication
+### Communication
 **Communication & branding**:
 - internal-comms, brand-guidelines, doc-coauthoring
 
-### 📄 Document-Generation
+### Document-Generation
 **Document creation**:
 - docx (Word), pdf (PDF), pptx (PowerPoint), xlsx (Excel)
 
-### 🤖 AI-Agents
+### AI-Agents
 **AI workflows & RAG**:
 - rag-pipeline-expert
 - **loki-mode** - Multi-agent autonomous system (37 AI agents, 6 swarms)
 
-### 🔒 Security
+### Security
 **Security testing**:
 - **ffuf-web-fuzzing** - Expert web fuzzing for penetration testing
 
-### 🔬 Scientific
+### Scientific
 **Scientific computing**:
 - **claude-scientific-skills** - Comprehensive scientific libraries & databases
 
@@ -539,7 +539,7 @@ Browse our comprehensive collection of specialized skills:
 python3 Skills/skill-library-manager/scripts/search-skills.py --all
 ```
 
-## 🔧 Requirements
+## Requirements
 
 **Minimum:**
 - Python 3.8+ (for discovery scripts)
@@ -550,7 +550,7 @@ python3 Skills/skill-library-manager/scripts/search-skills.py --all
 
 **That's it!** The system works on any platform that supports Claude skills. See [Installation Details](#-installation-details-any-platform) above for platform-specific instructions.
 
-## 📖 Documentation
+## Documentation
 
 ### Core Documentation
 
@@ -570,7 +570,7 @@ python3 Skills/skill-library-manager/scripts/search-skills.py --all
 - **[Skill Creator Guide](./Skills/Meta-skill/skill-creator/SKILL.md)** - Creating effective skills
 - **[Skill Template](./Skills/skill-library-manager/references/skill-template.md)** - Template for new skills
 
-## 🌐 How This Skill Works with Any System
+## How This Skill Works with Any System
 
 The **skills-store-access** skill is **platform-agnostic** and designed to work with **any system** that supports Claude skills. It automatically adapts to your environment without manual configuration.
 
@@ -632,7 +632,7 @@ python3 Skills/Meta-skill/skills-store-access/scripts/verify-installation.py
 
 **No system-specific configuration needed** - it just works!
 
-## 🔄 Workflows
+## Workflows
 
 ### Workflow 1: Equip Any System with Skills Store
 
@@ -691,7 +691,7 @@ python3 Skills/Meta-skill/skills-store-access/scripts/generate-skills-index.py
 bash Skills/skill-library-manager/scripts/sync-library.sh
 ```
 
-## 🎯 Key Features
+## Key Features
 
 ### Intelligent Discovery
 - **Lightweight Index**: ~10KB for 100+ skills (90%+ reduction vs catalog)
@@ -718,7 +718,7 @@ bash Skills/skill-library-manager/scripts/sync-library.sh
 - **Update**: Version management and updates
 - **Sync**: GitHub synchronization
 
-## 📝 Contributing
+## Contributing
 
 ### Adding New Skills
 
@@ -742,7 +742,7 @@ Skills are organized into these categories:
 - **Security**: Security testing and penetration testing (ffuf-web-fuzzing)
 - **Scientific**: Scientific computing and data analysis (claude-scientific-skills)
 
-## 🔗 Resources
+## Resources
 
 ### External Documentation
 - [What are skills?](https://support.claude.com/en/articles/12512176-what-are-skills)
@@ -763,43 +763,43 @@ Skills are organized into these categories:
 - **Main Entry Point**: `Skills/Meta-skill/skills-store-access/`
 - **Documentation**: See `Skills/` directory for individual skill docs
 
-## ⚡ Quick Reference
+## Quick Reference
 
-**🚀 Equip Any AI System:**
+**Equip Any AI System:**
 ```bash
 bash Skills/Meta-skill/skills-store-access/scripts/equip-skills-store.sh
 ```
 
-**🔍 Discover Skills for a Task:**
+**Discover Skills for a Task:**
 ```bash
 python3 Skills/Meta-skill/skills-store-access/scripts/discover-skills.py "your query"
 ```
 
-**🧠 Analyze If Task Needs Skills:**
+**Analyze If Task Needs Skills:**
 ```bash
 python3 Skills/Meta-skill/skills-store-access/scripts/analyze-task-requirements.py "task description"
 ```
 
-**📦 Search All Available Skills:**
+**Search All Available Skills:**
 ```bash
 python3 Skills/skill-library-manager/scripts/search-skills.py "keyword"
 ```
 
-**✨ Create Your Own Skill:**
+**Create Your Own Skill:**
 ```bash
 bash Skills/skill-library-manager/scripts/create-skill.sh
 ```
 
-**📚 Need More Help?** Check out:
+**Need More Help?** Check out:
 - [Complete Skills Store Access Guide](./Skills/Meta-skill/skills-store-access/SKILL.md)
 - [Quick Start Guide](./QUICK_START.md)
 - [Copy-Paste Prompt](./COPY_THIS_PROMPT.txt)
 
-## 📄 License
+## License
 
 Most skills in this repository are licensed under MIT. Some skills may have different licenses - check individual skill directories for license information.
 
-## 🔄 Comparison with Other Skill Systems
+## Comparison with Other Skill Systems
 
 ### Similar Systems & Resources
 
@@ -855,7 +855,7 @@ Skills from this repository can be used alongside:
 
 **No conflicts** - Each skill system works independently. Skills Librairie complements curated lists like Awesome Claude Skills by providing an actual skill repository with built-in discovery and management capabilities.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 This repository builds on:
 - Anthropic's Claude Skills system and documentation
@@ -867,7 +867,7 @@ This repository builds on:
 
 **Note:** This repository could be added to the [Awesome Claude Skills](https://github.com/travisvn/awesome-claude-skills) curated list in the "Collections & Libraries" section.
 
-## 🏗️ Architecture: Built Around skills-store-access
+## Architecture: Built Around skills-store-access
 
 ### The Foundation
 
@@ -944,21 +944,21 @@ Any System → skills-store-access → Skills Store → All Skills
 
 ---
 
-## 🎉 Ready to Get Started?
+## Ready to Get Started?
 
 **⭐ Start Here:** Install [skills-store-access](./Skills/Meta-skill/skills-store-access/) to equip any AI system with complete Skills store capabilities!
 
 **Quick Links:**
-- 🚀 **[Get Started Now](#-get-started-in-30-seconds)** - Install in 30 seconds
-- 📖 **[Complete Guide](./Skills/Meta-skill/skills-store-access/SKILL.md)** - Full documentation
-- 🎯 **[Quick Reference](#-quick-reference)** - Common commands
-- 📚 **[All Skills](./Skills/)** - Browse 40+ skills
-- ⚡ **[Copy-Paste Prompt](./COPY_THIS_PROMPT.txt)** - Ready-to-use installation prompt
+- **[Get Started Now](#-get-started-in-30-seconds)** - Install in 30 seconds
+- **[Complete Guide](./Skills/Meta-skill/skills-store-access/SKILL.md)** - Full documentation
+- **[Quick Reference](#-quick-reference)** - Common commands
+- **[All Skills](./Skills/)** - Browse 40+ skills
+- **[Copy-Paste Prompt](./COPY_THIS_PROMPT.txt)** - Ready-to-use installation prompt
 
 **Need Help?**
-- 📘 [Platform Guide](./Skills/Meta-skill/skills-store-access/references/platform-guide.md) - Platform-specific instructions
-- 🔍 [Discovery Strategy](./Skills/Meta-skill/skills-store-access/references/skill-discovery-strategy.md) - How discovery works
-- 💬 [Quick Start Guide](./QUICK_START.md) - Step-by-step setup
+- [Platform Guide](./Skills/Meta-skill/skills-store-access/references/platform-guide.md) - Platform-specific instructions
+- [Discovery Strategy](./Skills/Meta-skill/skills-store-access/references/skill-discovery-strategy.md) - How discovery works
+- [Quick Start Guide](./QUICK_START.md) - Step-by-step setup
 
 ---
 
