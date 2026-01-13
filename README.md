@@ -13,7 +13,7 @@
 
 </div>
 
-## 🚀 Get Started in 30 Seconds
+## Get Started in 30 Seconds
 
 **Equip any AI system (Claude Code, Claude.ai, Claude API, or any platform) with Skills store capabilities:**
 
