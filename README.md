@@ -17,10 +17,79 @@
 
 **Equip any AI system (Claude Code, Claude.ai, Claude API, or any platform) with Skills store capabilities:**
 
-```bash
-# Option 1: Copy this prompt and paste it into your AI
-# See: COPY_THIS_PROMPT.txt
+<details>
+  <summary><strong>Option 1, copy and paste this prompt into your AI (click to expand)</strong></summary>
 
+```text
+Read these skills and equip yourself with Skills Librairie capabilities:
+
+1. https://raw.githubusercontent.com/GuillaumeBld/Skills_librairie/main/Skills/Meta-skill/skills-store-access/SKILL.md
+2. https://raw.githubusercontent.com/GuillaumeBld/Skills_librairie/main/Skills/Meta-skill/superpowers/SKILL.md
+
+The first gives you access to the Skills store with intelligent discovery and JAAT-enhanced auto-discovery capabilities, the second teaches you how to use skills to their best capabilities (TDD, systematic debugging, collaborative planning).
+
+Note: If the superpowers skill URL returns 404, it means it hasn't been pushed to GitHub yet. In that case:
+- Use skills-store-access first to equip yourself with Skills store capabilities
+- The superpowers skill will be available once pushed, or you can read it from the cloned repository locally
+
+Repository: https://github.com/GuillaumeBld/Skills_librairie
+
+After reading both skills (or just skills-store-access if superpowers isn't available yet):
+
+1. Clone the repository (if not already done):
+   git clone https://github.com/GuillaumeBld/Skills_librairie.git <your-path>/Skills_librairie
+   cd <your-path>/Skills_librairie
+
+2. Set LIBRARY_ROOT environment variable (optional, but recommended):
+   export LIBRARY_ROOT="<your-path>/Skills_librairie"
+   The scripts will auto-detect the library root by walking up from their location, but setting this explicitly helps.
+
+3. Build the catalog (generates catalog.json from all skills):
+   python3 Skills/skill-library-manager/scripts/catalog-builder.py
+   This script:
+   - Auto-detects LIBRARY_ROOT if not set
+   - Finds the Skills/ directory (capital S)
+   - Scans recursively through all category subdirectories
+   - Extracts metadata from each SKILL.md file
+   - Generates catalog.json with all skills and categories
+
+4. Generate the lightweight skills discovery index:
+   python3 Skills/Meta-skill/skills-store-access/scripts/generate-skills-index.py
+   This creates skills-index.json for efficient skill discovery.
+
+5. Verify installation by searching for skills:
+   python3 Skills/skill-library-manager/scripts/search-skills.py --all
+
+6. Confirm understanding of superpowers methodology for systematic workflows (if available).
+
+Optional: Enable JAAT-Enhanced Discovery (for advanced auto-discovery):
+# Install JAAT dependencies for enhanced skill extraction
+pip install -r Skills/Meta-skill/skills-store-access/requirements.txt
+
+# Test JAAT-enhanced workflow
+python3 Skills/Meta-skill/skills-store-access/scripts/test-jaat-workflow.py \
+  "Deploy Docker stack with database migrations" \
+  --use-jaat
+
+Key Features Available:
+- Intelligent skill discovery (90%+ context reduction)
+- JAAT-enhanced extraction (O*NET tasks + EuropaCode skills)
+- Automatic skill gap detection
+- Auto-creation of missing skills from authoritative sources
+- Proactive installation for ongoing projects
+
+Important Notes:
+- The repository uses Skills/ (capital S) directory, not skills/ (lowercase)
+- Skills are organized in categories: Skills/Meta-skill/, Skills/Development/, etc.
+- The scripts automatically handle case sensitivity and path detection
+- If you cloned to a non-standard location, set LIBRARY_ROOT to help the scripts find it
+- JAAT features are optional, the skill works without them using keyword-based discovery
+
+If you're reading this locally (repository cloned), you can read superpowers from:
+- Local path: Skills/Meta-skill/superpowers/SKILL.md
+
+</details>
+```
 # Option 2: Clone and install locally
 git clone https://github.com/GuillaumeBld/Skills_librairie.git
 cd Skills_librairie
