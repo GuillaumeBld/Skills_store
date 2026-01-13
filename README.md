@@ -98,6 +98,9 @@ git clone https://github.com/GuillaumeBld/Skills_librairie.git
 cd Skills_librairie
 bash Skills/Meta-skill/skills-store-access/scripts/equip-skills-store.sh
 
+</details>
+
+
 ## How It Works
 
 See how the intelligent skill discovery system works from user request to execution:
