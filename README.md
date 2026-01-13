@@ -18,7 +18,7 @@
 **Equip any AI system (Claude Code, Cursor, Windsurf, GeminiCli, Codex or any platform) with Skills store capabilities:**
 
 <details>
-  <summary><strong>Option 1: Copy and paste this prompt into your AI (click to expand)</strong></summary>
+  <summary><strong>Option 1:</strong> Copy and paste this prompt into your AI (click to expand)</summary>
 
 ```text
 Read these skills and equip yourself with Skills Librairie capabilities:
