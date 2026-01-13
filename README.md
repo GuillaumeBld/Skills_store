@@ -91,7 +91,7 @@ If you're reading this locally (repository cloned), you can read superpowers fro
 </details>
 
 <details>
-  <summary><strong>Option 2: Clone and install locally</strong></summary>
+  <summary><strong>Option 2:</strong> Clone and install locally</summary>
 
 ```bash
 git clone https://github.com/GuillaumeBld/Skills_librairie.git
