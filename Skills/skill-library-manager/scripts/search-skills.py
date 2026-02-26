@@ -9,25 +9,44 @@ import json
 import sys
 from pathlib import Path
 
-# Get script directory and find library root dynamically (same logic as catalog-builder.py)
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-LIBRARY_ROOT = os.getenv('LIBRARY_ROOT')
-if not LIBRARY_ROOT:
-    # Walk up from script location to find repository root
-    current = SCRIPT_DIR
-    while current != os.path.dirname(current):  # Stop at filesystem root
-        if os.path.basename(current) == 'Skills_librairie' or os.path.basename(current) == 'Skills_store':
-            LIBRARY_ROOT = current
-            break
-        # Check if we're in a repo by looking for Skills/ directory
-        skills_candidate = os.path.join(current, 'Skills')
-        if os.path.exists(skills_candidate) and os.path.isdir(skills_candidate):
-            LIBRARY_ROOT = current
-            break
+REPO_NAMES = ('Skills_librairie', 'Skills_store')
+FALLBACK_ROOTS = [
+    os.path.expanduser('~/Skills_librairie'),
+    os.path.expanduser('~/Skills_store'),
+    os.path.expanduser('~/Documents/Skills/Skills_librairie'),
+    os.path.expanduser('~/Documents/Skills/Skills_store'),
+]
+
+
+def is_library_root(path: str) -> bool:
+    if not path or not os.path.isdir(path):
+        return False
+    return os.path.isdir(os.path.join(path, 'Skills')) or os.path.isdir(os.path.join(path, 'skills'))
+
+
+def detect_library_root(start_dir: str) -> str:
+    env_root = os.getenv('LIBRARY_ROOT')
+    if env_root:
+        env_root = os.path.abspath(os.path.expanduser(env_root))
+        if is_library_root(env_root):
+            return env_root
+
+    current = os.path.abspath(start_dir)
+    while current != os.path.dirname(current):
+        if is_library_root(current) or os.path.basename(current) in REPO_NAMES:
+            return current
         current = os.path.dirname(current)
-    else:
-        # Fallback to default
-        LIBRARY_ROOT = os.path.expanduser('~/Skills_librairie')
+
+    for candidate in FALLBACK_ROOTS:
+        candidate = os.path.abspath(candidate)
+        if is_library_root(candidate):
+            return candidate
+
+    return os.path.abspath(os.path.expanduser('~/Skills_librairie'))
+
+
+LIBRARY_ROOT = detect_library_root(SCRIPT_DIR)
 
 CATALOG_FILE = os.path.join(LIBRARY_ROOT, 'catalog.json')
 
@@ -35,7 +54,7 @@ def load_catalog():
     """Load catalog.json"""
     if not os.path.exists(CATALOG_FILE):
         print(f"Error: Catalog not found at {CATALOG_FILE}")
-        print("Run: python3 scripts/catalog-builder.py")
+        print("Run: python3 Skills/skill-library-manager/scripts/catalog-builder.py")
         sys.exit(1)
     
     with open(CATALOG_FILE, 'r', encoding='utf-8') as f:

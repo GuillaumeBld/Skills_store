@@ -8,6 +8,40 @@ import os
 import sys
 from pathlib import Path
 
+REPO_CANDIDATES = [
+    os.getenv('LIBRARY_ROOT', ''),
+    os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../..')),
+    os.path.expanduser('~/Skills_librairie'),
+    os.path.expanduser('~/Skills_store'),
+    os.path.expanduser('~/Documents/Skills/Skills_librairie'),
+    os.path.expanduser('~/Documents/Skills/Skills_store'),
+]
+
+
+def is_library_root(path: str) -> bool:
+    """Detect if path looks like a Skills library repository root."""
+    if not path:
+        return False
+    return (
+        os.path.isdir(path)
+        and (
+            os.path.isdir(os.path.join(path, 'Skills'))
+            or os.path.isdir(os.path.join(path, 'skills'))
+        )
+    )
+
+
+def discover_repository_root() -> str:
+    """Find a repository root from known candidates."""
+    for candidate in REPO_CANDIDATES:
+        if not candidate:
+            continue
+        candidate = os.path.abspath(os.path.expanduser(candidate))
+        if is_library_root(candidate):
+            return candidate
+    return ""
+
+
 def verify_skill_library_manager():
     """Verify skill-library-manager installation"""
     issues = []
@@ -56,8 +90,8 @@ def verify_skill_library_manager():
                 warnings.append(f"  ⚠ {script} not found")
     
     # Check repository access
-    repo_path = "/Users/guillaumebld/Documents/Skills/Skills_librairie"
-    if os.path.exists(repo_path):
+    repo_path = discover_repository_root()
+    if repo_path:
         success.append(f"✓ Repository found at: {repo_path}")
         
         # Check catalog.json
@@ -67,7 +101,7 @@ def verify_skill_library_manager():
         else:
             warnings.append("⚠ catalog.json not found (run catalog-builder.py to generate)")
     else:
-        warnings.append(f"⚠ Repository not found at: {repo_path}")
+        warnings.append("⚠ Repository not found (set LIBRARY_ROOT if using a custom location)")
     
     return issues, warnings, success
 

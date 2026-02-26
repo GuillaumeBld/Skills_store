@@ -21,72 +21,60 @@
   <summary><strong>Option 1:</strong> Copy and paste this prompt into your AI (click to expand)</summary>
 
 ```text
-Read these skills and equip yourself with Skills Librairie capabilities:
+Read and follow these skills first:
 
-1. https://raw.githubusercontent.com/GuillaumeBld/Skills_librairie/main/Skills/Meta-skill/skills-store-access/SKILL.md
-2. https://raw.githubusercontent.com/GuillaumeBld/Skills_librairie/main/Skills/Meta-skill/superpowers/SKILL.md
+1) https://raw.githubusercontent.com/GuillaumeBld/Skills_librairie/main/Skills/Meta-skill/skills-store-access/SKILL.md
+2) https://raw.githubusercontent.com/GuillaumeBld/Skills_librairie/main/Skills/Meta-skill/superpowers/SKILL.md
 
-The first gives you access to the Skills store with intelligent discovery and JAAT-enhanced auto-discovery capabilities, the second teaches you how to use skills to their best capabilities (TDD, systematic debugging, collaborative planning).
+If the superpowers URL returns 404, continue with skills-store-access and read superpowers locally after cloning.
 
-Note: If the superpowers skill URL returns 404, it means it hasn't been pushed to GitHub yet. In that case:
-- Use skills-store-access first to equip yourself with Skills store capabilities
-- The superpowers skill will be available once pushed, or you can read it from the cloned repository locally
+Repository:
+https://github.com/GuillaumeBld/Skills_librairie
 
-Repository: https://github.com/GuillaumeBld/Skills_librairie
+Then execute this setup exactly:
 
-After reading both skills (or just skills-store-access if superpowers isn't available yet):
-
-1. Clone the repository (if not already done):
+1) Clone and enter repository:
    git clone https://github.com/GuillaumeBld/Skills_librairie.git <your-path>/Skills_librairie
    cd <your-path>/Skills_librairie
 
-2. Set LIBRARY_ROOT environment variable (optional, but recommended):
+2) Set library root (recommended):
    export LIBRARY_ROOT="<your-path>/Skills_librairie"
-   The scripts will auto-detect the library root by walking up from their location, but setting this explicitly helps.
 
-3. Build the catalog (generates catalog.json from all skills):
+3) Equip skills-store-access locally (platform-aware):
+   bash Skills/Meta-skill/skills-store-access/scripts/equip-skills-store.sh
+
+4) Verify installation and tool health:
+   python3 Skills/Meta-skill/skills-store-access/scripts/verify-installation.py
+   bash Skills/Meta-skill/skills-store-access/scripts/test-skills-store.sh
+
+5) Build full catalog and lightweight index:
    python3 Skills/skill-library-manager/scripts/catalog-builder.py
-   This script:
-   - Auto-detects LIBRARY_ROOT if not set
-   - Finds the Skills/ directory (capital S)
-   - Scans recursively through all category subdirectories
-   - Extracts metadata from each SKILL.md file
-   - Generates catalog.json with all skills and categories
-
-4. Generate the lightweight skills discovery index:
    python3 Skills/Meta-skill/skills-store-access/scripts/generate-skills-index.py
-   This creates skills-index.json for efficient skill discovery.
 
-5. Verify installation by searching for skills:
-   python3 Skills/skill-library-manager/scripts/search-skills.py --all
+6) Validate discovery is operational:
+   python3 Skills/skill-library-manager/scripts/search-skills.py --stats
+   python3 Skills/Meta-skill/skills-store-access/scripts/discover-skills.py "docker deployment traefik"
 
-6. Confirm understanding of superpowers methodology for systematic workflows (if available).
+7) Enforce prompt-injection safety scan:
+   python3 Skills/skill-library-manager/scripts/scan-skill-injection.py --strict --report skills-injection-scan-report.json
 
-Optional: Enable JAAT-Enhanced Discovery (for advanced auto-discovery):
-# Install JAAT dependencies for enhanced skill extraction
-pip install -r Skills/Meta-skill/skills-store-access/requirements.txt
+Optional: safely import additional community skills (GitHub HTTPS only + injection checks):
+python3 Skills/skill-library-manager/scripts/import-external-skills.py \
+  --repo https://github.com/Jeffallan/claude-skills.git \
+  --repo https://github.com/alirezarezvani/claude-skills.git \
+  --repo https://github.com/mrgoonie/claudekit-skills.git \
+  --repo https://github.com/jezweb/claude-skills.git \
+  --report external-skills-import-report.json
 
-# Test JAAT-enhanced workflow
-python3 Skills/Meta-skill/skills-store-access/scripts/test-jaat-workflow.py \
-  "Deploy Docker stack with database migrations" \
-  --use-jaat
+If optional import is used, rebuild indexes:
+python3 Skills/skill-library-manager/scripts/catalog-builder.py
+python3 Skills/Meta-skill/skills-store-access/scripts/generate-skills-index.py
 
-Key Features Available:
-- Intelligent skill discovery (90%+ context reduction)
-- JAAT-enhanced extraction (O*NET tasks + EuropaCode skills)
-- Automatic skill gap detection
-- Auto-creation of missing skills from authoritative sources
-- Proactive installation for ongoing projects
-
-Important Notes:
-- The repository uses Skills/ (capital S) directory, not skills/ (lowercase)
-- Skills are organized in categories: Skills/Meta-skill/, Skills/Development/, etc.
-- The scripts automatically handle case sensitivity and path detection
-- If you cloned to a non-standard location, set LIBRARY_ROOT to help the scripts find it
-- JAAT features are optional, the skill works without them using keyword-based discovery
-
-If you're reading this locally (repository cloned), you can read superpowers from:
-- Local path: Skills/Meta-skill/superpowers/SKILL.md
+Final confirmation output required:
+- Total skills and categories from search-skills --stats
+- Verification summary (pass/fail)
+- Injection scan result path and finding count
+- If import ran: imported/skipped/blocked/error counts
 ```
 </details>
 

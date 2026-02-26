@@ -10,7 +10,43 @@ import json
 import sys
 from pathlib import Path
 
-LIBRARY_ROOT = os.getenv('LIBRARY_ROOT', os.path.expanduser('~/Documents/Skills/Skills_librairie'))
+REPO_NAMES = ('Skills_librairie', 'Skills_store')
+FALLBACK_ROOTS = [
+    os.path.expanduser('~/Skills_librairie'),
+    os.path.expanduser('~/Skills_store'),
+    os.path.expanduser('~/Documents/Skills/Skills_librairie'),
+    os.path.expanduser('~/Documents/Skills/Skills_store'),
+]
+
+
+def is_library_root(path: str) -> bool:
+    if not path or not os.path.isdir(path):
+        return False
+    return os.path.isdir(os.path.join(path, 'Skills')) or os.path.isdir(os.path.join(path, 'skills'))
+
+
+def detect_library_root(start_dir: str) -> str:
+    env_root = os.getenv('LIBRARY_ROOT')
+    if env_root:
+        env_root = os.path.abspath(os.path.expanduser(env_root))
+        if is_library_root(env_root):
+            return env_root
+
+    current = os.path.abspath(start_dir)
+    while current != os.path.dirname(current):
+        if is_library_root(current) or os.path.basename(current) in REPO_NAMES:
+            return current
+        current = os.path.dirname(current)
+
+    for candidate in FALLBACK_ROOTS:
+        candidate = os.path.abspath(candidate)
+        if is_library_root(candidate):
+            return candidate
+
+    return os.path.abspath(os.path.expanduser('~/Skills_librairie'))
+
+
+LIBRARY_ROOT = detect_library_root(os.path.dirname(os.path.abspath(__file__)))
 INDEX_FILE = os.path.join(LIBRARY_ROOT, 'skills-index.json')
 
 def load_index():

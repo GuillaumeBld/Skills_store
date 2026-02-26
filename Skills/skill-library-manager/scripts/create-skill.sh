@@ -1,64 +1,131 @@
 #!/bin/bash
-set -e
+set -euo pipefail
 
 # Automated Skill Creation Workflow
-# Creates skill, validates, packages, updates catalog, commits to Git
+# Creates a new skill in Skills/<Category>/<skill-name>, validates/package option,
+# updates catalog/index, and offers optional git commit/push.
 
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-LIBRARY_ROOT="${LIBRARY_ROOT:-$HOME/Skills_librairie}"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# Colors for output
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
 YELLOW='\033[1;33m'
-NC='\033[0m' # No Color
+RED='\033[0;31m'
+NC='\033[0m'
+
+detect_library_root() {
+  if [ -n "${LIBRARY_ROOT:-}" ] && [ -d "${LIBRARY_ROOT}/Skills" ]; then
+    echo "$LIBRARY_ROOT"
+    return 0
+  fi
+
+  local current="$SCRIPT_DIR"
+  while [ "$current" != "/" ]; do
+    if [ -d "$current/Skills" ] || [ -d "$current/skills" ]; then
+      echo "$current"
+      return 0
+    fi
+    current="$(dirname "$current")"
+  done
+
+  local candidates=(
+    "$HOME/Skills_librairie"
+    "$HOME/Skills_store"
+    "$HOME/Documents/Skills/Skills_librairie"
+    "$HOME/Documents/Skills/Skills_store"
+  )
+  local c
+  for c in "${candidates[@]}"; do
+    if [ -d "$c/Skills" ] || [ -d "$c/skills" ]; then
+      echo "$c"
+      return 0
+    fi
+  done
+
+  return 1
+}
+
+to_kebab() {
+  echo "$1" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9]+/-/g; s/^-+|-+$//g; s/--+/-/g'
+}
 
 echo -e "${BLUE}=== Skill Library Manager: Create New Skill ===${NC}\n"
 
-# Check if library exists
-if [ ! -d "$LIBRARY_ROOT" ]; then
-    echo -e "${YELLOW}Skills library not found at $LIBRARY_ROOT${NC}"
-    echo "Cloning from GitHub..."
-    gh repo clone GuillaumeBld/Skills_librairie "$LIBRARY_ROOT"
+if ! LIBRARY_ROOT="$(detect_library_root)"; then
+  echo -e "${RED}Could not locate a Skills repository.${NC}"
+  echo "Set LIBRARY_ROOT to your repository path and re-run."
+  exit 1
 fi
 
-cd "$LIBRARY_ROOT"
+if [ ! -d "$LIBRARY_ROOT/.git" ]; then
+  echo -e "${YELLOW}Warning: $LIBRARY_ROOT is not a git repo. Continuing anyway.${NC}"
+fi
 
-# Ensure directories exist
-mkdir -p skills packaged scripts
+SKILLS_DIR="$LIBRARY_ROOT/Skills"
+mkdir -p "$SKILLS_DIR" "$LIBRARY_ROOT/packaged"
 
-# Prompt for skill information
-read -p "Skill name (kebab-case, e.g., postgres-backup): " SKILL_NAME
-read -p "Short description: " DESCRIPTION
-read -p "Author name: " AUTHOR
-read -p "Tags (comma-separated, e.g., database,backup,postgresql): " TAGS_INPUT
-read -p "Version (default: 1.0.0): " VERSION
-VERSION=${VERSION:-1.0.0}
+echo "Repository: $LIBRARY_ROOT"
+echo ""
 
-# Convert tags to array
-IFS=',' read -ra TAGS <<< "$TAGS_INPUT"
+read -r -p "Skill name (kebab-case, e.g., postgres-backup): " RAW_SKILL_NAME
+SKILL_NAME="$(to_kebab "$RAW_SKILL_NAME")"
+if [ -z "$SKILL_NAME" ]; then
+  echo -e "${RED}Skill name cannot be empty.${NC}"
+  exit 1
+fi
 
-echo -e "\n${BLUE}Creating skill: $SKILL_NAME${NC}"
+read -r -p "Category (default: Development): " CATEGORY
+CATEGORY="${CATEGORY:-Development}"
+read -r -p "Short description: " DESCRIPTION
+read -r -p "Author name: " AUTHOR
+read -r -p "Tags (comma-separated, e.g., database,backup,postgresql): " TAGS_INPUT
+read -r -p "Version (default: 1.0.0): " VERSION
+VERSION="${VERSION:-1.0.0}"
 
-# 1. Initialize skill structure
-echo "Step 1: Initializing skill structure..."
-python3 /mnt/skills/examples/skill-creator/scripts/init_skill.py "$SKILL_NAME" --path "$LIBRARY_ROOT/skills"
+TARGET_DIR="$SKILLS_DIR/$CATEGORY"
+SKILL_DIR="$TARGET_DIR/$SKILL_NAME"
+SKILL_MD="$SKILL_DIR/SKILL.md"
 
-# 2. Update SKILL.md frontmatter with metadata
-SKILL_MD="$LIBRARY_ROOT/skills/$SKILL_NAME/SKILL.md"
-echo "Step 2: Adding metadata to SKILL.md..."
+if [ -d "$SKILL_DIR" ]; then
+  echo -e "${YELLOW}$SKILL_DIR already exists.${NC}"
+  read -r -p "Overwrite SKILL.md metadata and continue? (y/N): " OVERWRITE
+  if [[ ! "${OVERWRITE:-}" =~ ^[Yy]$ ]]; then
+    echo "Cancelled."
+    exit 0
+  fi
+fi
 
-# Create enhanced frontmatter
-cat > "$SKILL_MD.tmp" << EOF
+mkdir -p "$SKILL_DIR/scripts" "$SKILL_DIR/references" "$SKILL_DIR/assets"
+
+INIT_SCRIPT="$LIBRARY_ROOT/Skills/Meta-skill/skill-creator/scripts/init_skill.py"
+if [ -f "$INIT_SCRIPT" ]; then
+  echo "Initializing structure with skill-creator..."
+  python3 "$INIT_SCRIPT" "$SKILL_NAME" --path "$TARGET_DIR" >/dev/null 2>&1 || true
+fi
+
+# Normalize tags list.
+IFS=',' read -r -a TAGS <<< "$TAGS_INPUT"
+TAGS_JSON=""
+for t in "${TAGS[@]}"; do
+  t="$(echo "$t" | xargs)"
+  [ -z "$t" ] && continue
+  if [ -n "$TAGS_JSON" ]; then
+    TAGS_JSON="$TAGS_JSON, "
+  fi
+  TAGS_JSON="$TAGS_JSON\"$t\""
+done
+
+cat > "$SKILL_MD" <<EOF
 ---
-name: $SKILL_NAME
-description: $DESCRIPTION
-version: $VERSION
-author: $AUTHOR
-created: $(date +%Y-%m-%d)
-updated: $(date +%Y-%m-%d)
-tags: [$(echo "${TAGS[@]}" | sed 's/ /, /g')]
-license: MIT
+name: "$SKILL_NAME"
+description: "${DESCRIPTION//\"/\\\"}"
+version: "$VERSION"
+author: "${AUTHOR//\"/\\\"}"
+created: "$(date +%Y-%m-%d)"
+updated: "$(date +%Y-%m-%d)"
+category: "$CATEGORY"
+tags: [${TAGS_JSON}]
+license: "MIT"
 ---
 
 # ${SKILL_NAME}
@@ -78,70 +145,61 @@ TODO: Add quick start guide
 TODO: Document reference files if any
 EOF
 
-mv "$SKILL_MD.tmp" "$SKILL_MD"
-
-# 3. Create CHANGELOG
-echo "Step 3: Creating CHANGELOG..."
-cat > "$LIBRARY_ROOT/skills/$SKILL_NAME/CHANGELOG.md" << EOF
+cat > "$SKILL_DIR/CHANGELOG.md" <<EOF
 # Changelog
 
 ## v$VERSION - $(date +%Y-%m-%d)
 - Initial release
 EOF
 
-# 4. Open editor for user to fill in content
-echo -e "\n${YELLOW}Opening editor for you to add skill content...${NC}"
-echo "Press Enter when ready to edit SKILL.md"
-read
+echo -e "\n${YELLOW}Opening editor for SKILL.md...${NC}"
+echo "Close the editor when done."
+"${EDITOR:-nano}" "$SKILL_MD"
 
-${EDITOR:-nano} "$SKILL_MD"
-
-# 5. Validate skill
-echo -e "\n${BLUE}Step 4: Validating skill...${NC}"
-if python3 /mnt/skills/examples/skill-creator/scripts/package_skill.py "$LIBRARY_ROOT/skills/$SKILL_NAME" "$LIBRARY_ROOT/packaged"; then
-    echo -e "${GREEN}✓ Skill validated and packaged successfully${NC}"
+PACKAGE_SCRIPT="$LIBRARY_ROOT/Skills/Meta-skill/skill-creator/scripts/package_skill.py"
+if [ -f "$PACKAGE_SCRIPT" ]; then
+  echo -e "\n${BLUE}Packaging skill...${NC}"
+  if python3 "$PACKAGE_SCRIPT" "$SKILL_DIR" "$LIBRARY_ROOT/packaged"; then
+    echo -e "${GREEN}✓ Skill packaged successfully${NC}"
+  else
+    echo -e "${YELLOW}⚠ Packaging failed. You can rerun manually:${NC}"
+    echo "python3 \"$PACKAGE_SCRIPT\" \"$SKILL_DIR\" \"$LIBRARY_ROOT/packaged\""
+  fi
 else
-    echo -e "${YELLOW}⚠ Validation failed. Please fix errors and run:${NC}"
-    echo "  python3 /mnt/skills/examples/skill-creator/scripts/package_skill.py $LIBRARY_ROOT/skills/$SKILL_NAME $LIBRARY_ROOT/packaged"
-    exit 1
+  echo -e "${YELLOW}⚠ package_skill.py not found; skipping packaging.${NC}"
 fi
 
-# 6. Update catalog
-echo "Step 5: Updating catalog..."
-if [ -f "$LIBRARY_ROOT/scripts/catalog-builder.py" ]; then
-    python3 "$LIBRARY_ROOT/scripts/catalog-builder.py"
-else
-    echo -e "${YELLOW}⚠ catalog-builder.py not found, skipping catalog update${NC}"
+CATALOG_BUILDER="$LIBRARY_ROOT/Skills/skill-library-manager/scripts/catalog-builder.py"
+INDEX_BUILDER="$LIBRARY_ROOT/Skills/Meta-skill/skills-store-access/scripts/generate-skills-index.py"
+
+if [ -f "$CATALOG_BUILDER" ]; then
+  echo -e "\n${BLUE}Updating catalog...${NC}"
+  python3 "$CATALOG_BUILDER"
 fi
 
-# 7. Git operations
-echo "Step 6: Committing to Git..."
-git add .
-git commit -m "Add $SKILL_NAME skill v$VERSION
-
-- $DESCRIPTION
-- Tags: ${TAGS[*]}"
-
-# Create Git tag
-git tag "$SKILL_NAME-v$VERSION"
-
-# 8. Push to GitHub
-echo "Step 7: Pushing to GitHub..."
-read -p "Push to GitHub now? (y/n): " PUSH_CONFIRM
-if [ "$PUSH_CONFIRM" = "y" ]; then
-    git push origin main --tags
-    echo -e "${GREEN}✓ Pushed to GitHub${NC}"
-else
-    echo -e "${YELLOW}Skipped push. Run manually: git push origin main --tags${NC}"
+if [ -f "$INDEX_BUILDER" ]; then
+  echo -e "${BLUE}Updating lightweight index...${NC}"
+  python3 "$INDEX_BUILDER"
 fi
 
-echo -e "\n${GREEN}=== Skill Created Successfully ===${NC}"
-echo "Skill name: $SKILL_NAME"
-echo "Version: $VERSION"
-echo "Location: $LIBRARY_ROOT/skills/$SKILL_NAME/"
+if [ -d "$LIBRARY_ROOT/.git" ]; then
+  echo -e "\n${BLUE}Git summary:${NC}"
+  git -C "$LIBRARY_ROOT" status --short
+
+  read -r -p "Create commit now? (y/N): " COMMIT_CONFIRM
+  if [[ "${COMMIT_CONFIRM:-}" =~ ^[Yy]$ ]]; then
+    git -C "$LIBRARY_ROOT" add "$SKILL_DIR" "$LIBRARY_ROOT/catalog.json" "$LIBRARY_ROOT/skills-index.json" 2>/dev/null || true
+    git -C "$LIBRARY_ROOT" commit -m "Add $SKILL_NAME skill v$VERSION"
+    read -r -p "Push current branch now? (y/N): " PUSH_CONFIRM
+    if [[ "${PUSH_CONFIRM:-}" =~ ^[Yy]$ ]]; then
+      git -C "$LIBRARY_ROOT" push
+      echo -e "${GREEN}✓ Pushed${NC}"
+    fi
+  fi
+fi
+
+echo -e "\n${GREEN}=== Skill Created ===${NC}"
+echo "Skill: $SKILL_NAME"
+echo "Category: $CATEGORY"
+echo "Location: $SKILL_DIR"
 echo "Package: $LIBRARY_ROOT/packaged/$SKILL_NAME.skill"
-echo ""
-echo "Next steps:"
-echo "1. Test the skill in Claude.ai (upload .skill file)"
-echo "2. Iterate on content as needed"
-echo "3. Update version when making changes"

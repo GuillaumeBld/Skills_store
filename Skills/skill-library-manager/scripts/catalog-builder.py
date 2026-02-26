@@ -12,27 +12,52 @@ import yaml
 import re
 from pathlib import Path
 from datetime import datetime
+from typing import Dict, List, Optional
 
-# Get script directory and find library root dynamically
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-# Try to find library root: up from script to Skills_librairie root
-LIBRARY_ROOT = os.getenv('LIBRARY_ROOT')
-if not LIBRARY_ROOT:
-    # Walk up from script location to find repository root
-    current = SCRIPT_DIR
+
+REPO_NAMES = ('Skills_librairie', 'Skills_store')
+FALLBACK_ROOTS = [
+    os.path.expanduser('~/Skills_librairie'),
+    os.path.expanduser('~/Skills_store'),
+    os.path.expanduser('~/Documents/Skills/Skills_librairie'),
+    os.path.expanduser('~/Documents/Skills/Skills_store'),
+]
+
+
+def is_library_root(path: str) -> bool:
+    """Check if a path looks like a Skills library root."""
+    if not path or not os.path.isdir(path):
+        return False
+    skills_cap = os.path.join(path, 'Skills')
+    skills_low = os.path.join(path, 'skills')
+    return os.path.isdir(skills_cap) or os.path.isdir(skills_low)
+
+
+def detect_library_root(start_dir: str) -> str:
+    """Detect repository root from env var, upward walk, and fallback locations."""
+    env_root = os.getenv('LIBRARY_ROOT')
+    if env_root:
+        env_root = os.path.abspath(os.path.expanduser(env_root))
+        if is_library_root(env_root):
+            return env_root
+
+    current = os.path.abspath(start_dir)
     while current != os.path.dirname(current):  # Stop at filesystem root
-        if os.path.basename(current) == 'Skills_librairie' or os.path.basename(current) == 'Skills_store':
-            LIBRARY_ROOT = current
-            break
-        # Check if we're in a repo by looking for Skills/ directory
-        skills_candidate = os.path.join(current, 'Skills')
-        if os.path.exists(skills_candidate) and os.path.isdir(skills_candidate):
-            LIBRARY_ROOT = current
-            break
+        if is_library_root(current) or os.path.basename(current) in REPO_NAMES:
+            return current
         current = os.path.dirname(current)
-    else:
-        # Fallback to default
-        LIBRARY_ROOT = os.path.expanduser('~/Skills_librairie')
+
+    for candidate in FALLBACK_ROOTS:
+        candidate = os.path.abspath(candidate)
+        if is_library_root(candidate):
+            return candidate
+
+    # Last-resort fallback keeps previous behavior while remaining deterministic.
+    return os.path.abspath(os.path.expanduser('~/Skills_librairie'))
+
+
+LIBRARY_ROOT = detect_library_root(SCRIPT_DIR)
 
 # Try Skills (capital) first, then skills (lowercase) for compatibility
 SKILLS_DIR_CAPITAL = os.path.join(LIBRARY_ROOT, 'Skills')
@@ -47,7 +72,44 @@ else:
 PACKAGED_DIR = os.path.join(LIBRARY_ROOT, 'packaged')
 CATALOG_FILE = os.path.join(LIBRARY_ROOT, 'catalog.json')
 
-def extract_frontmatter(skill_md_path):
+def normalize_frontmatter_types(frontmatter: Dict) -> Dict:
+    """Normalize frontmatter fields to JSON-safe primitive values."""
+    normalized = dict(frontmatter)
+    for key in ['created', 'updated', 'date']:
+        if key in normalized and normalized[key]:
+            if isinstance(normalized[key], (datetime,)):
+                normalized[key] = normalized[key].strftime('%Y-%m-%d')
+            elif hasattr(normalized[key], 'strftime'):  # date object
+                normalized[key] = normalized[key].strftime('%Y-%m-%d')
+    return normalized
+
+
+def parse_frontmatter_fallback(raw_frontmatter: str) -> Dict:
+    """Best-effort parser for malformed YAML frontmatter."""
+    data: Dict[str, object] = {}
+    scalar_fields = ['name', 'description', 'version', 'author', 'category', 'license']
+
+    for field in scalar_fields:
+        match = re.search(rf'^{field}:\s*(.*)$', raw_frontmatter, re.MULTILINE)
+        if not match:
+            continue
+        value = match.group(1).strip()
+        if value and value[0] in {'"', "'"} and value[-1:] == value[0]:
+            value = value[1:-1]
+        data[field] = value
+
+    # Handle simple inline list syntax: tags: [a, b]
+    for list_field in ['tags', 'dependencies', 'compatibility']:
+        match = re.search(rf'^{list_field}:\s*\[(.*)\]\s*$', raw_frontmatter, re.MULTILINE)
+        if not match:
+            continue
+        values = [item.strip().strip('"').strip("'") for item in match.group(1).split(',')]
+        data[list_field] = [v for v in values if v]
+
+    return data
+
+
+def extract_frontmatter(skill_md_path: str) -> Dict:
     """Extract YAML frontmatter from SKILL.md"""
     try:
         with open(skill_md_path, 'r', encoding='utf-8') as f:
@@ -56,16 +118,16 @@ def extract_frontmatter(skill_md_path):
         # Match frontmatter between --- delimiters
         match = re.match(r'^---\n(.*?)\n---', content, re.DOTALL)
         if match:
-            frontmatter = yaml.safe_load(match.group(1))
-            if frontmatter:
-                # Convert date/datetime objects to strings for JSON serialization
-                for key in ['created', 'updated', 'date']:
-                    if key in frontmatter and frontmatter[key]:
-                        if isinstance(frontmatter[key], (datetime,)):
-                            frontmatter[key] = frontmatter[key].strftime('%Y-%m-%d')
-                        elif hasattr(frontmatter[key], 'strftime'):  # date object
-                            frontmatter[key] = frontmatter[key].strftime('%Y-%m-%d')
-            return frontmatter or {}
+            raw_frontmatter = match.group(1)
+            try:
+                frontmatter = yaml.safe_load(raw_frontmatter)
+                if isinstance(frontmatter, dict):
+                    return normalize_frontmatter_types(frontmatter)
+            except Exception:
+                fallback = parse_frontmatter_fallback(raw_frontmatter)
+                if fallback:
+                    return normalize_frontmatter_types(fallback)
+                raise
         return {}
     except Exception as e:
         print(f"Warning: Could not parse {skill_md_path}: {e}")

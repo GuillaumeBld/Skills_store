@@ -24,11 +24,11 @@ test_check() {
     echo -n "Testing $name... "
     if eval "$command" > /dev/null 2>&1; then
         echo -e "${GREEN}✓ PASS${NC}"
-        ((PASSED++))
+        PASSED=$((PASSED + 1))
         return 0
     else
         echo -e "${RED}✗ FAIL${NC}"
-        ((FAILED++))
+        FAILED=$((FAILED + 1))
         return 1
     fi
 }
@@ -69,12 +69,18 @@ fi
 # Test 5: Repository Access
 echo -e "\n${CYAN}Test 5: Repository Access${NC}"
 REPO_LOCATIONS=(
-    "/Users/guillaumebld/Documents/Skills/Skills_librairie"
+    "${LIBRARY_ROOT:-}"
+    "$PWD"
+    "$(git rev-parse --show-toplevel 2>/dev/null || true)"
+    "$(cd "$SCRIPT_DIR/../../../.." && pwd)"
     "$HOME/Documents/Skills/Skills_librairie"
+    "$HOME/Documents/Skills/Skills_store"
     "$HOME/Skills_librairie"
+    "$HOME/Skills_store"
 )
 REPO_FOUND=0
 for repo in "${REPO_LOCATIONS[@]}"; do
+    [ -n "$repo" ] || continue
     if [ -d "$repo/Skills/skill-library-manager" ]; then
         REPO_FOUND=1
         REPO_PATH="$repo"

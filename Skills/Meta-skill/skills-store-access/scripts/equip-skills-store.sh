@@ -67,14 +67,21 @@ echo -e "${BLUE}Method 2: Manual installation from repository${NC}"
 # Find repository location (try common locations)
 LOCAL_REPO=""
 POSSIBLE_LOCATIONS=(
-    "/Users/guillaumebld/Documents/Skills/Skills_librairie"
+    "${LIBRARY_ROOT:-}"
+    "$PWD"
+    "$(git rev-parse --show-toplevel 2>/dev/null || true)"
+    "$(cd "$SCRIPT_DIR/../../../.." && pwd)"
     "$HOME/Documents/Skills/Skills_librairie"
+    "$HOME/Documents/Skills/Skills_store"
     "$HOME/Skills_librairie"
+    "$HOME/Skills_store"
     "$HOME/.skills/Skills_librairie"
+    "$HOME/.skills/Skills_store"
     "$(dirname "$SCRIPT_DIR")/../../../.."
 )
 
 for loc in "${POSSIBLE_LOCATIONS[@]}"; do
+    [ -n "$loc" ] || continue
     if [ -d "$loc/Skills/skill-library-manager" ]; then
         LOCAL_REPO="$loc"
         break
@@ -111,6 +118,7 @@ fi
 if [ -z "$LOCAL_REPO" ] || [ ! -d "$LOCAL_REPO/Skills/skill-library-manager" ]; then
     echo -e "${RED}Error: Could not locate or clone repository${NC}"
     echo -e "Please manually clone: git clone https://github.com/$REPO_OWNER/$REPO_NAME.git"
+    echo -e "Or set LIBRARY_ROOT=/path/to/repo and rerun this script."
     exit 1
 fi
 

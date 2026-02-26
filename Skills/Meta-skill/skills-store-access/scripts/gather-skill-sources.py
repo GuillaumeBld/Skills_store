@@ -9,10 +9,69 @@ import sys
 import json
 import re
 import requests
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Tuple
 from urllib.parse import urlparse
 
-def identify_sources(skill_requirement: Dict) -> List[str]:
+ALLOWED_SOURCE_DOMAINS = {
+    'docs.docker.com',
+    'kubernetes.io',
+    'docs.n8n.io',
+    'docs.langchain.com',
+    'www.pinecone.io',
+    'www.postgresql.org',
+    'www.mongodb.com',
+    'react.dev',
+    'nextjs.org',
+    'doc.traefik.io',
+    'restfulapi.net',
+    'www.onetonline.org',
+    'github.com',
+}
+
+PROMPT_INJECTION_PATTERNS = [
+    re.compile(r'ignore\s+(all|any|previous|prior)\s+(instructions?|prompts?)', re.IGNORECASE),
+    re.compile(r'(override|bypass)\s+(the\s+)?(system|developer)\s+prompt', re.IGNORECASE),
+    re.compile(r'jailbreak|dan\s+mode|do\s+anything\s+now|ignore\s+safety', re.IGNORECASE),
+    re.compile(
+        r'(you|assistant|model).{0,60}(reveal|exfiltrate|steal).{0,60}'
+        r'(secret|token|credential|api[\s_-]?key|password)',
+        re.IGNORECASE,
+    ),
+    re.compile(r'send.{0,40}(env|secret|token|credential).{0,40}https?://', re.IGNORECASE),
+]
+
+
+def is_allowed_source_url(url: str) -> bool:
+    """Allow only HTTPS URLs from known documentation domains."""
+    try:
+        parsed = urlparse(url)
+        if parsed.scheme != 'https' or not parsed.netloc:
+            return False
+        host = parsed.netloc.lower()
+        return any(host == domain or host.endswith(f'.{domain}') for domain in ALLOWED_SOURCE_DOMAINS)
+    except Exception:
+        return False
+
+
+def has_prompt_injection_signals(text: str) -> Tuple[bool, List[str]]:
+    """Detect common prompt-injection markers in fetched content."""
+    matches = []
+    for pattern in PROMPT_INJECTION_PATTERNS:
+        if pattern.search(text):
+            matches.append(pattern.pattern)
+    return bool(matches), matches
+
+
+def sanitize_preview(text: str, max_chars: int = 1000) -> str:
+    """Strip noisy HTML/script content for previews."""
+    no_script = re.sub(r'(?is)<script.*?>.*?</script>', ' ', text)
+    no_style = re.sub(r'(?is)<style.*?>.*?</style>', ' ', no_script)
+    no_tags = re.sub(r'(?is)<[^>]+>', ' ', no_style)
+    collapsed = re.sub(r'\s+', ' ', no_tags).strip()
+    return collapsed[:max_chars]
+
+
+def identify_sources(skill_requirement: Dict) -> List[Dict]:
     """
     Identify authoritative sources for a skill requirement.
     
@@ -82,18 +141,25 @@ def identify_sources(skill_requirement: Dict) -> List[str]:
     
     return sources
 
-def fetch_web_content(url: str, timeout: int = 10) -> Optional[str]:
-    """Fetch content from a URL (simplified - in production, use proper HTML parsing)"""
+def fetch_web_content(url: str, timeout: int = 10) -> Tuple[Optional[str], Optional[str]]:
+    """Fetch source content with domain allowlist and injection checks."""
+    if not is_allowed_source_url(url):
+        return None, "blocked: untrusted domain or non-https URL"
+
     try:
         headers = {
             'User-Agent': 'Mozilla/5.0 (compatible; SkillLibraryBot/1.0)'
         }
         response = requests.get(url, headers=headers, timeout=timeout)
         if response.status_code == 200:
-            return response.text[:50000]  # Limit to first 50KB
-        return None
-    except Exception:
-        return None
+            raw = response.text[:50000]  # Limit to first 50KB
+            risky, patterns = has_prompt_injection_signals(raw)
+            if risky:
+                return None, f"blocked: potential prompt injection markers ({len(patterns)} pattern match(es))"
+            return sanitize_preview(raw, max_chars=5000), None
+        return None, f"http_{response.status_code}"
+    except Exception as exc:
+        return None, f"request_error: {exc}"
 
 def gather_sources(requirements: List[Dict], fetch_content: bool = False) -> Dict:
     """
@@ -116,9 +182,10 @@ def gather_sources(requirements: List[Dict], fetch_content: bool = False) -> Dic
             # Fetch content for each source
             enriched_sources = []
             for source in sources:
-                if source.get('type') == 'official_docs' and source.get('url'):
-                    content = fetch_web_content(source['url'])
+                if source.get('url'):
+                    content, fetch_status = fetch_web_content(source['url'])
                     source['content_preview'] = content[:1000] if content else None
+                    source['fetch_status'] = "ok" if content else fetch_status
                 enriched_sources.append(source)
             results[skill_name] = enriched_sources
         else:

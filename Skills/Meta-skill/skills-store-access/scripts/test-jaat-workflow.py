@@ -11,7 +11,32 @@ import subprocess
 from pathlib import Path
 
 SCRIPT_DIR = os.path.dirname(__file__)
-LIBRARY_ROOT = os.getenv('LIBRARY_ROOT', os.path.expanduser('~/Documents/Skills/Skills_librairie'))
+
+
+def detect_library_root() -> str:
+    env_root = os.getenv('LIBRARY_ROOT')
+    if env_root and os.path.isdir(os.path.join(env_root, 'Skills')):
+        return env_root
+
+    current = os.path.abspath(SCRIPT_DIR)
+    while current != os.path.dirname(current):
+        if os.path.isdir(os.path.join(current, 'Skills')) or os.path.isdir(os.path.join(current, 'skills')):
+            return current
+        current = os.path.dirname(current)
+
+    for candidate in (
+        os.path.expanduser('~/Skills_librairie'),
+        os.path.expanduser('~/Skills_store'),
+        os.path.expanduser('~/Documents/Skills/Skills_librairie'),
+        os.path.expanduser('~/Documents/Skills/Skills_store'),
+    ):
+        if os.path.isdir(os.path.join(candidate, 'Skills')) or os.path.isdir(os.path.join(candidate, 'skills')):
+            return candidate
+
+    return os.path.expanduser('~/Skills_librairie')
+
+
+LIBRARY_ROOT = detect_library_root()
 
 def run_step(name: str, command: list, input_data: str = None) -> tuple:
     """Run a workflow step and return (success, output, error)"""

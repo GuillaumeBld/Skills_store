@@ -1,0 +1,1719 @@
+{
+  "library_root": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q",
+  "skills_root": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills",
+  "dry_run": false,
+  "results": [
+    {
+      "repo": "https://github.com/Jeffallan/claude-skills.git",
+      "discovered": 66,
+      "imported": 1,
+      "skipped": 65,
+      "blocked": 0,
+      "errors": [],
+      "details": [
+        {
+          "source": "skills/nextjs-developer/SKILL.md",
+          "category": "Community",
+          "name": "nextjs-developer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/nextjs-developer",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/database-optimizer/SKILL.md",
+          "category": "Community",
+          "name": "database-optimizer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/database-optimizer",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/fullstack-guardian/SKILL.md",
+          "category": "Community",
+          "name": "fullstack-guardian",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/fullstack-guardian",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/spark-engineer/SKILL.md",
+          "category": "Community",
+          "name": "spark-engineer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/spark-engineer",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/fine-tuning-expert/SKILL.md",
+          "category": "Community",
+          "name": "fine-tuning-expert",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/fine-tuning-expert",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/wordpress-pro/SKILL.md",
+          "category": "Community",
+          "name": "wordpress-pro",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/wordpress-pro",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/code-documenter/SKILL.md",
+          "category": "Community",
+          "name": "code-documenter",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/code-documenter",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/microservices-architect/SKILL.md",
+          "category": "Community",
+          "name": "microservices-architect",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/microservices-architect",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/kotlin-specialist/SKILL.md",
+          "category": "Community",
+          "name": "kotlin-specialist",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/kotlin-specialist",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/spec-miner/SKILL.md",
+          "category": "Community",
+          "name": "spec-miner",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/spec-miner",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/fastapi-expert/SKILL.md",
+          "category": "Community",
+          "name": "fastapi-expert",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/fastapi-expert",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/atlassian-mcp/SKILL.md",
+          "category": "Community",
+          "name": "atlassian-mcp",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/atlassian-mcp",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/golang-pro/SKILL.md",
+          "category": "Community",
+          "name": "golang-pro",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/golang-pro",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/shopify-expert/SKILL.md",
+          "category": "Community",
+          "name": "shopify-expert",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/shopify-expert",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/cli-developer/SKILL.md",
+          "category": "Community",
+          "name": "cli-developer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/cli-developer",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/salesforce-developer/SKILL.md",
+          "category": "Community",
+          "name": "salesforce-developer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/salesforce-developer",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/dotnet-core-expert/SKILL.md",
+          "category": "Community",
+          "name": "dotnet-core-expert",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/dotnet-core-expert",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/prompt-engineer/SKILL.md",
+          "category": "Community",
+          "name": "prompt-engineer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/prompt-engineer",
+          "status": "imported",
+          "reason": "ok"
+        },
+        {
+          "source": "skills/monitoring-expert/SKILL.md",
+          "category": "Community",
+          "name": "monitoring-expert",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/monitoring-expert",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/vue-expert-js/SKILL.md",
+          "category": "Community",
+          "name": "vue-expert-js",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/vue-expert-js",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/swift-expert/SKILL.md",
+          "category": "Community",
+          "name": "swift-expert",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/swift-expert",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/embedded-systems/SKILL.md",
+          "category": "Community",
+          "name": "embedded-systems",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/embedded-systems",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/rust-engineer/SKILL.md",
+          "category": "Community",
+          "name": "rust-engineer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/rust-engineer",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/legacy-modernizer/SKILL.md",
+          "category": "Community",
+          "name": "legacy-modernizer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/legacy-modernizer",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/devops-engineer/SKILL.md",
+          "category": "Community",
+          "name": "devops-engineer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/devops-engineer",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/api-designer/SKILL.md",
+          "category": "Community",
+          "name": "api-designer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/api-designer",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/sre-engineer/SKILL.md",
+          "category": "Community",
+          "name": "sre-engineer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/sre-engineer",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/debugging-wizard/SKILL.md",
+          "category": "Community",
+          "name": "debugging-wizard",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/debugging-wizard",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/angular-architect/SKILL.md",
+          "category": "Community",
+          "name": "angular-architect",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/angular-architect",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/typescript-pro/SKILL.md",
+          "category": "Community",
+          "name": "typescript-pro",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/typescript-pro",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/php-pro/SKILL.md",
+          "category": "Community",
+          "name": "php-pro",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/php-pro",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/test-master/SKILL.md",
+          "category": "Community",
+          "name": "test-master",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/test-master",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/django-expert/SKILL.md",
+          "category": "Community",
+          "name": "django-expert",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/django-expert",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/nestjs-expert/SKILL.md",
+          "category": "Community",
+          "name": "nestjs-expert",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/nestjs-expert",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/secure-code-guardian/SKILL.md",
+          "category": "Community",
+          "name": "secure-code-guardian",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/secure-code-guardian",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/java-architect/SKILL.md",
+          "category": "Community",
+          "name": "java-architect",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/java-architect",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/pandas-pro/SKILL.md",
+          "category": "Community",
+          "name": "pandas-pro",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/pandas-pro",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/cpp-pro/SKILL.md",
+          "category": "Community",
+          "name": "cpp-pro",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/cpp-pro",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/kubernetes-specialist/SKILL.md",
+          "category": "Community",
+          "name": "kubernetes-specialist",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/kubernetes-specialist",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/laravel-specialist/SKILL.md",
+          "category": "Community",
+          "name": "laravel-specialist",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/laravel-specialist",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/python-pro/SKILL.md",
+          "category": "Community",
+          "name": "python-pro",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/python-pro",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/spring-boot-engineer/SKILL.md",
+          "category": "Community",
+          "name": "spring-boot-engineer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/spring-boot-engineer",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/architecture-designer/SKILL.md",
+          "category": "Community",
+          "name": "architecture-designer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/architecture-designer",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/ml-pipeline/SKILL.md",
+          "category": "Community",
+          "name": "ml-pipeline",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/ml-pipeline",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/terraform-engineer/SKILL.md",
+          "category": "Community",
+          "name": "terraform-engineer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/terraform-engineer",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/rag-architect/SKILL.md",
+          "category": "Community",
+          "name": "rag-architect",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/rag-architect",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/rails-expert/SKILL.md",
+          "category": "Community",
+          "name": "rails-expert",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/rails-expert",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/react-native-expert/SKILL.md",
+          "category": "Community",
+          "name": "react-native-expert",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/react-native-expert",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/csharp-developer/SKILL.md",
+          "category": "Community",
+          "name": "csharp-developer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/csharp-developer",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/graphql-architect/SKILL.md",
+          "category": "Community",
+          "name": "graphql-architect",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/graphql-architect",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/code-reviewer/SKILL.md",
+          "category": "Community",
+          "name": "code-reviewer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/code-reviewer",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/chaos-engineer/SKILL.md",
+          "category": "Community",
+          "name": "chaos-engineer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/chaos-engineer",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/vue-expert/SKILL.md",
+          "category": "Community",
+          "name": "vue-expert",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/vue-expert",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/react-expert/SKILL.md",
+          "category": "Community",
+          "name": "react-expert",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/react-expert",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/playwright-expert/SKILL.md",
+          "category": "Community",
+          "name": "playwright-expert",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/playwright-expert",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/game-developer/SKILL.md",
+          "category": "Community",
+          "name": "game-developer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/game-developer",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/the-fool/SKILL.md",
+          "category": "Community",
+          "name": "the-fool",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/the-fool",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/javascript-pro/SKILL.md",
+          "category": "Community",
+          "name": "javascript-pro",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/javascript-pro",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/mcp-developer/SKILL.md",
+          "category": "Community",
+          "name": "mcp-developer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/mcp-developer",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/feature-forge/SKILL.md",
+          "category": "Community",
+          "name": "feature-forge",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/feature-forge",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/postgres-pro/SKILL.md",
+          "category": "Community",
+          "name": "postgres-pro",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/postgres-pro",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/sql-pro/SKILL.md",
+          "category": "Community",
+          "name": "sql-pro",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/sql-pro",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/security-reviewer/SKILL.md",
+          "category": "Community",
+          "name": "security-reviewer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/security-reviewer",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/cloud-architect/SKILL.md",
+          "category": "Community",
+          "name": "cloud-architect",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/cloud-architect",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/flutter-expert/SKILL.md",
+          "category": "Community",
+          "name": "flutter-expert",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/flutter-expert",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "skills/websocket-engineer/SKILL.md",
+          "category": "Community",
+          "name": "websocket-engineer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/websocket-engineer",
+          "status": "skipped",
+          "reason": "already_exists"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/alirezarezvani/claude-skills.git",
+      "discovered": 66,
+      "imported": 0,
+      "skipped": 66,
+      "blocked": 0,
+      "errors": [],
+      "details": [
+        {
+          "source": "engineering/migration-architect/SKILL.md",
+          "category": "Community",
+          "name": "migration-architect",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/migration-architect",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "engineering/dependency-auditor/SKILL.md",
+          "category": "Community",
+          "name": "dependency-auditor",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/dependency-auditor",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "engineering/observability-designer/SKILL.md",
+          "category": "Community",
+          "name": "observability-designer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/observability-designer",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "engineering/tech-debt-tracker/SKILL.md",
+          "category": "Community",
+          "name": "tech-debt-tracker",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/tech-debt-tracker",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "engineering/api-design-reviewer/SKILL.md",
+          "category": "Community",
+          "name": "api-design-reviewer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/api-design-reviewer",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "engineering/agent-designer/SKILL.md",
+          "category": "Community",
+          "name": "agent-designer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/agent-designer",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "engineering/release-manager/SKILL.md",
+          "category": "Community",
+          "name": "release-manager",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/release-manager",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "engineering/rag-architect/SKILL.md",
+          "category": "Community",
+          "name": "rag-architect",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/rag-architect",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "engineering/database-designer/SKILL.md",
+          "category": "Community",
+          "name": "database-designer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/database-designer",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "engineering/skill-tester/SKILL.md",
+          "category": "Community",
+          "name": "skill-tester",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/skill-tester",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "engineering/interview-system-designer/SKILL.md",
+          "category": "Community",
+          "name": "interview-system-designer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/interview-system-designer",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "engineering/skill-tester/assets/sample-skill/SKILL.md",
+          "category": "Community",
+          "name": "sample-skill",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/sample-skill",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "product-team/agile-product-owner/SKILL.md",
+          "category": "Community",
+          "name": "agile-product-owner",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/agile-product-owner",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "product-team/product-manager-toolkit/SKILL.md",
+          "category": "Community",
+          "name": "product-manager-toolkit",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/product-manager-toolkit",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "product-team/product-strategist/SKILL.md",
+          "category": "Community",
+          "name": "product-strategist",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/product-strategist",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "product-team/ux-researcher-designer/SKILL.md",
+          "category": "Community",
+          "name": "ux-researcher-designer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/ux-researcher-designer",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "product-team/ui-design-system/SKILL.md",
+          "category": "Community",
+          "name": "ui-design-system",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/ui-design-system",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "finance/financial-analyst/SKILL.md",
+          "category": "Community",
+          "name": "financial-analyst",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/financial-analyst",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "ra-qm-team/information-security-manager-iso27001/SKILL.md",
+          "category": "Community",
+          "name": "information-security-manager-iso27001",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/information-security-manager-iso27001",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "ra-qm-team/quality-manager-qmr/SKILL.md",
+          "category": "Community",
+          "name": "quality-manager-qmr",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/quality-manager-qmr",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "ra-qm-team/regulatory-affairs-head/SKILL.md",
+          "category": "Community",
+          "name": "regulatory-affairs-head",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/regulatory-affairs-head",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "ra-qm-team/capa-officer/SKILL.md",
+          "category": "Community",
+          "name": "capa-officer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/capa-officer",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "ra-qm-team/mdr-745-specialist/SKILL.md",
+          "category": "Community",
+          "name": "mdr-745-specialist",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/mdr-745-specialist",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "ra-qm-team/qms-audit-expert/SKILL.md",
+          "category": "Community",
+          "name": "qms-audit-expert",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/qms-audit-expert",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "ra-qm-team/fda-consultant-specialist/SKILL.md",
+          "category": "Community",
+          "name": "fda-consultant-specialist",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/fda-consultant-specialist",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "ra-qm-team/quality-documentation-manager/SKILL.md",
+          "category": "Community",
+          "name": "quality-documentation-manager",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/quality-documentation-manager",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "ra-qm-team/quality-manager-qms-iso13485/SKILL.md",
+          "category": "Community",
+          "name": "quality-manager-qms-iso13485",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/quality-manager-qms-iso13485",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "ra-qm-team/isms-audit-expert/SKILL.md",
+          "category": "Community",
+          "name": "isms-audit-expert",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/isms-audit-expert",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "ra-qm-team/gdpr-dsgvo-expert/SKILL.md",
+          "category": "Community",
+          "name": "gdpr-dsgvo-expert",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/gdpr-dsgvo-expert",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "ra-qm-team/risk-management-specialist/SKILL.md",
+          "category": "Community",
+          "name": "risk-management-specialist",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/risk-management-specialist",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "marketing-skill/content-creator/SKILL.md",
+          "category": "Community",
+          "name": "content-creator",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/content-creator",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "marketing-skill/social-media-analyzer/SKILL.md",
+          "category": "Community",
+          "name": "social-media-analyzer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/social-media-analyzer",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "marketing-skill/campaign-analytics/SKILL.md",
+          "category": "Community",
+          "name": "campaign-analytics",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/campaign-analytics",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "marketing-skill/app-store-optimization/SKILL.md",
+          "category": "Community",
+          "name": "app-store-optimization",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/app-store-optimization",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "marketing-skill/marketing-strategy-pmm/SKILL.md",
+          "category": "Community",
+          "name": "marketing-strategy-pmm",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/marketing-strategy-pmm",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "marketing-skill/marketing-demand-acquisition/SKILL.md",
+          "category": "Community",
+          "name": "marketing-demand-acquisition",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/marketing-demand-acquisition",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "engineering-team/senior-security/SKILL.md",
+          "category": "Community",
+          "name": "senior-security",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/senior-security",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "engineering-team/senior-frontend/SKILL.md",
+          "category": "Community",
+          "name": "senior-frontend",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/senior-frontend",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "engineering-team/senior-secops/SKILL.md",
+          "category": "Community",
+          "name": "senior-secops",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/senior-secops",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "engineering-team/tdd-guide/SKILL.md",
+          "category": "Community",
+          "name": "tdd-guide",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/tdd-guide",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "engineering-team/incident-commander/SKILL.md",
+          "category": "Community",
+          "name": "incident-commander",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/incident-commander",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "engineering-team/senior-prompt-engineer/SKILL.md",
+          "category": "Community",
+          "name": "senior-prompt-engineer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/senior-prompt-engineer",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "engineering-team/senior-architect/SKILL.md",
+          "category": "Community",
+          "name": "senior-architect",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/senior-architect",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "engineering-team/senior-devops/SKILL.md",
+          "category": "Community",
+          "name": "senior-devops",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/senior-devops",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "engineering-team/senior-fullstack/SKILL.md",
+          "category": "Community",
+          "name": "senior-fullstack",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/senior-fullstack",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "engineering-team/senior-computer-vision/SKILL.md",
+          "category": "Community",
+          "name": "senior-computer-vision",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/senior-computer-vision",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "engineering-team/senior-ml-engineer/SKILL.md",
+          "category": "Community",
+          "name": "senior-ml-engineer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/senior-ml-engineer",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "engineering-team/senior-data-engineer/SKILL.md",
+          "category": "Community",
+          "name": "senior-data-engineer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/senior-data-engineer",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "engineering-team/senior-backend/SKILL.md",
+          "category": "Community",
+          "name": "senior-backend",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/senior-backend",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "engineering-team/aws-solution-architect/SKILL.md",
+          "category": "Community",
+          "name": "aws-solution-architect",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/aws-solution-architect",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "engineering-team/code-reviewer/SKILL.md",
+          "category": "Community",
+          "name": "code-reviewer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/code-reviewer",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "engineering-team/tech-stack-evaluator/SKILL.md",
+          "category": "Community",
+          "name": "tech-stack-evaluator",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/tech-stack-evaluator",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "engineering-team/senior-qa/SKILL.md",
+          "category": "Community",
+          "name": "senior-qa",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/senior-qa",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "engineering-team/ms365-tenant-manager/SKILL.md",
+          "category": "Community",
+          "name": "ms365-tenant-manager",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/ms365-tenant-manager",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "engineering-team/senior-data-scientist/SKILL.md",
+          "category": "Community",
+          "name": "senior-data-scientist",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/senior-data-scientist",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "project-management/atlassian-admin/SKILL.md",
+          "category": "Community",
+          "name": "atlassian-admin",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/atlassian-admin",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "project-management/scrum-master/SKILL.md",
+          "category": "Community",
+          "name": "scrum-master",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/scrum-master",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "project-management/senior-pm/SKILL.md",
+          "category": "Community",
+          "name": "senior-pm",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/senior-pm",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "project-management/confluence-expert/SKILL.md",
+          "category": "Community",
+          "name": "confluence-expert",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/confluence-expert",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "project-management/jira-expert/SKILL.md",
+          "category": "Community",
+          "name": "jira-expert",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/jira-expert",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "project-management/atlassian-templates/SKILL.md",
+          "category": "Community",
+          "name": "atlassian-templates",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/atlassian-templates",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "business-growth/revenue-operations/SKILL.md",
+          "category": "Community",
+          "name": "revenue-operations",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/revenue-operations",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "business-growth/sales-engineer/SKILL.md",
+          "category": "Community",
+          "name": "sales-engineer",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/sales-engineer",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "business-growth/customer-success-manager/SKILL.md",
+          "category": "Community",
+          "name": "customer-success-manager",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/customer-success-manager",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "c-level-advisor/cto-advisor/SKILL.md",
+          "category": "Community",
+          "name": "cto-advisor",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/cto-advisor",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "c-level-advisor/ceo-advisor/SKILL.md",
+          "category": "Community",
+          "name": "ceo-advisor",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/ceo-advisor",
+          "status": "skipped",
+          "reason": "already_exists"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/mrgoonie/claudekit-skills.git",
+      "discovered": 44,
+      "imported": 1,
+      "skipped": 43,
+      "blocked": 0,
+      "errors": [],
+      "details": [
+        {
+          "source": ".claude/skills/claude-code/SKILL.md",
+          "category": "Community",
+          "name": "claude-code",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/claude-code",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/backend-development/SKILL.md",
+          "category": "Community",
+          "name": "backend-development",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/backend-development",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/databases/SKILL.md",
+          "category": "Community",
+          "name": "databases",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/databases",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/template-skill/SKILL.md",
+          "category": "Community",
+          "name": "template-skill",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/template-skill",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/devops/SKILL.md",
+          "category": "Community",
+          "name": "devops",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/devops",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/frontend-development/SKILL.md",
+          "category": "Community",
+          "name": "frontend-development",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/frontend-development",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/ui-styling/SKILL.md",
+          "category": "Community",
+          "name": "ui-styling",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/ui-styling",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/code-review/SKILL.md",
+          "category": "Community",
+          "name": "code-review",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/code-review",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/debugging/SKILL.md",
+          "category": "Community",
+          "name": "debugging",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/debugging",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/shopify/SKILL.md",
+          "category": "Community",
+          "name": "shopify",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/shopify",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/context-engineering/SKILL.md",
+          "category": "Community",
+          "name": "context-engineering",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/context-engineering",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/mcp-management/SKILL.md",
+          "category": "Community",
+          "name": "mcp-management",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/mcp-management",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/aesthetic/SKILL.md",
+          "category": "Community",
+          "name": "aesthetic",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/aesthetic",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/problem-solving/SKILL.md",
+          "category": "Community",
+          "name": "problem-solving",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/problem-solving",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/mermaidjs-v11/SKILL.md",
+          "category": "Community",
+          "name": "mermaidjs-v11",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/mermaidjs-v11",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/skill-creator/SKILL.md",
+          "category": "Community",
+          "name": "skill-creator",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/skill-creator",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/media-processing/SKILL.md",
+          "category": "Community",
+          "name": "media-processing",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/media-processing",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/chrome-devtools/SKILL.md",
+          "category": "Community",
+          "name": "chrome-devtools",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/chrome-devtools",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/payment-integration/SKILL.md",
+          "category": "Community",
+          "name": "payment-integration",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/payment-integration",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/ai-multimodal/SKILL.md",
+          "category": "Community",
+          "name": "ai-multimodal",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/ai-multimodal",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/google-adk-python/SKILL.md",
+          "category": "Community",
+          "name": "google-adk-python",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/google-adk-python",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/repomix/SKILL.md",
+          "category": "Community",
+          "name": "repomix",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/repomix",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/docs-seeker/SKILL.md",
+          "category": "Community",
+          "name": "docs-seeker",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/docs-seeker",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/better-auth/SKILL.md",
+          "category": "Community",
+          "name": "better-auth",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/better-auth",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/frontend-design/SKILL.md",
+          "category": "Community",
+          "name": "frontend-design",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/frontend-design",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/web-testing/SKILL.md",
+          "category": "Community",
+          "name": "web-testing",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/web-testing",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/web-frameworks/SKILL.md",
+          "category": "Community",
+          "name": "web-frameworks",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/web-frameworks",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/mcp-builder/SKILL.md",
+          "category": "Community",
+          "name": "mcp-builder",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/mcp-builder",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/sequential-thinking/SKILL.md",
+          "category": "Community",
+          "name": "sequential-thinking",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/sequential-thinking",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/threejs/SKILL.md",
+          "category": "Community",
+          "name": "threejs",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/threejs",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/problem-solving/when-stuck/SKILL.md",
+          "category": "problem-solving",
+          "name": "when-stuck",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/problem-solving/when-stuck",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/problem-solving/simplification-cascades/SKILL.md",
+          "category": "problem-solving",
+          "name": "simplification-cascades",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/problem-solving/simplification-cascades",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/problem-solving/collision-zone-thinking/SKILL.md",
+          "category": "problem-solving",
+          "name": "collision-zone-thinking",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/problem-solving/collision-zone-thinking",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/problem-solving/meta-pattern-recognition/SKILL.md",
+          "category": "problem-solving",
+          "name": "meta-pattern-recognition",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/problem-solving/meta-pattern-recognition",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/problem-solving/inversion-exercise/SKILL.md",
+          "category": "problem-solving",
+          "name": "inversion-exercise",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/problem-solving/inversion-exercise",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/problem-solving/scale-game/SKILL.md",
+          "category": "problem-solving",
+          "name": "scale-game",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/problem-solving/scale-game",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/debugging/systematic-debugging/SKILL.md",
+          "category": "debugging",
+          "name": "systematic-debugging",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/debugging/systematic-debugging",
+          "status": "imported",
+          "reason": "ok"
+        },
+        {
+          "source": ".claude/skills/debugging/root-cause-tracing/SKILL.md",
+          "category": "debugging",
+          "name": "root-cause-tracing",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/debugging/root-cause-tracing",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/debugging/verification-before-completion/SKILL.md",
+          "category": "debugging",
+          "name": "verification-before-completion",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/debugging/verification-before-completion",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/debugging/defense-in-depth/SKILL.md",
+          "category": "debugging",
+          "name": "defense-in-depth",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/debugging/defense-in-depth",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/document-skills/xlsx/SKILL.md",
+          "category": "document-skills",
+          "name": "xlsx",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/document-skills/xlsx",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/document-skills/pdf/SKILL.md",
+          "category": "document-skills",
+          "name": "pdf",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/document-skills/pdf",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/document-skills/pptx/SKILL.md",
+          "category": "document-skills",
+          "name": "pptx",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/document-skills/pptx",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": ".claude/skills/document-skills/docx/SKILL.md",
+          "category": "document-skills",
+          "name": "docx",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/document-skills/docx",
+          "status": "skipped",
+          "reason": "already_exists"
+        }
+      ]
+    },
+    {
+      "repo": "https://github.com/jezweb/claude-skills.git",
+      "discovered": 32,
+      "imported": 1,
+      "skipped": 31,
+      "blocked": 0,
+      "errors": [],
+      "details": [
+        {
+          "source": "plugins/writing/skills/aussie-business-english/SKILL.md",
+          "category": "Community",
+          "name": "aussie-business-english",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/aussie-business-english",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "plugins/dev-tools/skills/github-release/SKILL.md",
+          "category": "Community",
+          "name": "github-release",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/github-release",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "plugins/dev-tools/skills/claude-capabilities/SKILL.md",
+          "category": "Community",
+          "name": "claude-capabilities",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/claude-capabilities",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "plugins/dev-tools/skills/skill-creator/SKILL.md",
+          "category": "Community",
+          "name": "skill-creator",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/skill-creator",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "plugins/dev-tools/skills/dev-session/SKILL.md",
+          "category": "Community",
+          "name": "dev-session",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/dev-session",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "plugins/dev-tools/skills/ux-audit/SKILL.md",
+          "category": "Community",
+          "name": "ux-audit",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/ux-audit",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "plugins/dev-tools/skills/gemini-peer-review/SKILL.md",
+          "category": "Community",
+          "name": "gemini-peer-review",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/gemini-peer-review",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "plugins/dev-tools/skills/project-health/SKILL.md",
+          "category": "Community",
+          "name": "project-health",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/project-health",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "plugins/dev-tools/skills/gemini-guide/SKILL.md",
+          "category": "Community",
+          "name": "gemini-guide",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/gemini-guide",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "plugins/dev-tools/skills/responsiveness-check/SKILL.md",
+          "category": "Community",
+          "name": "responsiveness-check",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/responsiveness-check",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "plugins/design-assets/skills/favicon-gen/SKILL.md",
+          "category": "Community",
+          "name": "favicon-gen",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/favicon-gen",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "plugins/design-assets/skills/color-palette/SKILL.md",
+          "category": "Community",
+          "name": "color-palette",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/color-palette",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "plugins/design-assets/skills/icon-set-generator/SKILL.md",
+          "category": "Community",
+          "name": "icon-set-generator",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/icon-set-generator",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "plugins/integrations/skills/google-chat-messages/SKILL.md",
+          "category": "Community",
+          "name": "google-chat-messages",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/google-chat-messages",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "plugins/integrations/skills/elevenlabs-agents/SKILL.md",
+          "category": "Community",
+          "name": "elevenlabs-agents",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/elevenlabs-agents",
+          "status": "imported",
+          "reason": "ok"
+        },
+        {
+          "source": "plugins/integrations/skills/google-apps-script/SKILL.md",
+          "category": "Community",
+          "name": "google-apps-script",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/google-apps-script",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "plugins/integrations/skills/mcp-builder/SKILL.md",
+          "category": "Community",
+          "name": "mcp-builder",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/mcp-builder",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "plugins/shopify/skills/shopify-setup/SKILL.md",
+          "category": "Community",
+          "name": "shopify-setup",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/shopify-setup",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "plugins/shopify/skills/shopify-content/SKILL.md",
+          "category": "Community",
+          "name": "shopify-content",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/shopify-content",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "plugins/shopify/skills/shopify-products/SKILL.md",
+          "category": "Community",
+          "name": "shopify-products",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/shopify-products",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "plugins/cloudflare/skills/vite-flare-starter/SKILL.md",
+          "category": "Community",
+          "name": "vite-flare-starter",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/vite-flare-starter",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "plugins/cloudflare/skills/hono-api-scaffolder/SKILL.md",
+          "category": "Community",
+          "name": "hono-api-scaffolder",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/hono-api-scaffolder",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "plugins/cloudflare/skills/d1-drizzle-schema/SKILL.md",
+          "category": "Community",
+          "name": "d1-drizzle-schema",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/d1-drizzle-schema",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "plugins/cloudflare/skills/cloudflare-worker-builder/SKILL.md",
+          "category": "Community",
+          "name": "cloudflare-worker-builder",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/cloudflare-worker-builder",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "plugins/wordpress/skills/wordpress-elementor/SKILL.md",
+          "category": "Community",
+          "name": "wordpress-elementor",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/wordpress-elementor",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "plugins/wordpress/skills/wordpress-setup/SKILL.md",
+          "category": "Community",
+          "name": "wordpress-setup",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/wordpress-setup",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "plugins/wordpress/skills/wordpress-content/SKILL.md",
+          "category": "Community",
+          "name": "wordpress-content",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/wordpress-content",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "plugins/frontend/skills/tailwind-theme-builder/SKILL.md",
+          "category": "Community",
+          "name": "tailwind-theme-builder",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/tailwind-theme-builder",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "plugins/frontend/skills/shadcn-ui/SKILL.md",
+          "category": "Community",
+          "name": "shadcn-ui",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/shadcn-ui",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "plugins/web-design/skills/web-design-methodology/SKILL.md",
+          "category": "Community",
+          "name": "web-design-methodology",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/web-design-methodology",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "plugins/web-design/skills/web-design-patterns/SKILL.md",
+          "category": "Community",
+          "name": "web-design-patterns",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/web-design-patterns",
+          "status": "skipped",
+          "reason": "already_exists"
+        },
+        {
+          "source": "plugins/web-design/skills/seo-local-business/SKILL.md",
+          "category": "Community",
+          "name": "seo-local-business",
+          "target": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/seo-local-business",
+          "status": "skipped",
+          "reason": "already_exists"
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "repos": 4,
+    "discovered": 208,
+    "imported": 3,
+    "skipped": 205,
+    "blocked": 0,
+    "errors": 0
+  }
+}

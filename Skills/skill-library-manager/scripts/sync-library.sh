@@ -1,85 +1,122 @@
 #!/bin/bash
-# Sync Skills Library with GitHub
-# Pulls latest changes and optionally pushes local changes
+# Sync Skills library with remote, rebuild catalog/index.
 
-set -e
+set -euo pipefail
 
-LIBRARY_ROOT="${LIBRARY_ROOT:-$HOME/Skills_librairie}"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# Colors
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
 YELLOW='\033[1;33m'
+RED='\033[0;31m'
 NC='\033[0m'
+
+detect_library_root() {
+  if [ -n "${LIBRARY_ROOT:-}" ] && [ -d "${LIBRARY_ROOT}/Skills" ]; then
+    echo "$LIBRARY_ROOT"
+    return 0
+  fi
+
+  local current="$SCRIPT_DIR"
+  while [ "$current" != "/" ]; do
+    if [ -d "$current/Skills" ] || [ -d "$current/skills" ]; then
+      echo "$current"
+      return 0
+    fi
+    current="$(dirname "$current")"
+  done
+
+  local candidates=(
+    "$HOME/Skills_librairie"
+    "$HOME/Skills_store"
+    "$HOME/Documents/Skills/Skills_librairie"
+    "$HOME/Documents/Skills/Skills_store"
+  )
+  local c
+  for c in "${candidates[@]}"; do
+    if [ -d "$c/Skills" ] || [ -d "$c/skills" ]; then
+      echo "$c"
+      return 0
+    fi
+  done
+
+  return 1
+}
 
 echo -e "${BLUE}=== Skills Library Sync ===${NC}\n"
 
-# Check if library exists
-if [ ! -d "$LIBRARY_ROOT" ]; then
-    echo -e "${YELLOW}Library not found at $LIBRARY_ROOT${NC}"
-    echo "Cloning from GitHub..."
-    gh repo clone GuillaumeBld/Skills_librairie "$LIBRARY_ROOT"
-    exit 0
+if ! LIBRARY_ROOT="$(detect_library_root)"; then
+  echo -e "${RED}Could not locate a Skills repository.${NC}"
+  echo "Set LIBRARY_ROOT=/path/to/repo and rerun."
+  exit 1
+fi
+
+if [ ! -d "$LIBRARY_ROOT/.git" ]; then
+  echo -e "${RED}$LIBRARY_ROOT is not a git repository.${NC}"
+  exit 1
 fi
 
 cd "$LIBRARY_ROOT"
+echo "Repository: $LIBRARY_ROOT"
 
-# Check if we're in a git repo
-if [ ! -d .git ]; then
-    echo -e "${YELLOW}Not a git repository!${NC}"
-    exit 1
+if ! command -v git >/dev/null 2>&1; then
+  echo -e "${RED}Git is required but not available.${NC}"
+  exit 1
 fi
 
-# Check GitHub CLI auth
-if ! gh auth status &>/dev/null; then
-    echo -e "${YELLOW}GitHub CLI not authenticated${NC}"
-    echo "Run: gh auth login"
-    exit 1
+if command -v gh >/dev/null 2>&1 && ! gh auth status >/dev/null 2>&1; then
+  echo -e "${YELLOW}GitHub CLI detected but not authenticated (optional).${NC}"
 fi
 
-echo "Current location: $LIBRARY_ROOT"
-echo ""
-
-# Show current status
-echo -e "${BLUE}Current status:${NC}"
+echo -e "\n${BLUE}Current status:${NC}"
 git status --short
 
-# Check for uncommitted changes
 if ! git diff-index --quiet HEAD --; then
-    echo -e "\n${YELLOW}You have uncommitted changes${NC}"
-    read -p "Commit them now? (y/n): " COMMIT_CONFIRM
-    
-    if [ "$COMMIT_CONFIRM" = "y" ]; then
-        read -p "Commit message: " COMMIT_MSG
-        git add .
-        git commit -m "$COMMIT_MSG"
-        echo -e "${GREEN}✓ Changes committed${NC}"
-    fi
+  echo -e "\n${YELLOW}You have uncommitted changes.${NC}"
+  read -r -p "Commit them now? (y/N): " COMMIT_CONFIRM
+  if [[ "${COMMIT_CONFIRM:-}" =~ ^[Yy]$ ]]; then
+    read -r -p "Commit message: " COMMIT_MSG
+    COMMIT_MSG="${COMMIT_MSG:-chore: sync local changes}"
+    git add -A
+    git commit -m "$COMMIT_MSG"
+    echo -e "${GREEN}✓ Changes committed${NC}"
+  fi
 fi
 
-# Pull latest changes
-echo -e "\n${BLUE}Pulling latest changes from GitHub...${NC}"
-git pull origin main --tags
-
-# Check if we should push
-if [ "$(git rev-list @{u}..HEAD --count)" -gt 0 ]; then
-    echo -e "\n${YELLOW}You have unpushed commits${NC}"
-    read -p "Push to GitHub now? (y/n): " PUSH_CONFIRM
-    
-    if [ "$PUSH_CONFIRM" = "y" ]; then
-        git push origin main --tags
-        echo -e "${GREEN}✓ Pushed to GitHub${NC}"
-    fi
+CURRENT_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+echo -e "\n${BLUE}Pulling latest changes for ${CURRENT_BRANCH}...${NC}"
+if git rev-parse --abbrev-ref --symbolic-full-name "@{u}" >/dev/null 2>&1; then
+  git pull --rebase --tags
 else
-    echo -e "${GREEN}✓ Already up to date${NC}"
+  echo -e "${YELLOW}No upstream set for ${CURRENT_BRANCH}; skipping pull.${NC}"
 fi
 
-# Rebuild catalog
-echo -e "\n${BLUE}Rebuilding catalog...${NC}"
-if [ -f "$LIBRARY_ROOT/scripts/catalog-builder.py" ]; then
-    python3 "$LIBRARY_ROOT/scripts/catalog-builder.py"
+if git rev-parse --abbrev-ref --symbolic-full-name "@{u}" >/dev/null 2>&1; then
+  if [ "$(git rev-list @{u}..HEAD --count)" -gt 0 ]; then
+    echo -e "\n${YELLOW}You have unpushed commits.${NC}"
+    read -r -p "Push now? (y/N): " PUSH_CONFIRM
+    if [[ "${PUSH_CONFIRM:-}" =~ ^[Yy]$ ]]; then
+      git push
+      echo -e "${GREEN}✓ Pushed${NC}"
+    fi
+  else
+    echo -e "${GREEN}✓ Branch is up to date with upstream${NC}"
+  fi
+fi
+
+CATALOG_BUILDER="$LIBRARY_ROOT/Skills/skill-library-manager/scripts/catalog-builder.py"
+INDEX_BUILDER="$LIBRARY_ROOT/Skills/Meta-skill/skills-store-access/scripts/generate-skills-index.py"
+
+if [ -f "$CATALOG_BUILDER" ]; then
+  echo -e "\n${BLUE}Rebuilding catalog...${NC}"
+  python3 "$CATALOG_BUILDER"
 else
-    echo -e "${YELLOW}catalog-builder.py not found, skipping${NC}"
+  echo -e "\n${YELLOW}catalog-builder.py not found; skipping catalog rebuild.${NC}"
+fi
+
+if [ -f "$INDEX_BUILDER" ]; then
+  echo -e "${BLUE}Rebuilding lightweight index...${NC}"
+  python3 "$INDEX_BUILDER"
 fi
 
 echo -e "\n${GREEN}=== Sync Complete ===${NC}"

@@ -10,10 +10,54 @@ import sys
 import json
 import subprocess
 from pathlib import Path
-from typing import Dict, Optional
+from typing import Dict, List, Optional
 
-LIBRARY_ROOT = os.getenv('LIBRARY_ROOT', os.path.expanduser('~/Documents/Skills/Skills_librairie'))
+REPO_NAMES = ('Skills_librairie', 'Skills_store')
+FALLBACK_ROOTS = [
+    os.path.expanduser('~/Skills_librairie'),
+    os.path.expanduser('~/Skills_store'),
+    os.path.expanduser('~/Documents/Skills/Skills_librairie'),
+    os.path.expanduser('~/Documents/Skills/Skills_store'),
+]
+
+
+def is_library_root(path: str) -> bool:
+    if not path or not os.path.isdir(path):
+        return False
+    return os.path.isdir(os.path.join(path, 'Skills')) or os.path.isdir(os.path.join(path, 'skills'))
+
+
+def detect_library_root(start_dir: str) -> str:
+    env_root = os.getenv('LIBRARY_ROOT')
+    if env_root:
+        env_root = os.path.abspath(os.path.expanduser(env_root))
+        if is_library_root(env_root):
+            return env_root
+
+    current = os.path.abspath(start_dir)
+    while current != os.path.dirname(current):
+        if is_library_root(current) or os.path.basename(current) in REPO_NAMES:
+            return current
+        current = os.path.dirname(current)
+
+    for candidate in FALLBACK_ROOTS:
+        candidate = os.path.abspath(candidate)
+        if is_library_root(candidate):
+            return candidate
+
+    return os.path.abspath(os.path.expanduser('~/Skills_librairie'))
+
+
+LIBRARY_ROOT = detect_library_root(os.path.dirname(os.path.abspath(__file__)))
 SKILL_CREATOR_PATH = os.path.join(LIBRARY_ROOT, 'Skills/Meta-skill/skill-creator/scripts/init_skill.py')
+
+
+def quote_yaml_scalar(value: str) -> str:
+    """Return a YAML-safe single-line scalar."""
+    if value is None:
+        return '""'
+    escaped = str(value).replace('\\', '\\\\').replace('"', '\\"')
+    return f'"{escaped}"'
 
 def generate_skill_content(skill_name: str, requirement: Dict, sources: List[Dict] = None) -> Dict:
     """
@@ -143,7 +187,7 @@ def create_skill_structure(skill_content: Dict, output_dir: Optional[str] = None
                 # Write frontmatter
                 f.write("---\n")
                 for key, value in skill_content['frontmatter'].items():
-                    f.write(f"{key}: {value}\n")
+                    f.write(f"{key}: {quote_yaml_scalar(value)}\n")
                 f.write("---\n\n")
                 # Write body
                 f.write(skill_content['body'])
