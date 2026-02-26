@@ -1,0 +1,1856 @@
+{
+  "library_root": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q",
+  "skills_root": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills",
+  "apply": true,
+  "source_buckets": [
+    "Community",
+    "debugging",
+    "document-skills",
+    "problem-solving"
+  ],
+  "items": [
+    {
+      "skill": "aesthetic",
+      "from": "Community",
+      "to": "Design-Creative",
+      "status": "moved",
+      "rationale": "keyword_score=11",
+      "score": 11,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/aesthetic -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Design-Creative/aesthetic"
+    },
+    {
+      "skill": "agent-designer",
+      "from": "Community",
+      "to": "AI-Agents",
+      "status": "moved",
+      "rationale": "keyword_score=6",
+      "score": 6,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/agent-designer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/AI-Agents/agent-designer"
+    },
+    {
+      "skill": "agile-product-owner",
+      "from": "Community",
+      "to": "Business-Operations",
+      "status": "moved",
+      "rationale": "keyword_score=7",
+      "score": 7,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/agile-product-owner -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Business-Operations/agile-product-owner"
+    },
+    {
+      "skill": "ai-multimodal",
+      "from": "Community",
+      "to": "AI-Agents",
+      "status": "moved",
+      "rationale": "keyword_score=14",
+      "score": 14,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/ai-multimodal -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/AI-Agents/ai-multimodal"
+    },
+    {
+      "skill": "angular-architect",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=8",
+      "score": 8,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/angular-architect -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/angular-architect"
+    },
+    {
+      "skill": "api-design-reviewer",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=9",
+      "score": 9,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/api-design-reviewer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/api-design-reviewer"
+    },
+    {
+      "skill": "api-designer",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=11",
+      "score": 11,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/api-designer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/api-designer"
+    },
+    {
+      "skill": "app-store-optimization",
+      "from": "Community",
+      "to": "Business-Operations",
+      "status": "moved",
+      "rationale": "keyword_score=6",
+      "score": 6,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/app-store-optimization -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Business-Operations/app-store-optimization"
+    },
+    {
+      "skill": "architecture-designer",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=8",
+      "score": 8,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/architecture-designer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/architecture-designer"
+    },
+    {
+      "skill": "atlassian-admin",
+      "from": "Community",
+      "to": "Automation",
+      "status": "moved",
+      "rationale": "keyword_score=9",
+      "score": 9,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/atlassian-admin -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Automation/atlassian-admin"
+    },
+    {
+      "skill": "atlassian-mcp",
+      "from": "Community",
+      "to": "Automation",
+      "status": "moved",
+      "rationale": "keyword_score=9",
+      "score": 9,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/atlassian-mcp -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Automation/atlassian-mcp"
+    },
+    {
+      "skill": "atlassian-templates",
+      "from": "Community",
+      "to": "Automation",
+      "status": "moved",
+      "rationale": "keyword_score=9",
+      "score": 9,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/atlassian-templates -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Automation/atlassian-templates"
+    },
+    {
+      "skill": "aussie-business-english",
+      "from": "Community",
+      "to": "Design-Creative",
+      "status": "moved",
+      "rationale": "keyword_score=3",
+      "score": 3,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/aussie-business-english -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Design-Creative/aussie-business-english"
+    },
+    {
+      "skill": "aws-solution-architect",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=11",
+      "score": 11,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/aws-solution-architect -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/aws-solution-architect"
+    },
+    {
+      "skill": "backend-development",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=18",
+      "score": 18,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/backend-development -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/backend-development"
+    },
+    {
+      "skill": "better-auth",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=11",
+      "score": 11,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/better-auth -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/better-auth"
+    },
+    {
+      "skill": "campaign-analytics",
+      "from": "Community",
+      "to": "Scientific",
+      "status": "moved",
+      "rationale": "keyword_score=5",
+      "score": 5,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/campaign-analytics -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Scientific/campaign-analytics"
+    },
+    {
+      "skill": "capa-officer",
+      "from": "Community",
+      "to": "Document-Generation",
+      "status": "moved",
+      "rationale": "keyword_score=3",
+      "score": 3,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/capa-officer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Document-Generation/capa-officer"
+    },
+    {
+      "skill": "ceo-advisor",
+      "from": "Community",
+      "to": "Business-Operations",
+      "status": "moved",
+      "rationale": "keyword_score=6",
+      "score": 6,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/ceo-advisor -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Business-Operations/ceo-advisor"
+    },
+    {
+      "skill": "chaos-engineer",
+      "from": "Community",
+      "to": "Infrastructure-DevOps",
+      "status": "moved",
+      "rationale": "keyword_score=9",
+      "score": 9,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/chaos-engineer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Infrastructure-DevOps/chaos-engineer"
+    },
+    {
+      "skill": "chrome-devtools",
+      "from": "Community",
+      "to": "AI-Agents",
+      "status": "moved",
+      "rationale": "keyword_score=3",
+      "score": 3,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/chrome-devtools -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/AI-Agents/chrome-devtools"
+    },
+    {
+      "skill": "claude-capabilities",
+      "from": "Community",
+      "to": "Document-Generation",
+      "status": "moved",
+      "rationale": "keyword_score=4",
+      "score": 4,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/claude-capabilities -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Document-Generation/claude-capabilities"
+    },
+    {
+      "skill": "claude-code",
+      "from": "Community",
+      "to": "AI-Agents",
+      "status": "moved",
+      "rationale": "keyword_score=4",
+      "score": 4,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/claude-code -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/AI-Agents/claude-code"
+    },
+    {
+      "skill": "cli-developer",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=8",
+      "score": 8,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/cli-developer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/cli-developer"
+    },
+    {
+      "skill": "cloud-architect",
+      "from": "Community",
+      "to": "Infrastructure-DevOps",
+      "status": "moved",
+      "rationale": "keyword_score=12",
+      "score": 12,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/cloud-architect -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Infrastructure-DevOps/cloud-architect"
+    },
+    {
+      "skill": "cloudflare-worker-builder",
+      "from": "Community",
+      "to": "Infrastructure-DevOps",
+      "status": "moved",
+      "rationale": "keyword_score=5",
+      "score": 5,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/cloudflare-worker-builder -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Infrastructure-DevOps/cloudflare-worker-builder"
+    },
+    {
+      "skill": "code-documenter",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=10",
+      "score": 10,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/code-documenter -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/code-documenter"
+    },
+    {
+      "skill": "code-review",
+      "from": "Community",
+      "to": "Meta-skill",
+      "status": "moved",
+      "rationale": "keyword_score=6",
+      "score": 6,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/code-review -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Meta-skill/code-review"
+    },
+    {
+      "skill": "code-reviewer",
+      "from": "Community",
+      "to": "Meta-skill",
+      "status": "moved",
+      "rationale": "keyword_score=6",
+      "score": 6,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/code-reviewer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Meta-skill/code-reviewer"
+    },
+    {
+      "skill": "color-palette",
+      "from": "Community",
+      "to": "Design-Creative",
+      "status": "moved",
+      "rationale": "keyword_score=9",
+      "score": 9,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/color-palette -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Design-Creative/color-palette"
+    },
+    {
+      "skill": "confluence-expert",
+      "from": "Community",
+      "to": "Automation",
+      "status": "moved",
+      "rationale": "keyword_score=9",
+      "score": 9,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/confluence-expert -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Automation/confluence-expert"
+    },
+    {
+      "skill": "content-creator",
+      "from": "Community",
+      "to": "Communication",
+      "status": "moved",
+      "rationale": "keyword_score=8",
+      "score": 8,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/content-creator -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Communication/content-creator"
+    },
+    {
+      "skill": "context-engineering",
+      "from": "Community",
+      "to": "AI-Agents",
+      "status": "moved",
+      "rationale": "keyword_score=2",
+      "score": 2,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/context-engineering -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/AI-Agents/context-engineering"
+    },
+    {
+      "skill": "cpp-pro",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=8",
+      "score": 8,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/cpp-pro -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/cpp-pro"
+    },
+    {
+      "skill": "csharp-developer",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=14",
+      "score": 14,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/csharp-developer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/csharp-developer"
+    },
+    {
+      "skill": "cto-advisor",
+      "from": "Community",
+      "to": "Document-Generation",
+      "status": "moved",
+      "rationale": "keyword_score=5",
+      "score": 5,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/cto-advisor -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Document-Generation/cto-advisor"
+    },
+    {
+      "skill": "customer-success-manager",
+      "from": "Community",
+      "to": "Business-Operations",
+      "status": "moved",
+      "rationale": "keyword_score=8",
+      "score": 8,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/customer-success-manager -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Business-Operations/customer-success-manager"
+    },
+    {
+      "skill": "d1-drizzle-schema",
+      "from": "Community",
+      "to": "Infrastructure-DevOps",
+      "status": "moved",
+      "rationale": "keyword_score=3",
+      "score": 3,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/d1-drizzle-schema -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Infrastructure-DevOps/d1-drizzle-schema"
+    },
+    {
+      "skill": "database-designer",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=10",
+      "score": 10,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/database-designer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/database-designer"
+    },
+    {
+      "skill": "database-optimizer",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=7",
+      "score": 7,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/database-optimizer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/database-optimizer"
+    },
+    {
+      "skill": "databases",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=11",
+      "score": 11,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/databases -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/databases"
+    },
+    {
+      "skill": "debugging",
+      "from": "Community",
+      "to": "Meta-skill",
+      "status": "moved",
+      "rationale": "keyword_score=7",
+      "score": 7,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/debugging -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Meta-skill/debugging"
+    },
+    {
+      "skill": "debugging-wizard",
+      "from": "Community",
+      "to": "Meta-skill",
+      "status": "moved",
+      "rationale": "keyword_score=5",
+      "score": 5,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/debugging-wizard -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Meta-skill/debugging-wizard"
+    },
+    {
+      "skill": "dependency-auditor",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=9",
+      "score": 9,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/dependency-auditor -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/dependency-auditor"
+    },
+    {
+      "skill": "dev-session",
+      "from": "Community",
+      "to": "Meta-skill",
+      "status": "moved",
+      "rationale": "keyword_score=5",
+      "score": 5,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/dev-session -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Meta-skill/dev-session"
+    },
+    {
+      "skill": "devops",
+      "from": "Community",
+      "to": "Infrastructure-DevOps",
+      "status": "moved",
+      "rationale": "keyword_score=8",
+      "score": 8,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/devops -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Infrastructure-DevOps/devops"
+    },
+    {
+      "skill": "devops-engineer",
+      "from": "Community",
+      "to": "Infrastructure-DevOps",
+      "status": "moved",
+      "rationale": "keyword_score=13",
+      "score": 13,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/devops-engineer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Infrastructure-DevOps/devops-engineer"
+    },
+    {
+      "skill": "django-expert",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=14",
+      "score": 14,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/django-expert -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/django-expert"
+    },
+    {
+      "skill": "docs-seeker",
+      "from": "Community",
+      "to": "Communication",
+      "status": "moved",
+      "rationale": "keyword_score=6",
+      "score": 6,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/docs-seeker -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Communication/docs-seeker"
+    },
+    {
+      "skill": "dotnet-core-expert",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=6",
+      "score": 6,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/dotnet-core-expert -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/dotnet-core-expert"
+    },
+    {
+      "skill": "elevenlabs-agents",
+      "from": "Community",
+      "to": "AI-Agents",
+      "status": "moved",
+      "rationale": "keyword_score=10",
+      "score": 10,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/elevenlabs-agents -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/AI-Agents/elevenlabs-agents"
+    },
+    {
+      "skill": "embedded-systems",
+      "from": "Community",
+      "to": "Document-Generation",
+      "status": "moved",
+      "rationale": "keyword_score=2",
+      "score": 2,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/embedded-systems -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Document-Generation/embedded-systems"
+    },
+    {
+      "skill": "fastapi-expert",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=16",
+      "score": 16,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/fastapi-expert -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/fastapi-expert"
+    },
+    {
+      "skill": "favicon-gen",
+      "from": "Community",
+      "to": "Design-Creative",
+      "status": "moved",
+      "rationale": "keyword_score=10",
+      "score": 10,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/favicon-gen -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Design-Creative/favicon-gen"
+    },
+    {
+      "skill": "fda-consultant-specialist",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=5",
+      "score": 5,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/fda-consultant-specialist -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/fda-consultant-specialist"
+    },
+    {
+      "skill": "feature-forge",
+      "from": "Community",
+      "to": "Document-Generation",
+      "status": "moved",
+      "rationale": "keyword_score=2",
+      "score": 2,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/feature-forge -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Document-Generation/feature-forge"
+    },
+    {
+      "skill": "financial-analyst",
+      "from": "Community",
+      "to": "Scientific",
+      "status": "moved",
+      "rationale": "keyword_score=6",
+      "score": 6,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/financial-analyst -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Scientific/financial-analyst"
+    },
+    {
+      "skill": "fine-tuning-expert",
+      "from": "Community",
+      "to": "AI-Agents",
+      "status": "moved",
+      "rationale": "keyword_score=7",
+      "score": 7,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/fine-tuning-expert -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/AI-Agents/fine-tuning-expert"
+    },
+    {
+      "skill": "flutter-expert",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=5",
+      "score": 5,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/flutter-expert -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/flutter-expert"
+    },
+    {
+      "skill": "frontend-design",
+      "from": "Community",
+      "to": "Design-Creative",
+      "status": "skipped",
+      "rationale": "keyword_score=11",
+      "score": 11,
+      "detail": "target_exists:/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Design-Creative/frontend-design"
+    },
+    {
+      "skill": "frontend-development",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=9",
+      "score": 9,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/frontend-development -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/frontend-development"
+    },
+    {
+      "skill": "fullstack-guardian",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=14",
+      "score": 14,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/fullstack-guardian -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/fullstack-guardian"
+    },
+    {
+      "skill": "game-developer",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=7",
+      "score": 7,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/game-developer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/game-developer"
+    },
+    {
+      "skill": "gdpr-dsgvo-expert",
+      "from": "Community",
+      "to": "Security",
+      "status": "moved",
+      "rationale": "keyword_score=14",
+      "score": 14,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/gdpr-dsgvo-expert -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Security/gdpr-dsgvo-expert"
+    },
+    {
+      "skill": "gemini-guide",
+      "from": "Community",
+      "to": "AI-Agents",
+      "status": "moved",
+      "rationale": "keyword_score=9",
+      "score": 9,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/gemini-guide -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/AI-Agents/gemini-guide"
+    },
+    {
+      "skill": "gemini-peer-review",
+      "from": "Community",
+      "to": "AI-Agents",
+      "status": "moved",
+      "rationale": "keyword_score=8",
+      "score": 8,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/gemini-peer-review -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/AI-Agents/gemini-peer-review"
+    },
+    {
+      "skill": "github-release",
+      "from": "Community",
+      "to": "Infrastructure-DevOps",
+      "status": "moved",
+      "rationale": "keyword_score=5",
+      "score": 5,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/github-release -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Infrastructure-DevOps/github-release"
+    },
+    {
+      "skill": "golang-pro",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=8",
+      "score": 8,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/golang-pro -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/golang-pro"
+    },
+    {
+      "skill": "google-adk-python",
+      "from": "Community",
+      "to": "AI-Agents",
+      "status": "moved",
+      "rationale": "keyword_score=9",
+      "score": 9,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/google-adk-python -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/AI-Agents/google-adk-python"
+    },
+    {
+      "skill": "google-apps-script",
+      "from": "Community",
+      "to": "Automation",
+      "status": "moved",
+      "rationale": "keyword_score=7",
+      "score": 7,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/google-apps-script -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Automation/google-apps-script"
+    },
+    {
+      "skill": "google-chat-messages",
+      "from": "Community",
+      "to": "AI-Agents",
+      "status": "moved",
+      "rationale": "keyword_score=2",
+      "score": 2,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/google-chat-messages -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/AI-Agents/google-chat-messages"
+    },
+    {
+      "skill": "graphql-architect",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=12",
+      "score": 12,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/graphql-architect -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/graphql-architect"
+    },
+    {
+      "skill": "hono-api-scaffolder",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=7",
+      "score": 7,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/hono-api-scaffolder -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/hono-api-scaffolder"
+    },
+    {
+      "skill": "icon-set-generator",
+      "from": "Community",
+      "to": "Design-Creative",
+      "status": "moved",
+      "rationale": "keyword_score=4",
+      "score": 4,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/icon-set-generator -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Design-Creative/icon-set-generator"
+    },
+    {
+      "skill": "incident-commander",
+      "from": "Community",
+      "to": "Infrastructure-DevOps",
+      "status": "moved",
+      "rationale": "keyword_score=8",
+      "score": 8,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/incident-commander -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Infrastructure-DevOps/incident-commander"
+    },
+    {
+      "skill": "information-security-manager-iso27001",
+      "from": "Community",
+      "to": "Security",
+      "status": "moved",
+      "rationale": "keyword_score=13",
+      "score": 13,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/information-security-manager-iso27001 -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Security/information-security-manager-iso27001"
+    },
+    {
+      "skill": "interview-system-designer",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=10",
+      "score": 10,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/interview-system-designer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/interview-system-designer"
+    },
+    {
+      "skill": "isms-audit-expert",
+      "from": "Community",
+      "to": "Security",
+      "status": "moved",
+      "rationale": "keyword_score=15",
+      "score": 15,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/isms-audit-expert -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Security/isms-audit-expert"
+    },
+    {
+      "skill": "java-architect",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=15",
+      "score": 15,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/java-architect -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/java-architect"
+    },
+    {
+      "skill": "javascript-pro",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=15",
+      "score": 15,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/javascript-pro -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/javascript-pro"
+    },
+    {
+      "skill": "jira-expert",
+      "from": "Community",
+      "to": "Automation",
+      "status": "moved",
+      "rationale": "keyword_score=9",
+      "score": 9,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/jira-expert -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Automation/jira-expert"
+    },
+    {
+      "skill": "kotlin-specialist",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=4",
+      "score": 4,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/kotlin-specialist -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/kotlin-specialist"
+    },
+    {
+      "skill": "kubernetes-specialist",
+      "from": "Community",
+      "to": "Infrastructure-DevOps",
+      "status": "moved",
+      "rationale": "keyword_score=9",
+      "score": 9,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/kubernetes-specialist -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Infrastructure-DevOps/kubernetes-specialist"
+    },
+    {
+      "skill": "laravel-specialist",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=14",
+      "score": 14,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/laravel-specialist -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/laravel-specialist"
+    },
+    {
+      "skill": "legacy-modernizer",
+      "from": "Community",
+      "to": "Infrastructure-DevOps",
+      "status": "moved",
+      "rationale": "keyword_score=4",
+      "score": 4,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/legacy-modernizer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Infrastructure-DevOps/legacy-modernizer"
+    },
+    {
+      "skill": "marketing-demand-acquisition",
+      "from": "Community",
+      "to": "Design-Creative",
+      "status": "moved",
+      "rationale": "keyword_score=7",
+      "score": 7,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/marketing-demand-acquisition -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Design-Creative/marketing-demand-acquisition"
+    },
+    {
+      "skill": "marketing-strategy-pmm",
+      "from": "Community",
+      "to": "Business-Operations",
+      "status": "moved",
+      "rationale": "keyword_score=7",
+      "score": 7,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/marketing-strategy-pmm -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Business-Operations/marketing-strategy-pmm"
+    },
+    {
+      "skill": "mcp-builder",
+      "from": "Community",
+      "to": "AI-Agents",
+      "status": "moved",
+      "rationale": "keyword_score=10",
+      "score": 10,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/mcp-builder -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/AI-Agents/mcp-builder"
+    },
+    {
+      "skill": "mcp-developer",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=10",
+      "score": 10,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/mcp-developer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/mcp-developer"
+    },
+    {
+      "skill": "mcp-management",
+      "from": "Community",
+      "to": "AI-Agents",
+      "status": "moved",
+      "rationale": "keyword_score=10",
+      "score": 10,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/mcp-management -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/AI-Agents/mcp-management"
+    },
+    {
+      "skill": "mdr-745-specialist",
+      "from": "Community",
+      "to": "Document-Generation",
+      "status": "moved",
+      "rationale": "keyword_score=3",
+      "score": 3,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/mdr-745-specialist -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Document-Generation/mdr-745-specialist"
+    },
+    {
+      "skill": "media-processing",
+      "from": "Community",
+      "to": "Document-Generation",
+      "status": "moved",
+      "rationale": "keyword_score=2",
+      "score": 2,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/media-processing -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Document-Generation/media-processing"
+    },
+    {
+      "skill": "mermaidjs-v11",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=5",
+      "score": 5,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/mermaidjs-v11 -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/mermaidjs-v11"
+    },
+    {
+      "skill": "microservices-architect",
+      "from": "Community",
+      "to": "Infrastructure-DevOps",
+      "status": "moved",
+      "rationale": "keyword_score=10",
+      "score": 10,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/microservices-architect -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Infrastructure-DevOps/microservices-architect"
+    },
+    {
+      "skill": "migration-architect",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=12",
+      "score": 12,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/migration-architect -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/migration-architect"
+    },
+    {
+      "skill": "ml-pipeline",
+      "from": "Community",
+      "to": "AI-Agents",
+      "status": "moved",
+      "rationale": "keyword_score=6",
+      "score": 6,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/ml-pipeline -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/AI-Agents/ml-pipeline"
+    },
+    {
+      "skill": "monitoring-expert",
+      "from": "Community",
+      "to": "Infrastructure-DevOps",
+      "status": "moved",
+      "rationale": "keyword_score=10",
+      "score": 10,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/monitoring-expert -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Infrastructure-DevOps/monitoring-expert"
+    },
+    {
+      "skill": "ms365-tenant-manager",
+      "from": "Community",
+      "to": "Security",
+      "status": "moved",
+      "rationale": "keyword_score=4",
+      "score": 4,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/ms365-tenant-manager -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Security/ms365-tenant-manager"
+    },
+    {
+      "skill": "nestjs-expert",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=13",
+      "score": 13,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/nestjs-expert -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/nestjs-expert"
+    },
+    {
+      "skill": "nextjs-developer",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=15",
+      "score": 15,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/nextjs-developer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/nextjs-developer"
+    },
+    {
+      "skill": "observability-designer",
+      "from": "Community",
+      "to": "Infrastructure-DevOps",
+      "status": "moved",
+      "rationale": "keyword_score=13",
+      "score": 13,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/observability-designer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Infrastructure-DevOps/observability-designer"
+    },
+    {
+      "skill": "pandas-pro",
+      "from": "Community",
+      "to": "Scientific",
+      "status": "moved",
+      "rationale": "keyword_score=5",
+      "score": 5,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/pandas-pro -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Scientific/pandas-pro"
+    },
+    {
+      "skill": "payment-integration",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=5",
+      "score": 5,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/payment-integration -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/payment-integration"
+    },
+    {
+      "skill": "php-pro",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=16",
+      "score": 16,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/php-pro -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/php-pro"
+    },
+    {
+      "skill": "playwright-expert",
+      "from": "Community",
+      "to": "Automation",
+      "status": "moved",
+      "rationale": "keyword_score=8",
+      "score": 8,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/playwright-expert -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Automation/playwright-expert"
+    },
+    {
+      "skill": "postgres-pro",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=7",
+      "score": 7,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/postgres-pro -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/postgres-pro"
+    },
+    {
+      "skill": "problem-solving",
+      "from": "Community",
+      "to": "Meta-skill",
+      "status": "moved",
+      "rationale": "keyword_score=5",
+      "score": 5,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/problem-solving -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Meta-skill/problem-solving"
+    },
+    {
+      "skill": "product-manager-toolkit",
+      "from": "Community",
+      "to": "Business-Operations",
+      "status": "moved",
+      "rationale": "keyword_score=7",
+      "score": 7,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/product-manager-toolkit -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Business-Operations/product-manager-toolkit"
+    },
+    {
+      "skill": "product-strategist",
+      "from": "Community",
+      "to": "Business-Operations",
+      "status": "moved",
+      "rationale": "keyword_score=7",
+      "score": 7,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/product-strategist -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Business-Operations/product-strategist"
+    },
+    {
+      "skill": "project-health",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=9",
+      "score": 9,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/project-health -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/project-health"
+    },
+    {
+      "skill": "prompt-engineer",
+      "from": "Community",
+      "to": "AI-Agents",
+      "status": "moved",
+      "rationale": "keyword_score=8",
+      "score": 8,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/prompt-engineer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/AI-Agents/prompt-engineer"
+    },
+    {
+      "skill": "python-pro",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=8",
+      "score": 8,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/python-pro -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/python-pro"
+    },
+    {
+      "skill": "qms-audit-expert",
+      "from": "Community",
+      "to": "Security",
+      "status": "moved",
+      "rationale": "keyword_score=6",
+      "score": 6,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/qms-audit-expert -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Security/qms-audit-expert"
+    },
+    {
+      "skill": "quality-documentation-manager",
+      "from": "Community",
+      "to": "Document-Generation",
+      "status": "moved",
+      "rationale": "keyword_score=6",
+      "score": 6,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/quality-documentation-manager -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Document-Generation/quality-documentation-manager"
+    },
+    {
+      "skill": "quality-manager-qmr",
+      "from": "Community",
+      "to": "Document-Generation",
+      "status": "moved",
+      "rationale": "keyword_score=4",
+      "score": 4,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/quality-manager-qmr -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Document-Generation/quality-manager-qmr"
+    },
+    {
+      "skill": "quality-manager-qms-iso13485",
+      "from": "Community",
+      "to": "Document-Generation",
+      "status": "moved",
+      "rationale": "keyword_score=3",
+      "score": 3,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/quality-manager-qms-iso13485 -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Document-Generation/quality-manager-qms-iso13485"
+    },
+    {
+      "skill": "rag-architect",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=9",
+      "score": 9,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/rag-architect -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/rag-architect"
+    },
+    {
+      "skill": "rails-expert",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=14",
+      "score": 14,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/rails-expert -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/rails-expert"
+    },
+    {
+      "skill": "react-expert",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=9",
+      "score": 9,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/react-expert -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/react-expert"
+    },
+    {
+      "skill": "react-native-expert",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=10",
+      "score": 10,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/react-native-expert -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/react-native-expert"
+    },
+    {
+      "skill": "regulatory-affairs-head",
+      "from": "Community",
+      "to": "Document-Generation",
+      "status": "moved",
+      "rationale": "keyword_score=3",
+      "score": 3,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/regulatory-affairs-head -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Document-Generation/regulatory-affairs-head"
+    },
+    {
+      "skill": "release-manager",
+      "from": "Community",
+      "to": "Infrastructure-DevOps",
+      "status": "moved",
+      "rationale": "keyword_score=10",
+      "score": 10,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/release-manager -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Infrastructure-DevOps/release-manager"
+    },
+    {
+      "skill": "repomix",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=8",
+      "score": 8,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/repomix -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/repomix"
+    },
+    {
+      "skill": "responsiveness-check",
+      "from": "Community",
+      "to": "AI-Agents",
+      "status": "moved",
+      "rationale": "keyword_score=3",
+      "score": 3,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/responsiveness-check -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/AI-Agents/responsiveness-check"
+    },
+    {
+      "skill": "revenue-operations",
+      "from": "Community",
+      "to": "Business-Operations",
+      "status": "moved",
+      "rationale": "keyword_score=7",
+      "score": 7,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/revenue-operations -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Business-Operations/revenue-operations"
+    },
+    {
+      "skill": "risk-management-specialist",
+      "from": "Community",
+      "to": "Security",
+      "status": "moved",
+      "rationale": "keyword_score=5",
+      "score": 5,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/risk-management-specialist -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Security/risk-management-specialist"
+    },
+    {
+      "skill": "rust-engineer",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=6",
+      "score": 6,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/rust-engineer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/rust-engineer"
+    },
+    {
+      "skill": "sales-engineer",
+      "from": "Community",
+      "to": "Business-Operations",
+      "status": "moved",
+      "rationale": "keyword_score=7",
+      "score": 7,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/sales-engineer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Business-Operations/sales-engineer"
+    },
+    {
+      "skill": "salesforce-developer",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=9",
+      "score": 9,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/salesforce-developer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/salesforce-developer"
+    },
+    {
+      "skill": "sample-skill",
+      "from": "Community",
+      "to": "Document-Generation",
+      "status": "moved",
+      "rationale": "keyword_score=4",
+      "score": 4,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/sample-skill -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Document-Generation/sample-skill"
+    },
+    {
+      "skill": "scrum-master",
+      "from": "Community",
+      "to": "Business-Operations",
+      "status": "moved",
+      "rationale": "keyword_score=6",
+      "score": 6,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/scrum-master -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Business-Operations/scrum-master"
+    },
+    {
+      "skill": "secure-code-guardian",
+      "from": "Community",
+      "to": "Security",
+      "status": "moved",
+      "rationale": "keyword_score=6",
+      "score": 6,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/secure-code-guardian -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Security/secure-code-guardian"
+    },
+    {
+      "skill": "security-reviewer",
+      "from": "Community",
+      "to": "Security",
+      "status": "moved",
+      "rationale": "keyword_score=10",
+      "score": 10,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/security-reviewer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Security/security-reviewer"
+    },
+    {
+      "skill": "senior-architect",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=22",
+      "score": 22,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/senior-architect -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/senior-architect"
+    },
+    {
+      "skill": "senior-backend",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=14",
+      "score": 14,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/senior-backend -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/senior-backend"
+    },
+    {
+      "skill": "senior-computer-vision",
+      "from": "Community",
+      "to": "Scientific",
+      "status": "moved",
+      "rationale": "keyword_score=5",
+      "score": 5,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/senior-computer-vision -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Scientific/senior-computer-vision"
+    },
+    {
+      "skill": "senior-data-engineer",
+      "from": "Community",
+      "to": "Scientific",
+      "status": "moved",
+      "rationale": "keyword_score=8",
+      "score": 8,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/senior-data-engineer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Scientific/senior-data-engineer"
+    },
+    {
+      "skill": "senior-data-scientist",
+      "from": "Community",
+      "to": "Scientific",
+      "status": "moved",
+      "rationale": "keyword_score=9",
+      "score": 9,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/senior-data-scientist -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Scientific/senior-data-scientist"
+    },
+    {
+      "skill": "senior-devops",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=12",
+      "score": 12,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/senior-devops -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/senior-devops"
+    },
+    {
+      "skill": "senior-frontend",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=10",
+      "score": 10,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/senior-frontend -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/senior-frontend"
+    },
+    {
+      "skill": "senior-fullstack",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=22",
+      "score": 22,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/senior-fullstack -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/senior-fullstack"
+    },
+    {
+      "skill": "senior-ml-engineer",
+      "from": "Community",
+      "to": "AI-Agents",
+      "status": "moved",
+      "rationale": "keyword_score=8",
+      "score": 8,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/senior-ml-engineer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/AI-Agents/senior-ml-engineer"
+    },
+    {
+      "skill": "senior-pm",
+      "from": "Community",
+      "to": "Document-Generation",
+      "status": "moved",
+      "rationale": "keyword_score=4",
+      "score": 4,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/senior-pm -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Document-Generation/senior-pm"
+    },
+    {
+      "skill": "senior-prompt-engineer",
+      "from": "Community",
+      "to": "AI-Agents",
+      "status": "moved",
+      "rationale": "keyword_score=9",
+      "score": 9,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/senior-prompt-engineer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/AI-Agents/senior-prompt-engineer"
+    },
+    {
+      "skill": "senior-qa",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=6",
+      "score": 6,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/senior-qa -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/senior-qa"
+    },
+    {
+      "skill": "senior-secops",
+      "from": "Community",
+      "to": "Security",
+      "status": "moved",
+      "rationale": "keyword_score=10",
+      "score": 10,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/senior-secops -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Security/senior-secops"
+    },
+    {
+      "skill": "senior-security",
+      "from": "Community",
+      "to": "Security",
+      "status": "moved",
+      "rationale": "keyword_score=10",
+      "score": 10,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/senior-security -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Security/senior-security"
+    },
+    {
+      "skill": "seo-local-business",
+      "from": "Community",
+      "to": "Design-Creative",
+      "status": "moved",
+      "rationale": "keyword_score=2",
+      "score": 2,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/seo-local-business -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Design-Creative/seo-local-business"
+    },
+    {
+      "skill": "sequential-thinking",
+      "from": "Community",
+      "to": "Meta-skill",
+      "status": "moved",
+      "rationale": "keyword_score=6",
+      "score": 6,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/sequential-thinking -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Meta-skill/sequential-thinking"
+    },
+    {
+      "skill": "shadcn-ui",
+      "from": "Community",
+      "to": "Design-Creative",
+      "status": "moved",
+      "rationale": "keyword_score=7",
+      "score": 7,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/shadcn-ui -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Design-Creative/shadcn-ui"
+    },
+    {
+      "skill": "shopify",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=12",
+      "score": 12,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/shopify -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/shopify"
+    },
+    {
+      "skill": "shopify-content",
+      "from": "Community",
+      "to": "Communication",
+      "status": "moved",
+      "rationale": "keyword_score=11",
+      "score": 11,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/shopify-content -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Communication/shopify-content"
+    },
+    {
+      "skill": "shopify-expert",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=12",
+      "score": 12,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/shopify-expert -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/shopify-expert"
+    },
+    {
+      "skill": "shopify-products",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=7",
+      "score": 7,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/shopify-products -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/shopify-products"
+    },
+    {
+      "skill": "shopify-setup",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=7",
+      "score": 7,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/shopify-setup -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/shopify-setup"
+    },
+    {
+      "skill": "skill-creator",
+      "from": "Community",
+      "to": "Document-Generation",
+      "status": "moved",
+      "rationale": "keyword_score=6",
+      "score": 6,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/skill-creator -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Document-Generation/skill-creator"
+    },
+    {
+      "skill": "skill-tester",
+      "from": "Community",
+      "to": "Meta-skill",
+      "status": "moved",
+      "rationale": "keyword_score=7",
+      "score": 7,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/skill-tester -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Meta-skill/skill-tester"
+    },
+    {
+      "skill": "social-media-analyzer",
+      "from": "Community",
+      "to": "Communication",
+      "status": "moved",
+      "rationale": "keyword_score=6",
+      "score": 6,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/social-media-analyzer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Communication/social-media-analyzer"
+    },
+    {
+      "skill": "spark-engineer",
+      "from": "Community",
+      "to": "Scientific",
+      "status": "moved",
+      "rationale": "keyword_score=6",
+      "score": 6,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/spark-engineer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Scientific/spark-engineer"
+    },
+    {
+      "skill": "spec-miner",
+      "from": "Community",
+      "to": "Meta-skill",
+      "status": "moved",
+      "rationale": "keyword_score=5",
+      "score": 5,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/spec-miner -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Meta-skill/spec-miner"
+    },
+    {
+      "skill": "spring-boot-engineer",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=12",
+      "score": 12,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/spring-boot-engineer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/spring-boot-engineer"
+    },
+    {
+      "skill": "sql-pro",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=9",
+      "score": 9,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/sql-pro -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/sql-pro"
+    },
+    {
+      "skill": "sre-engineer",
+      "from": "Community",
+      "to": "Infrastructure-DevOps",
+      "status": "moved",
+      "rationale": "keyword_score=12",
+      "score": 12,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/sre-engineer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Infrastructure-DevOps/sre-engineer"
+    },
+    {
+      "skill": "swift-expert",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=3",
+      "score": 3,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/swift-expert -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/swift-expert"
+    },
+    {
+      "skill": "tailwind-theme-builder",
+      "from": "Community",
+      "to": "Design-Creative",
+      "status": "moved",
+      "rationale": "keyword_score=11",
+      "score": 11,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/tailwind-theme-builder -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Design-Creative/tailwind-theme-builder"
+    },
+    {
+      "skill": "tdd-guide",
+      "from": "Community",
+      "to": "Meta-skill",
+      "status": "moved",
+      "rationale": "keyword_score=5",
+      "score": 5,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/tdd-guide -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Meta-skill/tdd-guide"
+    },
+    {
+      "skill": "tech-debt-tracker",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=5",
+      "score": 5,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/tech-debt-tracker -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/tech-debt-tracker"
+    },
+    {
+      "skill": "tech-stack-evaluator",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=9",
+      "score": 9,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/tech-stack-evaluator -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/tech-stack-evaluator"
+    },
+    {
+      "skill": "template-skill",
+      "from": "Community",
+      "to": "Document-Generation",
+      "status": "moved",
+      "rationale": "keyword_score=5",
+      "score": 5,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/template-skill -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Document-Generation/template-skill"
+    },
+    {
+      "skill": "terraform-engineer",
+      "from": "Community",
+      "to": "Infrastructure-DevOps",
+      "status": "moved",
+      "rationale": "keyword_score=9",
+      "score": 9,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/terraform-engineer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Infrastructure-DevOps/terraform-engineer"
+    },
+    {
+      "skill": "test-master",
+      "from": "Community",
+      "to": "Automation",
+      "status": "moved",
+      "rationale": "keyword_score=8",
+      "score": 8,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/test-master -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Automation/test-master"
+    },
+    {
+      "skill": "the-fool",
+      "from": "Community",
+      "to": "Design-Creative",
+      "status": "moved",
+      "rationale": "keyword_score=3",
+      "score": 3,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/the-fool -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Design-Creative/the-fool"
+    },
+    {
+      "skill": "threejs",
+      "from": "Community",
+      "to": "Design-Creative",
+      "status": "moved",
+      "rationale": "keyword_score=7",
+      "score": 7,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/threejs -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Design-Creative/threejs"
+    },
+    {
+      "skill": "typescript-pro",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=9",
+      "score": 9,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/typescript-pro -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/typescript-pro"
+    },
+    {
+      "skill": "ui-design-system",
+      "from": "Community",
+      "to": "Design-Creative",
+      "status": "moved",
+      "rationale": "keyword_score=13",
+      "score": 13,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/ui-design-system -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Design-Creative/ui-design-system"
+    },
+    {
+      "skill": "ui-styling",
+      "from": "Community",
+      "to": "Design-Creative",
+      "status": "moved",
+      "rationale": "keyword_score=15",
+      "score": 15,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/ui-styling -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Design-Creative/ui-styling"
+    },
+    {
+      "skill": "ux-audit",
+      "from": "Community",
+      "to": "Design-Creative",
+      "status": "moved",
+      "rationale": "keyword_score=6",
+      "score": 6,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/ux-audit -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Design-Creative/ux-audit"
+    },
+    {
+      "skill": "ux-researcher-designer",
+      "from": "Community",
+      "to": "Design-Creative",
+      "status": "moved",
+      "rationale": "keyword_score=12",
+      "score": 12,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/ux-researcher-designer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Design-Creative/ux-researcher-designer"
+    },
+    {
+      "skill": "vite-flare-starter",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=7",
+      "score": 7,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/vite-flare-starter -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/vite-flare-starter"
+    },
+    {
+      "skill": "vue-expert",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=14",
+      "score": 14,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/vue-expert -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/vue-expert"
+    },
+    {
+      "skill": "vue-expert-js",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=12",
+      "score": 12,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/vue-expert-js -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/vue-expert-js"
+    },
+    {
+      "skill": "web-design-methodology",
+      "from": "Community",
+      "to": "Design-Creative",
+      "status": "moved",
+      "rationale": "keyword_score=17",
+      "score": 17,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/web-design-methodology -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Design-Creative/web-design-methodology"
+    },
+    {
+      "skill": "web-design-patterns",
+      "from": "Community",
+      "to": "Design-Creative",
+      "status": "moved",
+      "rationale": "keyword_score=14",
+      "score": 14,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/web-design-patterns -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Design-Creative/web-design-patterns"
+    },
+    {
+      "skill": "web-frameworks",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=14",
+      "score": 14,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/web-frameworks -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/web-frameworks"
+    },
+    {
+      "skill": "web-testing",
+      "from": "Community",
+      "to": "Automation",
+      "status": "moved",
+      "rationale": "keyword_score=8",
+      "score": 8,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/web-testing -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Automation/web-testing"
+    },
+    {
+      "skill": "websocket-engineer",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=4",
+      "score": 4,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/websocket-engineer -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/websocket-engineer"
+    },
+    {
+      "skill": "wordpress-content",
+      "from": "Community",
+      "to": "Communication",
+      "status": "moved",
+      "rationale": "keyword_score=11",
+      "score": 11,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/wordpress-content -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Communication/wordpress-content"
+    },
+    {
+      "skill": "wordpress-elementor",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=7",
+      "score": 7,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/wordpress-elementor -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/wordpress-elementor"
+    },
+    {
+      "skill": "wordpress-pro",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=14",
+      "score": 14,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/wordpress-pro -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/wordpress-pro"
+    },
+    {
+      "skill": "wordpress-setup",
+      "from": "Community",
+      "to": "Development",
+      "status": "moved",
+      "rationale": "keyword_score=7",
+      "score": 7,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Community/wordpress-setup -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Development/wordpress-setup"
+    },
+    {
+      "skill": "defense-in-depth",
+      "from": "debugging",
+      "to": "Meta-skill",
+      "status": "moved",
+      "rationale": "source_bucket=debugging",
+      "score": 999,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/debugging/defense-in-depth -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Meta-skill/defense-in-depth"
+    },
+    {
+      "skill": "root-cause-tracing",
+      "from": "debugging",
+      "to": "Meta-skill",
+      "status": "moved",
+      "rationale": "source_bucket=debugging",
+      "score": 999,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/debugging/root-cause-tracing -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Meta-skill/root-cause-tracing"
+    },
+    {
+      "skill": "systematic-debugging",
+      "from": "debugging",
+      "to": "Meta-skill",
+      "status": "moved",
+      "rationale": "source_bucket=debugging",
+      "score": 999,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/debugging/systematic-debugging -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Meta-skill/systematic-debugging"
+    },
+    {
+      "skill": "verification-before-completion",
+      "from": "debugging",
+      "to": "Meta-skill",
+      "status": "moved",
+      "rationale": "source_bucket=debugging",
+      "score": 999,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/debugging/verification-before-completion -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Meta-skill/verification-before-completion"
+    },
+    {
+      "skill": "docx",
+      "from": "document-skills",
+      "to": "Document-Generation",
+      "status": "skipped",
+      "rationale": "source_bucket=document-skills",
+      "score": 999,
+      "detail": "target_exists:/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Document-Generation/docx"
+    },
+    {
+      "skill": "pdf",
+      "from": "document-skills",
+      "to": "Document-Generation",
+      "status": "skipped",
+      "rationale": "source_bucket=document-skills",
+      "score": 999,
+      "detail": "target_exists:/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Document-Generation/pdf"
+    },
+    {
+      "skill": "pptx",
+      "from": "document-skills",
+      "to": "Document-Generation",
+      "status": "skipped",
+      "rationale": "source_bucket=document-skills",
+      "score": 999,
+      "detail": "target_exists:/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Document-Generation/pptx"
+    },
+    {
+      "skill": "xlsx",
+      "from": "document-skills",
+      "to": "Document-Generation",
+      "status": "skipped",
+      "rationale": "source_bucket=document-skills",
+      "score": 999,
+      "detail": "target_exists:/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Document-Generation/xlsx"
+    },
+    {
+      "skill": "collision-zone-thinking",
+      "from": "problem-solving",
+      "to": "Meta-skill",
+      "status": "moved",
+      "rationale": "source_bucket=problem-solving",
+      "score": 999,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/problem-solving/collision-zone-thinking -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Meta-skill/collision-zone-thinking"
+    },
+    {
+      "skill": "inversion-exercise",
+      "from": "problem-solving",
+      "to": "Meta-skill",
+      "status": "moved",
+      "rationale": "source_bucket=problem-solving",
+      "score": 999,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/problem-solving/inversion-exercise -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Meta-skill/inversion-exercise"
+    },
+    {
+      "skill": "meta-pattern-recognition",
+      "from": "problem-solving",
+      "to": "Meta-skill",
+      "status": "moved",
+      "rationale": "source_bucket=problem-solving",
+      "score": 999,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/problem-solving/meta-pattern-recognition -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Meta-skill/meta-pattern-recognition"
+    },
+    {
+      "skill": "scale-game",
+      "from": "problem-solving",
+      "to": "Meta-skill",
+      "status": "moved",
+      "rationale": "source_bucket=problem-solving",
+      "score": 999,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/problem-solving/scale-game -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Meta-skill/scale-game"
+    },
+    {
+      "skill": "simplification-cascades",
+      "from": "problem-solving",
+      "to": "Meta-skill",
+      "status": "moved",
+      "rationale": "source_bucket=problem-solving",
+      "score": 999,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/problem-solving/simplification-cascades -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Meta-skill/simplification-cascades"
+    },
+    {
+      "skill": "when-stuck",
+      "from": "problem-solving",
+      "to": "Meta-skill",
+      "status": "moved",
+      "rationale": "source_bucket=problem-solving",
+      "score": 999,
+      "detail": "/Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/problem-solving/when-stuck -> /Volumes/SanDisk/Cloud_Master/Documents/MacMini/Projects/Projects/Q/Skills/Meta-skill/when-stuck"
+    }
+  ],
+  "summary": {
+    "total_scanned": 204,
+    "moved": 199,
+    "skipped": 5,
+    "unchanged": 0,
+    "error": 0
+  }
+}
