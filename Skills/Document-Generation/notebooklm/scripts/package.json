@@ -1,0 +1,11 @@
+{
+  "name": "notebook-decks-scripts",
+  "version": "1.0.0",
+  "description": "Watermark removal utilities for NotebookLM slide decks",
+  "type": "module",
+  "dependencies": {
+    "canvas": "^3.0.2",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^3.11.174"
+  }
+}
