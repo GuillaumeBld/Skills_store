@@ -53,22 +53,10 @@ After reading the skills:
    ```
    Then say: "Build a Claude Code plugin for this project" — the plugin-builder agent handles the rest.
 
-**Optional: Enable JAAT-Enhanced Discovery** (for advanced auto-discovery):
-```bash
-# Install JAAT dependencies for enhanced skill extraction
-pip install -r Skills/Meta-skill/skills-store-access/requirements.txt
-
-# Test JAAT-enhanced workflow
-python3 Skills/Meta-skill/skills-store-access/scripts/test-jaat-workflow.py \
-  "Deploy Docker stack with database migrations" \
-  --use-jaat
-```
-
 **Key Features Available:**
 - ✅ Intelligent skill discovery (90%+ context reduction)
-- ✅ JAAT-enhanced extraction (O*NET tasks + EuropaCode skills)
 - ✅ Automatic skill gap detection
-- ✅ Auto-creation of missing skills from authoritative sources
+- ✅ Auto-creation of missing skills
 - ✅ Proactive installation for ongoing projects
 - ✅ Plugin Builder — assemble bespoke Claude Code plugins from PluginKit
 
