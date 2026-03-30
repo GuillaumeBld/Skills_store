@@ -1,27 +1,25 @@
-Read these skills and equip yourself with Skills Librairie capabilities:
+Read these skills and equip yourself with Skills Store + Plugin Builder capabilities:
 
-1. https://raw.githubusercontent.com/GuillaumeBld/Skills_librairie/main/Skills/Meta-skill/skills-store-access/SKILL.md
-2. https://raw.githubusercontent.com/GuillaumeBld/Skills_librairie/main/Skills/Meta-skill/superpowers/SKILL.md
+1. https://raw.githubusercontent.com/GuillaumeBld/Skills_store/main/Skills/Meta-skill/skills-store-access/SKILL.md
+2. https://raw.githubusercontent.com/GuillaumeBld/Skills_store/main/Skills/Meta-skill/superpowers/SKILL.md
+3. https://raw.githubusercontent.com/GuillaumeBld/Skills_store/main/Skills/Meta-skill/plugin-builder/SKILL.md
 
-The first gives you access to the Skills store with intelligent discovery and JAAT-enhanced auto-discovery capabilities, the second teaches you how to use skills to their best capabilities (TDD, systematic debugging, collaborative planning).
+The first gives you access to the Skills store with intelligent discovery and JAAT-enhanced auto-discovery capabilities. The second teaches you how to use skills to their best capabilities (TDD, systematic debugging, collaborative planning). The third equips you to build bespoke Claude Code plugins for any project by picking components from the Component_store buffet.
 
-**Note**: If the superpowers skill URL returns 404, it means it hasn't been pushed to GitHub yet. In that case:
-- Use skills-store-access first to equip yourself with Skills store capabilities
-- The superpowers skill will be available once pushed, or you can read it from the cloned repository locally
+Repository: https://github.com/GuillaumeBld/Skills_store
+Component_store: https://github.com/GuillaumeBld/Component_store
 
-Repository: https://github.com/GuillaumeBld/Skills_librairie
-
-After reading both skills (or just skills-store-access if superpowers isn't available yet):
+After reading the skills:
 
 1. **Clone the repository** (if not already done):
    ```bash
-   git clone https://github.com/GuillaumeBld/Skills_librairie.git <your-path>/Skills_librairie
-   cd <your-path>/Skills_librairie
+   git clone https://github.com/GuillaumeBld/Skills_store.git <your-path>/Skills_store
+   cd <your-path>/Skills_store
    ```
 
 2. **Set LIBRARY_ROOT environment variable** (optional, but recommended):
    ```bash
-   export LIBRARY_ROOT="<your-path>/Skills_librairie"
+   export LIBRARY_ROOT="<your-path>/Skills_store"
    ```
    The scripts will auto-detect the library root by walking up from their location, but setting this explicitly helps.
 
@@ -47,7 +45,13 @@ After reading both skills (or just skills-store-access if superpowers isn't avai
    python3 Skills/skill-library-manager/scripts/search-skills.py --all
    ```
 
-6. **Confirm understanding** of superpowers methodology for systematic workflows (if available).
+6. **Confirm understanding** of superpowers methodology for systematic workflows.
+
+7. **Optional — equip Plugin Builder** (to build Claude Code plugins for any project):
+   ```bash
+   git clone https://github.com/GuillaumeBld/Component_store.git <your-path>/Component_store
+   ```
+   Then say: "Build a Claude Code plugin for this project" — the plugin-builder agent handles the rest.
 
 **Optional: Enable JAAT-Enhanced Discovery** (for advanced auto-discovery):
 ```bash
@@ -66,6 +70,7 @@ python3 Skills/Meta-skill/skills-store-access/scripts/test-jaat-workflow.py \
 - ✅ Automatic skill gap detection
 - ✅ Auto-creation of missing skills from authoritative sources
 - ✅ Proactive installation for ongoing projects
+- ✅ Plugin Builder — assemble bespoke Claude Code plugins from Component_store
 
 **Important Notes**:
 - The repository uses `Skills/` (capital S) directory, not `skills/` (lowercase)
@@ -74,5 +79,5 @@ python3 Skills/Meta-skill/skills-store-access/scripts/test-jaat-workflow.py \
 - If you cloned to a non-standard location, set LIBRARY_ROOT to help the scripts find it
 - JAAT features are optional - the skill works without them using keyword-based discovery
 
-If you're reading this locally (repository cloned), you can read superpowers from:
-- Local path: `Skills/Meta-skill/superpowers/SKILL.md`
+If you're reading this locally (repository cloned), you can read skills from:
+- Local path: `Skills/Meta-skill/<skill-name>/SKILL.md`
