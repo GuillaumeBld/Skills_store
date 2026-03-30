@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "updated": "2026-02-26T02:10:14.753762",
-  "total_skills": 256,
+  "updated": "2026-03-29T20:50:54.559929",
+  "total_skills": 257,
   "skills": [
     {
       "name": "agent-designer",
@@ -3840,6 +3840,24 @@
         "dev",
         "development",
         "files"
+      ]
+    },
+    {
+      "name": "plugin-builder",
+      "description": "Build a bespoke Claude Code plugin for any project by picking components from the Component_store buffet and refactoring them to fit the project context. This skill should be used when the user asks to \"create a plugin\", \"build a Claude Code plugin\", \"equip this project with a plugin\", \"generate a...",
+      "tags": [],
+      "category": "Meta-skill",
+      "keywords": [
+        "actual",
+        "adapts",
+        "agents",
+        "always",
+        "analyzes",
+        "any",
+        "asks",
+        "assemble",
+        "assembles",
+        "bespoke"
       ]
     },
     {
