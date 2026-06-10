@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "updated": "2026-06-10T04:13:07.333991",
-  "total_skills": 269,
+  "updated": "2026-06-09T22:00:48.622279",
+  "total_skills": 270,
   "skills": [
     {
       "name": "agent-designer",
@@ -308,6 +308,24 @@
         "based",
         "bases",
         "both"
+      ]
+    },
+    {
+      "name": "ralph-loki",
+      "description": "Autonomous full-stack startup builder combining Ralph's iterative PRD loop (snarktank/ralph) with Loki's multi-agent swarm orchestration (loki-mode). Use when building complete applications or startups end-to-end: PRD → user stories → autonomous parallel agent execution → deployed product. Triggers on: build this app, execute this PRD, autonomous build, ralph-loki, launch this startup,...",
+      "tags": [],
+      "category": "AI-Agents",
+      "keywords": [
+        "agent",
+        "agents",
+        "app",
+        "applications",
+        "autonomous",
+        "build",
+        "builder",
+        "building",
+        "combines",
+        "combining"
       ]
     },
     {

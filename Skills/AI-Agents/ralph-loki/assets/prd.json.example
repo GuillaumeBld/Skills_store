@@ -1,0 +1,108 @@
+{
+  "project": "KotéPrix",
+  "branchName": "ralph/koteprix-backend-v1",
+  "description": "Price transparency infrastructure for food markets in Martinique",
+  "swarmConfig": {
+    "backend": ["fastapi-expert", "senior-backend"],
+    "frontend": ["nextjs-developer", "senior-frontend"],
+    "infra": ["senior-devops"],
+    "qa": ["senior-qa"],
+    "data": ["ml-pipeline"],
+    "parallel": true
+  },
+  "userStories": [
+    {
+      "id": "US-001",
+      "title": "PriceRecord SQLAlchemy model + migration",
+      "description": "As a developer, I want a PriceRecord async SQLAlchemy model so prices can be stored",
+      "swarm": "backend",
+      "acceptanceCriteria": [
+        "Model has: id (UUID), product_name, normalized_name, brand, store, price (Decimal 10,2), unit, category, source (enum), collected_at, created_at, territory",
+        "Alembic migration created and runnable",
+        "pytest tests/test_models.py passes"
+      ],
+      "priority": 1,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-002",
+      "title": "FastAPI app scaffold + health endpoint",
+      "description": "As a developer, I want a FastAPI app with /health endpoint",
+      "swarm": "backend",
+      "blockedBy": [],
+      "acceptanceCriteria": [
+        "GET /health returns {status: ok, version: 0.1.0}",
+        "docker-compose up starts api on port 8000",
+        "pytest tests/test_api.py::test_health passes"
+      ],
+      "priority": 2,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-003",
+      "title": "GET /prices/latest endpoint",
+      "description": "As a consumer, I want to fetch latest prices filtered by store/category",
+      "swarm": "backend",
+      "blockedBy": ["US-001", "US-002"],
+      "acceptanceCriteria": [
+        "GET /prices/latest?store=Carrefour&limit=50 returns PriceRecord list",
+        "Response time < 200ms with 1000 records",
+        "Pagination via limit/offset"
+      ],
+      "priority": 3,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-010",
+      "title": "Next.js 14 app scaffold + layout",
+      "description": "As a developer, I want a Next.js 14 App Router scaffold with header/footer",
+      "swarm": "frontend",
+      "blockedBy": [],
+      "acceptanceCriteria": [
+        "npm run dev starts on port 3000",
+        "Header: KotéPrix logo + nav links",
+        "Footer: Méthodologie | GitHub | Contact",
+        "Mobile responsive (Tailwind breakpoints)",
+        "Lighthouse > 85"
+      ],
+      "priority": 1,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-011",
+      "title": "Home page with hero + stats + anomalies",
+      "description": "As a visitor, I want to see a compelling home page with live stats",
+      "swarm": "frontend",
+      "blockedBy": ["US-010"],
+      "acceptanceCriteria": [
+        "Hero: title + subtitle + 2 CTAs",
+        "Stats bar: X produits | Y enseignes | Mis à jour",
+        "Top 3 anomalies this week with ALERTE badge",
+        "Uses mock data (API not live yet)"
+      ],
+      "priority": 2,
+      "passes": false,
+      "notes": ""
+    },
+    {
+      "id": "US-020",
+      "title": "docker-compose full stack",
+      "description": "As a developer, I want docker-compose to start api + postgres + redis",
+      "swarm": "infra",
+      "blockedBy": ["US-002"],
+      "acceptanceCriteria": [
+        "docker-compose up starts 3 services",
+        "Health checks on all services",
+        "Volumes for data persistence",
+        "API accessible at localhost:8000"
+      ],
+      "priority": 1,
+      "passes": false,
+      "notes": ""
+    }
+  ]
+}
