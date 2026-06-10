@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "updated": "2026-03-29T20:50:54.559929",
-  "total_skills": 257,
+  "updated": "2026-06-10T04:13:07.333991",
+  "total_skills": 269,
   "skills": [
     {
       "name": "agent-designer",
@@ -650,6 +650,24 @@
         "load",
         "mobile",
         "playwright"
+      ]
+    },
+    {
+      "name": "weekly-changelog",
+      "description": "This skill should be used when the user asks to 'generate changelog slides', 'create weekly update', 'document recent changes', 'what changed this week', 'generate feature presentation', or wants automated weekly documentation updates with Marp slide decks. Handles git diff analysis, feature detection, chapter updates, and presentation generation.",
+      "tags": [],
+      "category": "Automation",
+      "keywords": [
+        "analysis",
+        "asks",
+        "automated",
+        "changed",
+        "changelog",
+        "changes",
+        "chapter",
+        "create",
+        "decks",
+        "detection"
       ]
     },
     {
@@ -3001,6 +3019,24 @@
       ]
     },
     {
+      "name": "book-writing",
+      "description": "This skill should be used when the user asks to 'document a project', 'write project documentation', 'create a technical book', 'generate docs', 'document this codebase', or wants documentation that reads like a book. Provides pedagogical principles, narrative structure techniques, tone adaptation for different audiences, and quality criteria for engaging technical...",
+      "tags": [],
+      "category": "Document-Generation",
+      "keywords": [
+        "adaptation",
+        "asks",
+        "audiences",
+        "book",
+        "codebase",
+        "create",
+        "criteria",
+        "different",
+        "docs",
+        "document"
+      ]
+    },
+    {
       "name": "docx",
       "description": "Comprehensive document creation, editing, and analysis with support for tracked changes, comments, formatting preservation, and text extraction. When Claude needs to work with professional documents (.docx files) for: (1) Creating new documents, (2) Modifying or editing content, (3) Working with tracked changes, (4) Adding comments, or any other document tasks",
       "tags": [],
@@ -3016,6 +3052,24 @@
         "content",
         "creating",
         "creation"
+      ]
+    },
+    {
+      "name": "notebooklm",
+      "description": "This skill should be used when the user asks to 'generate audio from docs', 'create a podcast from documentation', 'make slides from docs', 'create a video explainer', 'transform docs into learning materials', or wants to use NotebookLM for media generation from project documentation. Handles notebook creation, source upload, content generation...",
+      "tags": [],
+      "category": "Document-Generation",
+      "keywords": [
+        "artifact",
+        "asks",
+        "audio",
+        "content",
+        "create",
+        "creation",
+        "docs",
+        "documentation",
+        "download",
+        "explainer"
       ]
     },
     {
@@ -3394,6 +3448,42 @@
         "covers",
         "deploy",
         "deploying"
+      ]
+    },
+    {
+      "name": "cultural-research",
+      "description": "Use this to autonomously populate Martinique_DB. Takes a cultural topic from the 6 CoT circles, runs a deep research loop using gpt-researcher or web search, structures findings into DB-ready entries, and loops until coverage is sufficient.",
+      "tags": [],
+      "category": "Martinique-DB",
+      "keywords": [
+        "autonomously",
+        "circles",
+        "cot",
+        "coverage",
+        "cultural",
+        "deep",
+        "entries",
+        "findings",
+        "from",
+        "gpt"
+      ]
+    },
+    {
+      "name": "db-ingest",
+      "description": "Use this to ingest raw content (crawled pages, audio transcriptions, scraped posts) into Martinique_DB. Parses raw content, extracts structured entries, runs LightRAG entity extraction, and updates the vector index.",
+      "tags": [],
+      "category": "Martinique-DB",
+      "keywords": [
+        "audio",
+        "content",
+        "crawled",
+        "entity",
+        "entries",
+        "extraction",
+        "extracts",
+        "index",
+        "ingest",
+        "into"
       ]
     },
     {
@@ -3844,7 +3934,7 @@
     },
     {
       "name": "plugin-builder",
-      "description": "Build a bespoke Claude Code plugin for any project by picking components from the Component_store buffet and refactoring them to fit the project context. This skill should be used when the user asks to \"create a plugin\", \"build a Claude Code plugin\", \"equip this project with a plugin\", \"generate a...",
+      "description": "Build a bespoke Claude Code plugin for any project by picking components from the PluginKit buffet and refactoring them to fit the project context. This skill should be used when the user asks to \"create a plugin\", \"build a Claude Code plugin\", \"equip this project with a plugin\", \"generate a...",
       "tags": [],
       "category": "Meta-skill",
       "keywords": [
@@ -3876,6 +3966,24 @@
         "problem",
         "recognition",
         "simplification"
+      ]
+    },
+    {
+      "name": "project-nav",
+      "description": "This skill should be used when the user asks to 'generate a navigation skill', 'create a nav skill for this project', 'make the project navigable', or wants a project-scoped Claude Code skill that helps navigate the codebase. Generates a project-scoped skill file saved to <project>/.claude/skills/ that activates automatically in every...",
+      "tags": [],
+      "category": "Meta-skill",
+      "keywords": [
+        "activates",
+        "asks",
+        "automatically",
+        "claude",
+        "code",
+        "codebase",
+        "create",
+        "every",
+        "file",
+        "generate"
       ]
     },
     {
@@ -4314,6 +4422,24 @@
       ]
     },
     {
+      "name": "research-orchestrator",
+      "description": "Orchestrate parallel literature research to answer \"what is the optimal way to do X\" questions. Use when the user needs evidence-based recommendations backed by academic research. Triggers include requests for optimal approaches, best practices supported by research, literature reviews, or systematic evidence gathering on any topic. Spawns parallel sub-agents to...",
+      "tags": [],
+      "category": "Scientific",
+      "keywords": [
+        "academic",
+        "actionable",
+        "agents",
+        "answer",
+        "any",
+        "approaches",
+        "assessments",
+        "backed",
+        "based",
+        "best"
+      ]
+    },
+    {
       "name": "senior-computer-vision",
       "description": "Computer vision engineering skill for object detection, image segmentation, and visual AI systems. Covers CNN and Vision Transformer architectures, YOLO/Faster R-CNN/DETR detection, Mask R-CNN/SAM segmentation, and production deployment with ONNX/TensorRT. Includes PyTorch, torchvision, Ultralytics, Detectron2, and MMDetection frameworks. Use when building detection pipelines, training custom models, optimizing inference, or deploying...",
       "tags": [],
@@ -4563,6 +4689,89 @@
         "owasp",
         "patterns",
         "penetration"
+      ]
+    },
+    {
+      "name": "campaign-tracker",
+      "description": "Use this after a UGC campaign has been published to track performance, measure engagement, feed results back into the autoresearch loop, and determine whether to keep or revert the content strategy.",
+      "tags": [],
+      "category": "UGC-MADA",
+      "keywords": [
+        "after",
+        "autoresearch",
+        "back",
+        "campaign",
+        "content",
+        "determine",
+        "engagement",
+        "feed",
+        "into",
+        "keep"
+      ]
+    },
+    {
+      "name": "cco-pipeline",
+      "description": "Use this to generate UGC content scripts for Martinican influencers. Takes a validated product brief and runs the 4-step CCO chain: trend deconstruction, cultural mapping, script generation with slang injection, and authenticity validation.",
+      "tags": [],
+      "category": "UGC-MADA",
+      "keywords": [
+        "authenticity",
+        "brief",
+        "cco",
+        "chain",
+        "content",
+        "cultural",
+        "deconstruction",
+        "generate",
+        "generation",
+        "influencers"
+      ]
+    },
+    {
+      "name": "influencer-assign",
+      "description": "Use this when a product brief needs to be matched to the right UGC MADA influencers. Scores each influencer against the brief's target niche, tone, and audience, and outputs an assignment with reasoning.",
+      "tags": [],
+      "category": "UGC-MADA",
+      "keywords": [
+        "against",
+        "assign",
+        "assignment",
+        "audience",
+        "brief",
+        "each",
+        "influencer",
+        "influencers",
+        "mada",
+        "matched"
+      ]
+    },
+    {
+      "name": "product-brief",
+      "description": "Use this when a brand or product needs to be marketed through UGC MADA influencers. Validates the brief, scores cultural fit, checks for authenticity risks, and prepares the input package for the CCO pipeline.",
+      "tags": [],
+      "category": "UGC-MADA",
+      "keywords": [
+        "authenticity",
+        "brand",
+        "brief",
+        "cco",
+        "checks",
+        "cultural",
+        "fit",
+        "influencers",
+        "input",
+        "mada"
+      ]
+    },
+    {
+      "name": "publish",
+      "description": "No description available",
+      "tags": [],
+      "category": "UGC-MADA",
+      "keywords": [
+        "available",
+        "description",
+        "publish"
       ]
     },
     {
