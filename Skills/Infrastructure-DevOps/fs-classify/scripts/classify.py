@@ -1,18 +1,25 @@
 #!/usr/bin/env python3
-"""fs-classify — dynamic-depth classification of a directory's units into a
-taxonomy, producing a reviewable manifest.csv + classification_report.md.
+"""fs-classify — agent-driven classification harness.
 
-Read-only on the target (samples file contents, never modifies). Resumable and
-batchable so it can run under /loop until coverage is complete.
+This is NOT a keyword classifier that decides on its own. It is the harness that
+lets an AI agent classify a directory's units with real judgment, while the
+taxonomy improves as coverage grows. Three subcommands form the loop:
 
-Exit codes:
-  0  — classified one or more new units this run (work may remain)
-  42 — coverage complete: no unclassified in-scope units remain (loop stop signal)
-  1  — error
+  emit   TARGET --out batch.json [--batch N] [--resume]
+         Enumerate not-yet-classified units, attach a dynamic-depth snippet and a
+         heuristic hint_category to each, write the batch for the agent to judge.
+         Exit 42 when no units remain (loop-until-complete stop signal).
 
-Usage:
-  classify.py TARGET [--out manifest.csv] [--report report.md]
-              [--taxonomy taxonomy.default.json] [--batch N] [--resume]
+  record TARGET --decisions decisions.json --out manifest.csv
+         Append the agent's decisions to manifest.csv (idempotent: replaces any
+         prior row for the same path). New categories are accepted as-is.
+
+  report TARGET --out manifest.csv --report report.md
+         (Re)generate the human classification report from the manifest.
+
+Read-only on user content (samples; never moves — that's fs-reorganize's job).
+
+Exit codes: 0 ok / work remains · 42 coverage complete · 1 error.
 """
 import argparse, csv, json, os, sys
 
@@ -33,30 +40,30 @@ MEDIA_EXT = {".png", ".jpg", ".jpeg", ".gif", ".mp4", ".webm", ".mov",
              ".tif", ".tiff", ".svg", ".heic", ".webp", ".mp3", ".wav"}
 ARCHIVE_EXT = {".zip", ".dmg", ".pkg", ".tar", ".gz", ".tgz", ".bz2", ".7z"}
 SAMPLEABLE = {".md", ".txt", ".csv", ".json", ".yml", ".yaml", ".eml", ".log"}
-RESERVED = {"survey.json", "manifest.csv", "report.md",
-            "classification_report.md", "FILESYSTEM_MAP.md", "AGENTS.md",
-            "INDEX.md"}
+RESERVED = {"survey.json", "manifest.csv", "report.md", "batch.json",
+            "batch2.json", "decisions.json", "classification_report.md",
+            "FILESYSTEM_MAP.md", "AGENTS.md", "INDEX.md"}
+HEADER = ["current_path", "kind", "size", "category", "proposed_action",
+          "target_path", "confidence", "note"]
+
+
+def dir_empty(p):
+    try:
+        return not any(os.scandir(p))
+    except OSError:
+        return False
+
+
+def is_code_unit(p):
+    try:
+        return bool({e.name for e in os.scandir(p)} & CODE_MARKERS)
+    except OSError:
+        return False
 
 
 def is_junk_name(name):
-    if name in JUNK_NAMES:
-        return True
     low = name.lower()
-    return any(low.startswith(p) for p in JUNK_PREFIXES)
-
-
-def dir_empty(path):
-    try:
-        return not any(os.scandir(path))
-    except OSError:
-        return False
-
-
-def is_code_unit(path):
-    try:
-        return bool({e.name for e in os.scandir(path)} & CODE_MARKERS)
-    except OSError:
-        return False
+    return name in JUNK_NAMES or any(low.startswith(p) for p in JUNK_PREFIXES)
 
 
 def kind_of(entry):
@@ -64,9 +71,7 @@ def kind_of(entry):
     if entry.is_dir(follow_symlinks=False):
         if dir_empty(entry.path) or is_junk_name(name):
             return "junk_candidate"
-        if is_code_unit(entry.path):
-            return "code_unit"
-        return "dir"
+        return "code_unit" if is_code_unit(entry.path) else "dir"
     if name in JUNK_NAMES:
         return "junk_candidate"
     ext = os.path.splitext(name)[1].lower()
@@ -80,14 +85,14 @@ def kind_of(entry):
 
 
 def list_units(target):
-    """Top-level units, mirroring fs-survey (code projects = one unit)."""
     out = []
     try:
         entries = sorted(os.scandir(target), key=lambda e: e.name)
     except OSError as e:
         sys.exit(f"error: cannot read {target}: {e}")
     for e in entries:
-        if e.name in RESERVED or e.name in SKIP_DIRS or e.name.startswith(".filesystem-index"):
+        if (e.name in RESERVED or e.name in SKIP_DIRS
+                or e.name.startswith(".filesystem-index")):
             continue
         if not (e.is_dir(follow_symlinks=False) or e.is_file(follow_symlinks=False)):
             continue
@@ -99,71 +104,111 @@ def list_units(target):
     return out
 
 
-def sample_text(unit):
-    """Dynamic depth: read content only where it sharpens the label."""
+def snippet_for(unit):
+    """Dynamic depth: read content only where it sharpens the agent's judgment."""
     name, kind, path = unit["name"], unit["kind"], unit["path"]
     text = name.replace("_", " ").replace("-", " ")
     if kind == "code_unit":
-        for readme in ("README.md", "README", "README.txt", "package.json",
-                       "pyproject.toml"):
-            rp = os.path.join(path, readme)
+        for f in ("README.md", "README", "README.txt", "package.json",
+                  "pyproject.toml"):
+            rp = os.path.join(path, f)
             if os.path.isfile(rp):
                 try:
-                    with open(rp, "r", errors="ignore") as fh:
-                        text += " " + fh.read(2000)
+                    with open(rp, errors="ignore") as fh:
+                        text += " | " + fh.read(2000)
                 except OSError:
                     pass
                 break
-    elif kind == "document":
-        ext = os.path.splitext(name)[1].lower()
-        if ext in SAMPLEABLE:
-            try:
-                with open(path, "r", errors="ignore") as fh:
-                    text += " " + fh.read(4000)
-            except OSError:
-                pass
-    # media / archive / junk: filename only (no read)
-    return text.lower()
+        try:
+            text += " | contents: " + ", ".join(
+                sorted(os.listdir(path))[:20])
+        except OSError:
+            pass
+    elif kind == "document" and os.path.splitext(name)[1].lower() in SAMPLEABLE:
+        try:
+            with open(path, errors="ignore") as fh:
+                text += " | " + fh.read(4000)
+        except OSError:
+            pass
+    return text.strip()
 
 
-def score_categories(text, ext, tax):
-    best, best_score = tax.get("fallback", "Media_Documents"), 0
+def load_taxonomy(path):
+    with open(path) as fh:
+        return json.load(fh)
+
+
+def hint_category(text, ext, tax):
+    best, score = tax.get("fallback", "Media_Documents"), 0
+    low = text.lower()
     for cat, spec in tax["categories"].items():
         if cat == "Junk_Candidate":
             continue
-        score = sum(1 for kw in spec.get("keywords", []) if kw in text)
+        s = sum(1 for kw in spec.get("keywords", []) if kw in low)
         if ext in set(spec.get("ext", [])):
-            score += 1
-        if score > best_score:
-            best, best_score = cat, score
-    # Confidence: 0.4 baseline (ext/fallback) → up toward 0.95 with keyword hits.
-    confidence = min(0.95, 0.4 + 0.18 * best_score) if best_score else 0.4
-    return best, round(confidence, 2)
+            s += 1
+        if s > score:
+            best, score = cat, s
+    return best, round(min(0.95, 0.4 + 0.18 * score) if score else 0.4, 2)
 
 
-def classify_unit(unit, tax):
-    if unit["kind"] == "junk_candidate":
-        return {"category": "Junk_Candidate", "action": "quarantine",
-                "target": "", "confidence": 0.5,
-                "note": "empty/scratch — review before deleting"}
-    ext = os.path.splitext(unit["name"])[1].lower()
-    text = sample_text(unit)
-    cat, conf = score_categories(text, ext, tax)
-    return {"category": cat, "action": "move",
-            "target": f"{cat}/{unit['name']}", "confidence": conf, "note": ""}
-
-
-def load_done(out_path):
-    done = set()
+def done_paths(out_path):
+    done = {}
     if os.path.isfile(out_path):
         with open(out_path, newline="") as fh:
             for row in csv.DictReader(fh):
-                done.add(row["current_path"])
+                done[row["current_path"]] = row
     return done
 
 
-HEADER = ["current_path", "kind", "size", "category", "proposed_action",
-          "target_path", "confidence", "note"]
+def cmd_emit(args, tax):
+    target = os.path.abspath(args.target)
+    out_path = args.out or os.path.join(target, "batch.json")
+    manifest = args.manifest or os.path.join(target, "manifest.csv")
+    done = done_paths(manifest) if args.resume else {}
+    units = [u for u in list_units(target) if u["path"] not in done]
+    if not units:
+        print("coverage complete: 0 units remaining", file=sys.stderr)
+        sys.exit(42)
+    batch = units[: args.batch]
+    for u in batch:
+        ext = os.path.splitext(u["name"])[1].lower()
+        u["snippet"] = snippet_for(u)[:4000]
+        if u["kind"] == "junk_candidate":
+            u["hint_category"], u["hint_confidence"] = "Junk_Candidate", 0.5
+        else:
+            u["hint_category"], u["hint_confidence"] = hint_category(
+                u["snippet"], ext, tax)
+    with open(out_path, "w") as fh:
+        json.dump(batch, fh, indent=2)
+    print(f"emitted {len(batch)} units ({len(units)-len(batch)} remaining) -> {out_path}")
+    sys.exit(0)
+
+
+def cmd_record(args, tax):
+    target = os.path.abspath(args.target)
+    out_path = args.out or os.path.join(target, "manifest.csv")
+    with open(args.decisions) as fh:
+        decisions = json.load(fh)
+    rows = done_paths(out_path)  # path -> existing row (dict)
+    sizes = {u["path"]: (u["size"], u["kind"]) for u in list_units(target)}
+    for d in decisions:
+        p = d["path"]
+        size, kind = sizes.get(p, (0, "other"))
+        rows[p] = {
+            "current_path": p, "kind": kind, "size": size,
+            "category": d["category"],
+            "proposed_action": d.get("proposed_action", "move"),
+            "target_path": d.get("target_path", f"{d['category']}/{os.path.basename(p)}"),
+            "confidence": d.get("confidence", 0.7),
+            "note": d.get("note", ""),
+        }
+    with open(out_path, "w", newline="") as fh:
+        w = csv.DictWriter(fh, fieldnames=HEADER)
+        w.writeheader()
+        for r in rows.values():
+            w.writerow(r)
+    print(f"recorded {len(decisions)} decisions; manifest now {len(rows)} rows")
 
 
 def write_report(rows, report_path, target):
@@ -171,87 +216,57 @@ def write_report(rows, report_path, target):
     by_cat = defaultdict(list)
     for r in rows:
         by_cat[r["category"]].append(r)
-    lines = [f"# Classification report — {target}", "",
-             f"Total classified: {len(rows)}", ""]
-    # Proposed deletions section first (most important to review).
+    L = [f"# Classification report — {target}", "",
+         f"Total classified: {len(rows)}", "",
+         "## Proposed deletions / quarantine", ""]
     junk = by_cat.get("Junk_Candidate", [])
-    lines += ["## Proposed deletions / quarantine", ""]
-    if junk:
-        for r in junk:
-            lines.append(f"- `{r['current_path']}` — {r['note']}")
-    else:
-        lines.append("_none_")
-    lines += [""]
-    low = [r for r in rows if float(r["confidence"]) < 0.5 and r["category"] != "Junk_Candidate"]
-    lines += ["## Low-confidence — needs review", ""]
-    if low:
-        for r in low:
-            lines.append(f"- `{r['current_path']}` → **{r['category']}** "
-                         f"(conf {r['confidence']})")
-    else:
-        lines.append("_none_")
-    lines += [""]
+    L += ([f"- `{r['current_path']}` — {r['note']}" for r in junk] or ["_none_"])
+    L += ["", "## Low-confidence — needs review", ""]
+    low = [r for r in rows if float(r["confidence"]) < 0.5
+           and r["category"] != "Junk_Candidate"]
+    L += ([f"- `{r['current_path']}` → **{r['category']}** (conf {r['confidence']})"
+           for r in low] or ["_none_"])
+    L += [""]
     for cat in sorted(by_cat):
         if cat == "Junk_Candidate":
             continue
-        lines += [f"## {cat} ({len(by_cat[cat])})", ""]
-        for r in by_cat[cat]:
-            lines.append(f"- `{os.path.basename(r['current_path'])}` "
-                         f"→ `{r['target_path']}` (conf {r['confidence']})")
-        lines += [""]
+        L += [f"## {cat} ({len(by_cat[cat])})", ""]
+        L += [f"- `{os.path.basename(r['current_path'])}` → `{r['target_path']}` "
+              f"(conf {r['confidence']})" for r in by_cat[cat]]
+        L += [""]
     with open(report_path, "w") as fh:
-        fh.write("\n".join(lines))
+        fh.write("\n".join(L))
+
+
+def cmd_report(args, tax):
+    target = os.path.abspath(args.target)
+    out_path = args.out or os.path.join(target, "manifest.csv")
+    report_path = args.report or os.path.join(target, "classification_report.md")
+    rows = list(done_paths(out_path).values())
+    write_report(rows, report_path, target)
+    print(f"report -> {report_path} ({len(rows)} rows)")
 
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("target")
-    ap.add_argument("--out", default=None)
-    ap.add_argument("--report", default=None)
-    ap.add_argument("--taxonomy", default=os.path.join(HERE, "taxonomy.default.json"))
-    ap.add_argument("--batch", type=int, default=50)
-    ap.add_argument("--resume", action="store_true")
+    sub = ap.add_subparsers(dest="cmd", required=True)
+    common = dict()
+    for name in ("emit", "record", "report"):
+        p = sub.add_parser(name)
+        p.add_argument("target")
+        p.add_argument("--out", default=None)
+        p.add_argument("--taxonomy", default=os.path.join(HERE, "taxonomy.default.json"))
+        if name == "emit":
+            p.add_argument("--batch", type=int, default=50)
+            p.add_argument("--resume", action="store_true")
+            p.add_argument("--manifest", default=None)
+        if name == "record":
+            p.add_argument("--decisions", required=True)
+        if name == "report":
+            p.add_argument("--report", default=None)
     args = ap.parse_args()
-
-    target = os.path.abspath(args.target)
-    out_path = args.out or os.path.join(target, "manifest.csv")
-    report_path = args.report or os.path.join(target, "classification_report.md")
-    with open(args.taxonomy) as fh:
-        tax = json.load(fh)
-
-    units = list_units(target)
-    done = load_done(out_path) if args.resume else set()
-    remaining = [u for u in units if u["path"] not in done]
-
-    if not remaining:
-        # Coverage complete — refresh report from existing manifest and signal stop.
-        all_rows = []
-        if os.path.isfile(out_path):
-            with open(out_path, newline="") as fh:
-                all_rows = list(csv.DictReader(fh))
-        write_report(all_rows, report_path, target)
-        print(f"coverage complete: {len(done)} units classified, 0 remaining")
-        sys.exit(42)
-
-    batch = remaining[: args.batch]
-    new_exists = os.path.isfile(out_path)
-    with open(out_path, "a", newline="") as fh:
-        w = csv.writer(fh)
-        if not new_exists:
-            w.writerow(HEADER)
-        for u in batch:
-            c = classify_unit(u, tax)
-            w.writerow([u["path"], u["kind"], u["size"], c["category"],
-                        c["action"], c["target"], c["confidence"], c["note"]])
-
-    # Rebuild report from the full manifest.
-    with open(out_path, newline="") as fh:
-        all_rows = list(csv.DictReader(fh))
-    write_report(all_rows, report_path, target)
-
-    left = len(remaining) - len(batch)
-    print(f"classified {len(batch)} units this batch; {left} remaining")
-    sys.exit(0)
+    tax = load_taxonomy(args.taxonomy)
+    {"emit": cmd_emit, "record": cmd_record, "report": cmd_report}[args.cmd](args, tax)
 
 
 if __name__ == "__main__":

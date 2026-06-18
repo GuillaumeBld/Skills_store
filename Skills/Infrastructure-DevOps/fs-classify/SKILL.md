@@ -1,62 +1,63 @@
 ---
 name: fs-classify
-description: "Classify the units of a directory into a taxonomy with dynamic per-item depth (read README for code projects, sample contents for documents, filename-only for media/archives), producing a reviewable manifest.csv + classification_report.md. Resumable and batchable so it runs under /loop until every in-scope file is read and classified (exit code 42 = coverage complete). Read-only — proposes moves, never performs them. Use when you need to categorize a directory, build a file manifest, or classify files before reorganizing. Second stage of the system-organizer suite."
+description: "Agent-driven classification harness for a directory's units. Does NOT decide by keyword alone — it enumerates units, extracts a dynamic-depth snippet per item (README for code projects, sampled text for documents, filename/metadata for media), and hands batches to an AI agent that identifies and categorizes each with real judgment while the taxonomy improves as we go. Resumable/batchable so it runs under /loop until every in-scope unit is classified (emit exits 42 when coverage is complete). Read-only — proposes moves, never performs them. Use to categorize a directory, build a file manifest, or classify files before reorganizing. Second stage of the system-organizer suite."
 ---
 
-# fs-classify
+# fs-classify (agent-driven)
 
-Turns a directory's units into a **reviewable plan** — which category each item
-belongs to, and whether it should move or be quarantined. Read-only: it samples
-content but changes nothing. Output feeds `fs-reorganize`.
+The classifier's *judgment* is the agent's; this harness handles enumeration,
+dynamic-depth content extraction, and bookkeeping. It is read-only on your files.
 
-## Usage
+## The loop (emit → agent judges → record)
 
 ```bash
-python3 scripts/classify.py TARGET \
-  [--out manifest.csv] [--report classification_report.md] \
-  [--taxonomy taxonomy.default.json] [--batch N] [--resume]
+# 1. Harness emits the next batch of unclassified units, each with a content
+#    snippet (dynamic depth) and a heuristic hint_category to assist:
+python3 scripts/classify.py emit  TARGET --out batch.json --batch 50 --resume
+#    → exit 0 with work; exit 42 when nothing remains (loop stop signal).
+
+# 2. The AGENT reads batch.json, identifies each unit, and writes decisions.json:
+#    [{"path": "...", "category": "...", "proposed_action": "move|quarantine|keep",
+#      "target_path": "Category/name", "confidence": 0.0-1.0, "note": "..."}]
+#    The agent may introduce a NEW category here (taxonomy grows as we go) and may
+#    re-judge earlier low-confidence units by including them again.
+
+# 3. Harness records decisions into the manifest (idempotent per path):
+python3 scripts/classify.py record TARGET --decisions decisions.json --out manifest.csv
+
+# 4. Regenerate the human report at any time:
+python3 scripts/classify.py report TARGET --out manifest.csv --report classification_report.md
 ```
 
-## Loop-until-complete
+Repeat 1–3 under `/loop` until `emit` returns **exit 42**.
 
-Designed to run under `/loop`. Each call classifies up to `--batch` (default 50)
-not-yet-seen units, appends to `manifest.csv`, then exits:
+## Dynamic-depth snippet policy (what the agent sees per item)
 
-- **exit 0** — classified ≥1 new unit this run (more may remain) → loop continues.
-- **exit 42** — every in-scope unit is already in the manifest → loop **stops**.
-
-`--resume` makes it idempotent: it skips paths already present in `manifest.csv`,
-so the loop survives interruption/restart and never re-reads a classified file.
-
-## Dynamic-depth policy (the core IP)
-
-| kind | depth → label source |
-|------|----------------------|
-| `code_unit` | read `README`/`package.json`/`pyproject.toml` only → name, stack, purpose |
-| `document` | sample first ~4 KB of text-readable docs → keywords + category |
-| `media` | filename + extension (no content read; OCR is out of scope) |
+| kind | snippet source (never slurps huge files) |
+|------|------------------------------------------|
+| `code_unit` | README/`package.json`/`pyproject.toml` (first 2 KB) + top-level file list |
+| `document` | first ~4 KB of text-readable docs (`.md .txt .csv .json .eml …`) |
+| `media` | filename + extension (no content read; OCR out of scope) |
 | `archive` | filename + extension |
-| `junk_candidate` | flagged → `proposed_action=quarantine`, never read |
+| `junk_candidate` | flagged; agent confirms quarantine |
 
-Categories are scored by keyword + extension hits; the best-scoring category wins
-with a `confidence` in `[0.4, 0.95]`. Low-confidence rows are surfaced in the
-report for human review.
+## Taxonomy: seed + grow
+
+`taxonomy.default.json` seeds the categories (`Academic_Work, Business_Work,
+Development_Projects, Dev_Tools, Personal_Admin, Media_Documents, Media_Photos,
+Junk_Candidate`). The agent **adds or splits a category only when the data clearly
+demands it** — folders serve the *human* mental model, while the AI navigates via
+the index (see `fs-index`), so the two audiences never conflict. Override the seed
+per-system with `--taxonomy <file>`.
 
 ## Output
 
-- `manifest.csv` — columns `current_path,kind,size,category,proposed_action,target_path,confidence,note`; `proposed_action` ∈ `move|keep|quarantine`.
-- `classification_report.md` — grouped by category, with **Proposed deletions /
-  quarantine** and **Low-confidence — needs review** sections up top.
-
-## Taxonomy
-
-Default categories (`taxonomy.default.json`): `Academic_Work, Business_Work,
-Development_Projects, Dev_Tools, Personal_Admin, Media_Documents, Media_Photos,
-Junk_Candidate`. Override per system with `--taxonomy <file>` (same shape:
-`{categories: {Name: {keywords:[], ext:[]}}, fallback: "Name"}`).
+- `manifest.csv` — `current_path,kind,size,category,proposed_action,target_path,confidence,note`.
+- `classification_report.md` — grouped by category; **Proposed deletions** and
+  **Low-confidence — needs review** sections up top for the approval checkpoint.
 
 ## Notes
 
-- **Read-only.** Proposes; never moves. Mutation is `fs-reorganize`'s job, behind
-  an approval gate.
-- System-agnostic; works on macOS and Linux. Run `bash tests/test_classify.sh`.
+- **Read-only.** Proposes; never moves. Mutation is `fs-reorganize`'s job, gated
+  on human approval of the manifest.
+- System-agnostic (macOS + Linux). Run `bash tests/test_classify.sh`.
