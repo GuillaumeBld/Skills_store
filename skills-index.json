@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "updated": "2026-06-09T22:00:48.622279",
-  "total_skills": 270,
+  "updated": "2026-06-17T22:00:31.204387",
+  "total_skills": 275,
   "skills": [
     {
       "name": "agent-designer",
@@ -3271,6 +3271,78 @@
       ]
     },
     {
+      "name": "fs-classify",
+      "description": "Agent-driven classification harness for a directory's units. Does NOT decide by keyword alone — it enumerates units, extracts a dynamic-depth snippet per item (README for code projects, sampled text for documents, filename/metadata for media), and hands batches to an AI agent that identifies and categorizes each with real judgment while...",
+      "tags": [],
+      "category": "Infrastructure-DevOps",
+      "keywords": [
+        "agent",
+        "alone",
+        "batchable",
+        "batches",
+        "before",
+        "build",
+        "categorize",
+        "categorizes",
+        "classification",
+        "classified"
+      ]
+    },
+    {
+      "name": "fs-index",
+      "description": "Build a grep-first, agent-navigable RAG layer over a directory (default $HOME): per-area INDEX.md files, a machine-queryable .filesystem-index/catalog.jsonl (path/kind/category/summary/keywords per line), and a master FILESYSTEM_MAP.md (<=25KB) that explicitly links every INDEX.md and answers 'where do I find X'. With --wire it makes the map auto-discoverable by inserting a pointer into ~/.claude/CLAUDE.md...",
+      "tags": [],
+      "category": "Infrastructure-DevOps",
+      "keywords": [
+        "agent",
+        "agents",
+        "answers",
+        "area",
+        "auto",
+        "build",
+        "catalog",
+        "category",
+        "change",
+        "claude"
+      ]
+    },
+    {
+      "name": "fs-reorganize",
+      "description": "Apply an approved manifest.csv as REVERSIBLE file moves: moves items into category folders, quarantines junk to _REVIEW_DELETE/ (never deletes), logs every move to moves.log, and generates an undo.sh that reverses everything. Defaults to dry-run; --apply executes. Collisions get a numeric suffix, never overwrite. Use to reorganize files safely, clean up...",
+      "tags": [],
+      "category": "Infrastructure-DevOps",
+      "keywords": [
+        "after",
+        "apply",
+        "approved",
+        "approves",
+        "category",
+        "classification",
+        "clean",
+        "collisions",
+        "csv",
+        "defaults"
+      ]
+    },
+    {
+      "name": "fs-survey",
+      "description": "Survey and map any directory tree (default $HOME), separating user-content signal from OS/dependency noise. Treats code projects as single units and never descends into node_modules/.git/venvs. Emits survey.json (machine-readable unit list) plus a human summary. Use when you need to recon a system before organizing it, answer 'what's on this machine',...",
+      "tags": [],
+      "category": "Infrastructure-DevOps",
+      "keywords": [
+        "answer",
+        "any",
+        "before",
+        "classify",
+        "code",
+        "content",
+        "default",
+        "dependency",
+        "descends",
+        "directory"
+      ]
+    },
+    {
       "name": "github-release",
       "description": "Prepare and publish GitHub releases. Sanitizes code for public release (secrets scan, personal artifacts, LICENSE/README validation), creates version tags, and publishes via gh CLI. Trigger with 'release', 'publish', 'open source', 'prepare for release', 'create release', or 'github release'.",
       "tags": [],
@@ -3412,6 +3484,24 @@
         "error",
         "incident",
         "invoke"
+      ]
+    },
+    {
+      "name": "system-organizer",
+      "description": "Take ANY system (macOS or Linux, default $HOME) and make it simultaneously human-legible, AI-navigable, and safely manipulable. Orchestrates the fs-* suite — fs-survey → fs-classify (agent-driven, loop-until-complete) → [human approval checkpoint] → fs-reorganize (reversible) → fs-index (grep-first RAG layer + auto-discovery wiring). Read-only until the user approves the manifest; every...",
+      "tags": [],
+      "category": "Infrastructure-DevOps",
+      "keywords": [
+        "agent",
+        "any",
+        "approval",
+        "approves",
+        "asked",
+        "auto",
+        "base",
+        "checkpoint",
+        "classify",
+        "clean"
       ]
     },
     {
