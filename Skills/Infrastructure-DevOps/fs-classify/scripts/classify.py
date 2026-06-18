@@ -21,9 +21,14 @@ Read-only on user content (samples; never moves — that's fs-reorganize's job).
 
 Exit codes: 0 ok / work remains · 42 coverage complete · 1 error.
 """
-import argparse, csv, json, os, sys
+import argparse, csv, json, os, sys, unicodedata
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+
+
+def norm(p):
+    """NFC-normalize a path so NFD (macOS on-disk) and NFC compare equal."""
+    return unicodedata.normalize("NFC", p)
 
 SKIP_DIRS = {"node_modules", ".git", ".venv", "venv", "site-packages",
              "__pycache__", ".Trash", "Library", "System", "usr", "bin",
@@ -157,7 +162,7 @@ def done_paths(out_path):
     if os.path.isfile(out_path):
         with open(out_path, newline="") as fh:
             for row in csv.DictReader(fh):
-                done[row["current_path"]] = row
+                done[norm(row["current_path"])] = row
     return done
 
 
@@ -166,7 +171,7 @@ def cmd_emit(args, tax):
     out_path = args.out or os.path.join(target, "batch.json")
     manifest = args.manifest or os.path.join(target, "manifest.csv")
     done = done_paths(manifest) if args.resume else {}
-    units = [u for u in list_units(target) if u["path"] not in done]
+    units = [u for u in list_units(target) if norm(u["path"]) not in done]
     if not units:
         print("coverage complete: 0 units remaining", file=sys.stderr)
         sys.exit(42)
@@ -190,12 +195,12 @@ def cmd_record(args, tax):
     out_path = args.out or os.path.join(target, "manifest.csv")
     with open(args.decisions) as fh:
         decisions = json.load(fh)
-    rows = done_paths(out_path)  # path -> existing row (dict)
-    sizes = {u["path"]: (u["size"], u["kind"]) for u in list_units(target)}
+    rows = done_paths(out_path)  # norm(path) -> existing row (dict)
+    sizes = {norm(u["path"]): (u["size"], u["kind"]) for u in list_units(target)}
     for d in decisions:
         p = d["path"]
-        size, kind = sizes.get(p, (0, "other"))
-        rows[p] = {
+        size, kind = sizes.get(norm(p), (0, "other"))
+        rows[norm(p)] = {
             "current_path": p, "kind": kind, "size": size,
             "category": d["category"],
             "proposed_action": d.get("proposed_action", "move"),
