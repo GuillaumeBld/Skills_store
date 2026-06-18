@@ -1,0 +1,53 @@
+{
+  "categories": {
+    "Academic_Work": {
+      "keywords": ["esg", "research", "regression", "paper", "thesis", "dissertation",
+                   "merton", "kmv", "systemic risk", "msci", "refinitiv", "spss",
+                   "2sls", "methodology", "study", "journal", "abstract", "literature",
+                   "quin", "irb", "professor", "lab", "experiment", "dataset"],
+      "ext": [".ipynb", ".sav", ".dta", ".rmd"]
+    },
+    "Business_Work": {
+      "keywords": ["chibizhub", "finbiz", "bso", "qualia", "client", "invoice",
+                   "proposal", "contract", "deck", "presentation", "prd", "blueprint",
+                   "migration", "platform", "business", "company", "startup", "pitch",
+                   "marketing", "sales", "revenue", "roadmap"],
+      "ext": [".pptx", ".key"]
+    },
+    "Development_Projects": {
+      "keywords": ["repo", "project", "app", "server", "api", "mcp", "agent",
+                   "build", "deploy", "docker", "code", "framework", "library",
+                   "roku", "cli", "sdk"],
+      "ext": []
+    },
+    "Dev_Tools": {
+      "keywords": ["tool", "script", "config", "settings", "setup", "install",
+                   "github", "wolfram", "word_mcp", "utility", "helper", "automation"],
+      "ext": [".sh", ".py", ".js", ".ts", ".yml", ".yaml", ".toml", ".ini"]
+    },
+    "Personal_Admin": {
+      "keywords": ["resume", "cv", "curriculum", "bolivard", "guillaume", "job",
+                   "career", "application", "cover letter", "diploma", "diplomas",
+                   "passport", "loca", "loca pass", "dossier", "bank", "finance",
+                   "investissement", "tax", "impot", "sante", "health", "workout",
+                   "insurance", "administrative", "admin"],
+      "ext": []
+    },
+    "Media_Documents": {
+      "keywords": ["report", "document", "notes", "memo", "minutes", "transcript",
+                   "email", "letter", "doc", "readme", "guide", "manual"],
+      "ext": [".pdf", ".docx", ".txt", ".md", ".eml", ".rtf", ".csv", ".xlsx"]
+    },
+    "Media_Photos": {
+      "keywords": ["screenshot", "photo", "image", "picture", "wallpaper", "logo",
+                   "video", "movie", "recording", "clip"],
+      "ext": [".png", ".jpg", ".jpeg", ".gif", ".mp4", ".mov", ".webm", ".tif",
+              ".tiff", ".svg", ".heic", ".webp"]
+    },
+    "Junk_Candidate": {
+      "keywords": [],
+      "ext": []
+    }
+  },
+  "fallback": "Media_Documents"
+}
