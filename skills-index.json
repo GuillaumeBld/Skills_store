@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "updated": "2026-06-17T22:00:31.204387",
-  "total_skills": 275,
+  "updated": "2026-06-18T13:22:47.811249",
+  "total_skills": 276,
   "skills": [
     {
       "name": "agent-designer",
@@ -632,6 +632,24 @@
         "invoke",
         "model",
         "object"
+      ]
+    },
+    {
+      "name": "power-automate-mcp-preflight",
+      "description": "Use when setting up powerautomate-mcp (or any Entra-app-based Power Automate / Power Platform MCP server) against a Microsoft 365 tenant, or when az login keeps returning \"Please run az login\" on a tenant with no Azure subscription. Determines, before building anything, whether the agent-driven MCP route is viable or whether...",
+      "tags": [],
+      "category": "Automation",
+      "keywords": [
+        "against",
+        "agent",
+        "any",
+        "anything",
+        "app",
+        "automate",
+        "azure",
+        "back",
+        "based",
+        "before"
       ]
     },
     {
