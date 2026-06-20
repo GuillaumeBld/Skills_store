@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "updated": "2026-06-18T13:22:47.811249",
-  "total_skills": 276,
+  "updated": "2026-06-20T17:49:40.193009",
+  "total_skills": 277,
   "skills": [
     {
       "name": "agent-designer",
@@ -4527,6 +4527,24 @@
         "forecast",
         "making",
         "performs"
+      ]
+    },
+    {
+      "name": "full-research",
+      "description": "Full-spectrum, triangulated research with a step-by-step terminal interface (modeled on /deep-research's guided, phased UX). Fans out to THREE arms in parallel and cross-validates them: deep-research (verified general web with adversarial fact-checking), research-orchestrator (academic / peer-reviewed evidence), and last30days (last-30-days social + community pulse). Use when the user wants the most...",
+      "tags": [],
+      "category": "Scientific",
+      "keywords": [
+        "academic",
+        "adversarial",
+        "agree",
+        "all",
+        "answer",
+        "arms",
+        "checked",
+        "checking",
+        "combined",
+        "community"
       ]
     },
     {
