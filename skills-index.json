@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "updated": "2026-06-20T17:49:40.193009",
-  "total_skills": 277,
+  "updated": "2026-06-23T19:49:22.042535",
+  "total_skills": 278,
   "skills": [
     {
       "name": "agent-designer",
@@ -3142,6 +3142,24 @@
         "creation",
         "editing",
         "files"
+      ]
+    },
+    {
+      "name": "sop-runbook-writer",
+      "description": "Rédige des SOP (procédures opératoires normalisées) et des runbooks opérationnels structurés, prêts à présenter (management) ou à exécuter (équipe). À utiliser quand l'utilisateur demande une SOP, un runbook, une procédure de processus, une documentation opérationnelle pas-à-pas, un mode opératoire, ou la documentation d'un processus métier/technique récurrent. Trigger phrases: 'écris une...",
+      "tags": [],
+      "category": "Document-Generation",
+      "keywords": [
+        "demande",
+        "des",
+        "documentation",
+        "documente",
+        "management",
+        "mode",
+        "operating",
+        "operational",
+        "pas",
+        "phrases"
       ]
     },
     {
