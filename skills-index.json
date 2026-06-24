@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "updated": "2026-06-23T19:49:22.042535",
-  "total_skills": 278,
+  "updated": "2026-06-24T13:46:39.290211",
+  "total_skills": 279,
   "skills": [
     {
       "name": "agent-designer",
@@ -974,6 +974,24 @@
         "json",
         "local",
         "localbusiness"
+      ]
+    },
+    {
+      "name": "succession-bolivard-kb",
+      "description": "Access and work with the BOLIVARD family succession knowledge base (Martinique). Use when asked about the succession, the family tree, heirs, properties, or the hermes-succession bot. Trigger phrases: succession bolivard, héritage bolivard, arbre genealogique bolivard, hermes succession, coach succession papa, Vénérand, Pierre-François, Eléonore, Poirier rivière-pilote, SanDisk succession.",
+      "tags": [],
+      "category": "Business-Operations",
+      "keywords": [
+        "about",
+        "access",
+        "arbre",
+        "asked",
+        "base",
+        "bolivard",
+        "bot",
+        "coach",
+        "family",
+        "genealogique"
       ]
     },
     {
